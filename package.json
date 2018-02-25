@@ -9,6 +9,10 @@
     "dev": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --progress --env dev",
     "test": "jest"
   },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "keywords": [],
   "dependencies": {
     "cloudinary": "^1.10.0",
@@ -46,6 +50,7 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
     "clean-webpack-plugin": "^0.1.18",
+    "codecov": "^3.0.0",
     "compression-webpack-plugin": "^1.1.8",
     "copy-webpack-plugin": "^4.4.1",
     "css-loader": "^0.25.0",
