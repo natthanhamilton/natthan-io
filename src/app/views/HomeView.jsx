@@ -9,7 +9,7 @@ import Snackbar from 'material-ui/Snackbar';
 
 import GroupWork from 'material-ui-icons/GroupWork';
 
-import {Layout, Portfolio, SkillsBreakdown, Skills, Experience, Person, About, Education} from './partials';
+import {Layout, Portfolio, SkillsBreakdown, Skills, Experience, Person, About, Education, Footer} from './partials';
 import locale from '../../assets/locale/en_us';
 
 const styles = theme => ({
@@ -76,6 +76,7 @@ render () {
           <SkillsBreakdown c={c} />
         </Grid>
       </Paper>
+      <Footer />
       <Snackbar
         anchorOrigin={{
           vertical: 'bottom',

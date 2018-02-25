@@ -29,12 +29,11 @@ class Layout extends Component {
     const c = this.props.classes
 
     return (<div>
-      <LoadingBar className={c.loadingBar} showFastActions="showFastActions" updateTime={200} maxProgress={90}/>
+      <LoadingBar className={c.loadingBar} showFastActions="showFastActions" updateTime={200} maxProgress={90} />
       <AppBar position="fixed">
-        <Toolbar className={c.toolBar}>
-        </Toolbar>
+        <Toolbar className={c.toolBar} />
       </AppBar>
-      <Grid container="container" className={c.root} spacing={0} alignItems="flex-start" direction="row" justify="center">
+      <Grid container className={c.root} spacing={0} alignItems="flex-start" direction="row" justify="center">
         <Grid item="item" xs={12} sm={10} md={8}>
           {this.props.children}
         </Grid>
