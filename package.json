@@ -7,7 +7,7 @@
     "build:prod": "./node_modules/.bin/webpack --config webpack.config.js --progress --colors  --env prod",
     "build:stage": "./node_modules/.bin/webpack --config webpack.config.js --progress --colors  --env stage",
     "dev": "webpack-dev-server --progress --colors --env development",
-    "test": "jest"
+    "test": "jest && codecov"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
