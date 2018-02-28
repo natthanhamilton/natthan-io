@@ -12,7 +12,11 @@ const styles = theme => ({
     textAlign: 'center'
   },
   gitLink: {
-    textDecoration: 'none'
+    textDecoration: 'none',
+    padding: '0 5px'
+  },
+  badge: {
+    padding: 5
   }
 });
 
@@ -29,12 +33,11 @@ Visit the GitHub repository!
       </a>
     </Grid>
     <Grid item xs={12}>
-      <a href='https://travis-ci.org/'><img alt="Travis-CI" src="https://travis-ci.org/natthanhamilton/natthan-io.svg?branch=master" /></a>
-      <a href='https://ci.appveyor.com/'><img alt="App-Veyor" src="https://ci.appveyor.com/api/projects/status/5gywn7y6frv0y2k8?svg=true" /></a>
-      <a href="https://david-dm.org/natthanhamilton/natthan-io" title="dependencies status"><img src="https://david-dm.org/natthanhamilton/natthan-io/status.svg" /></a>
-      <a href="https://david-dm.org/natthanhamilton/natthan-io?type=dev" title="devDependencies status"><img src="https://david-dm.org/natthanhamilton/natthan-io/dev-status.svg" /></a>
-      <a href='https://coveralls.io/github/natthanhamilton/natthan-io?branch=master'><img src='https://coveralls.io/repos/github/natthanhamilton/natthan-io/badge.svg?branch=master' alt='Coverage Status' /></a>
-      */}
+      <a href='https://travis-ci.org/'><img className={c.badge} alt="Travis-CI" src="https://img.shields.io/travis/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
+      <a href='https://ci.appveyor.com/'><img className={c.badge} alt="App-Veyor" src="https://img.shields.io/appveyor/ci/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
+      <a href="https://david-dm.org/natthanhamilton/natthan-io" title="dependencies status"><img className={c.badge} src="https://img.shields.io/david/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
+      <a href="https://david-dm.org/natthanhamilton/natthan-io?type=dev" title="devDependencies status"><img className={c.badge} src="https://img.shields.io/david/dev/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
+      <a href='https://coveralls.io/github/natthanhamilton/natthan-io?branch=master'><img className={c.badge} src='https://img.shields.io/coveralls/github/natthanhamilton/natthan-io.svg?style=for-the-badge' alt='Coverage Status' /></a>
     </Grid>
   </Grid>);
 }
