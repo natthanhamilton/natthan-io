@@ -1,4 +1,30 @@
 {
+  "badges": [{
+      "tool": "Travis-CI",
+      "link": "https://travis-ci.org/",
+      "image": "https://img.shields.io/travis/natthanhamilton/natthan-io.svg?style=for-the-badge"
+    },
+    {
+      "tool": "AppVeyor",
+      "link": "https://ci.appveyor.com/",
+      "image": "https://img.shields.io/appveyor/ci/natthanhamilton/natthan-io.svg?style=for-the-badge"
+    },
+    {
+      "tool": "David-DM",
+      "link": "https://david-dm.org/natthanhamilton/natthan-io",
+      "image": "https://img.shields.io/david/natthanhamilton/natthan-io.svg?style=for-the-badge"
+    },
+    {
+      "tool": "David-DM",
+      "link": "https://david-dm.org/natthanhamilton/natthan-io?type=dev",
+      "image": "https://img.shields.io/david/dev/natthanhamilton/natthan-io.svg?style=for-the-badge"
+    },
+    {
+      "tool": "Code Coverage",
+      "link": "https://codecov.io/",
+      "image": "https://img.shields.io/codecov/c/github/natthanhamilton/natthan-io.svg?style=for-the-badge"
+    }
+  ],
   "site": {
     "author": "Natthan Hamilton",
     "title": "Natthan.io"
@@ -10,14 +36,14 @@
       "url": "http://natthan.io",
       "image": "http://res.cloudinary.com/natthanhamilton/image/upload/v1519557083/natthan-io.jpg"
     },
-      "twitter": {
-        "card": "summary",
-        "cretor": "@natthanhamilton",
-        "site": "@natthanhamilton",
-        "description": "Digital Home of Natthan Hamilton, Business Driven Developer",
-        "title": "Natthan.io",
-        "image": "http://res.cloudinary.com/natthanhamilton/image/upload/v1519557083/natthan-io.jpg"
-      }
+    "twitter": {
+      "card": "summary",
+      "cretor": "@natthanhamilton",
+      "site": "@natthanhamilton",
+      "description": "Digital Home of Natthan Hamilton, Business Driven Developer",
+      "title": "Natthan.io",
+      "image": "http://res.cloudinary.com/natthanhamilton/image/upload/v1519557083/natthan-io.jpg"
+    }
   },
   "skills": [{
       "name": "ReactJS",

@@ -2,6 +2,9 @@ import React from 'react';
 import {withStyles} from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
+import Tooltip from 'material-ui/Tooltip';
+
+import locale from '../../../assets/locale/en_us';
 
 const styles = theme => ({
   root: {
@@ -26,6 +29,10 @@ const styles = theme => ({
 const Footer = (props) => {
   const c = props.classes
 
+    const list = locale.badges.map((d, key) => (<Tooltip key={key} title={d.tool} placement="bottom">
+      <a href={d.link}><img className={c.badge} src={d.image} alt={d.tool} /></a>
+    </Tooltip>));
+
 return (
   <Grid className={c.root} container spacing={24} alignItems="flex-start" direction="row" justify="flex-start">
     <Grid className={c.git} item xs={12}>
@@ -36,11 +43,7 @@ Visit the GitHub repository!
       </a>
     </Grid>
     <Grid className={c.badges} item xs={12}>
-      <a href='https://travis-ci.org/'><img className={c.badge} alt="Travis-CI" src="https://img.shields.io/travis/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
-      <a href='https://ci.appveyor.com/'><img className={c.badge} alt="App-Veyor" src="https://img.shields.io/appveyor/ci/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
-      <a href="https://david-dm.org/" title="dependencies status"><img className={c.badge} src="https://img.shields.io/david/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
-      <a href="https://david-dm.org/natthanhamilton/natthan-io?type=dev" title="devDependencies status"><img className={c.badge} src="https://img.shields.io/david/dev/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
-      <a href='https://codecov.io/'><img className={c.badge} src='https://img.shields.io/codecov/c/github/natthanhamilton/natthan-io.svg?style=for-the-badge' alt='Coverage Status' /></a>
+      {list}
     </Grid>
   </Grid>);
 }
