@@ -29,21 +29,21 @@ const Skills = (props) => {
   </div>));
 
   return (
-    <Grid container="container" className={c.container} spacing={24}>
+    <Grid container className={c.container} spacing={24} alignItems="flex-start" direction="row" justify="flex-start">
 
-      <Grid item="item" xs={12}>
+      <Grid item xs={12}>
         <Typography variant="title"><Star className={c.iconLarge} />
                     &nbsp;Skills Overview
         </Typography>
       </Grid>
-      <Grid item="item" xs={12}>
+      <Grid item xs={12}>
         {res}
       </Grid>
     </Grid>);
 }
 
 Skills.propTypes = {
-  c: PropTypes.Object
+  c: PropTypes.object
 }
 Skills.defaultProps = {
   c: {}

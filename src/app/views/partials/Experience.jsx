@@ -19,7 +19,7 @@ const Experience = (props) => {
         <Typography className={c.padding} variant="body1">{content}</Typography>
       </li>));
 
-      return (<Grid key={i} item="item" xs={12} className={c.section}>
+      return (<Grid key={i} item xs={12} className={c.section}>
         {i > 0 && (<Divider className={c.divider} />)}
         <Typography variant="title">{d.title}</Typography>
         <Typography className={c.padding} variant="body2"><LocationOn className={c.iconSmall} /> {d.location}
@@ -32,9 +32,10 @@ const Experience = (props) => {
         <ul className={c.ul}>{description}</ul>
       </Grid>);
     });
+    
     return (
-      <Grid container="container" className={c.container}>
-        <Grid item="item" xs={12}>
+      <Grid container className={c.container} spacing={0} alignItems="flex-start" direction="row" justify="flex-start">
+        <Grid item xs={12}>
           <Typography variant="title"><Work className={c.iconLarge} />
                       &nbsp;Work Experience
           </Typography>
@@ -44,7 +45,7 @@ const Experience = (props) => {
   }
 
   Experience.propTypes = {
-    c: PropTypes.Object
+    c: PropTypes.object
   }
   Experience.defaultProps = {
     c: {}

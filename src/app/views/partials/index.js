@@ -1,5 +1,6 @@
 import Layout from './Layout'
 import Portfolio from './Portfolio'
+import PortfolioModal from './PortfolioModal'
 import SkillsBreakdown from './SkillsBreakdown'
 import Skills from './Skills'
 import Experience from './Experience'
@@ -10,6 +11,7 @@ import Footer from './Footer'
 
 export {Layout}
 export {Portfolio}
+export {PortfolioModal}
 export {SkillsBreakdown}
 export {Skills}
 export {Experience}

@@ -18,14 +18,14 @@ const SkillsBreakdown = (props) => {
   </Tooltip>));
 
   return (
-    <Grid item="item" xs={12}>
-      <Grid container="container" className={c.container}>
-        <Grid item="item" xs={12}>
+    <Grid item xs={12}>
+      <Grid container className={c.container} spacing={0} alignItems="flex-start" direction="row" justify="flex-start">
+        <Grid item xs={12}>
           <Typography variant="title"><Star className={c.iconLarge} />
             {locale.skillsFull.length}&nbsp;Languages, Tools, and The Kitchen Sink
           </Typography>
         </Grid>
-        <Grid item="item" xs={12}>
+        <Grid item xs={12}>
           {list}
         </Grid>
       </Grid>
@@ -33,7 +33,7 @@ const SkillsBreakdown = (props) => {
 };
 
 SkillsBreakdown.propTypes = {
-  c: PropTypes.Object
+  c: PropTypes.object
 }
 SkillsBreakdown.defaultProps = {
   c: {}

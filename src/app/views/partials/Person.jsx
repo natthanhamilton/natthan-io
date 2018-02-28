@@ -20,6 +20,9 @@ const styles = theme => ({
   actionIcon: {
     maxHeight: 36,
     padding: '0 5px'
+  },
+  actions: {
+    textAlign: 'center'
   }
 });
 
@@ -32,21 +35,19 @@ const Person = (props) => {
       </a>));
 
 return (
-  <Grid container="container" className={c.container} spacing={24}>
-    <Grid item="item" xs={12}>
+  <Grid container className={c.container} spacing={24} alignItems="flex-start" direction="row" justify="flex-start">
+    <Grid item xs={12}>
       <Avatar alt="Natthan Hamilton" src={cloudinary.url(`portraits/nate.jpg`, {height: 113, quality: 60, width: 100, crop: "scale"})} className={c.avatar} />
     </Grid>
-    <Grid item="item" xs={12}>
+    <Grid item xs={12}>
       <Typography variant="title" align="center">Natthan Hamilton</Typography>
       <Typography variant="body1" align="center">
                 Business driven developer.
                 Passionate to create beneficial solutions
       </Typography>
     </Grid>
-    <Grid item="item" xs={12}>
-      <Typography variant="body1" align="center">{list}</Typography>
-    </Grid>
-    <Grid item="item" xs={12}>
+    <Grid className={c.actions} item xs={12}>{list}</Grid>
+    <Grid item xs={12}>
       <Divider />
     </Grid>
   </Grid>);
@@ -54,10 +55,12 @@ return (
 
 
 Person.propTypes = {
-  c: PropTypes.Object
+  classes: PropTypes.object,
+    c: PropTypes.object
 }
 Person.defaultProps = {
-  c: {}
+  classes: {},
+    c: {}
 };
 
 export default withStyles(styles)(Person);

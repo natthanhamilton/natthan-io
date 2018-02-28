@@ -1,11 +1,16 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
 import cloudinary from 'cloudinary'
+import PropTypes from 'prop-types';
+import {closePortfolio} from '../../redux/actions'
 
 import {withStyles} from 'material-ui/styles';
 import Dialog, {DialogActions, DialogContent, DialogContentText, DialogTitle,} from 'material-ui/Dialog';
 import Button from 'material-ui/Button';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography'
+
+import locale from '../../../assets/locale/en_us';
 
 const styles = {
   dialog: {
@@ -23,32 +28,67 @@ const styles = {
   },
 };
 
-class PortfolioModal extends Component {
-  handleClose = () => {
-    const s = Object.assign({}, this.props.state)
-    s.portfolio[this.props.index] = false
-    this.props.handleClose(s)
-  }
-  render() {
-    const d = this.props.portfolio
-    const c = this.props.classes
 
-    return (<Dialog className={c.dialog} open={this.props.state.portfolio[this.props.index]} onClose={this.handleClose} aria-labelledby={d.name} aria-describedby={d.summary}>
+class PortfolioModal extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      portfolio: {
+          name: "",
+          summary: "",
+          content: "",
+          image: ""
+        },
+        index: null
+    };
+  }
+  componentWillMount() {
+    if (this.props.store.portfolio != null) {
+      this.setState({
+        portfolio: locale.portfolio[this.props.store.portfolio],
+        index: this.props.store.portfolio
+      });
+    }
+  }
+
+  render() {
+    const hasPortfolio = Boolean(this.state.index)
+    const c = this.props.classes
+    const d = this.state.portfolio
+
+    return (<Dialog
+      className={c.dialog}
+      open={hasPortfolio}
+      onClose={() => this.props.dispatch(closePortfolio())}
+      aria-labelledby={d.name}
+      aria-describedby={d.summary}
+    >
       <DialogContent>
         <DialogContentText id={d.summary}>
           <Paper className={c.paper} elevation={4}>
-            <img className={c.image} src={cloudinary.url(`portfolio/${d.image}.jpg`)} title={d.name} />
+            <img className={c.image} src={cloudinary.url(`portfolio/${d.image}.jpg`)} alt={d.name} />
           </Paper>
           <Typography className={c.title} variant="title">{d.name}</Typography>
           <Typography variant="body1">{d.content}</Typography>
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={this.handleClose} color="primary" autoFocus="autoFocus">
-          Close
+        <Button onClick={() => this.props.dispatch(closePortfolio())} color="primary">
+            Close
         </Button>
       </DialogActions>
-    </Dialog>);
+    </Dialog>)
   }
 }
-export default withStyles(styles)(PortfolioModal);
+
+PortfolioModal.propTypes = {
+    store: PropTypes.object,
+    classes: PropTypes.object,
+    dispatch: PropTypes.func
+}
+PortfolioModal.defaultProps = {
+  store: {},
+    classes: {}
+};
+
+export default withStyles(styles)(connect(store => ({store}), undefined)(PortfolioModal))

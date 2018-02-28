@@ -18,9 +18,10 @@ const styles = theme => ({
 
 const Footer = (props) => {
   const c = props.classes
+  
 return (
-  <Grid className={c.root} container spacing={24}>
-    <Grid className={c.git} item xs={12} alignItems="center">
+  <Grid className={c.root} container spacing={24} alignItems="flex-start" direction="row" justify="flex-start">
+    <Grid className={c.git} item xs={12}>
       <a className={c.gitLink} target="_new" href="https://github.com/natthanhamilton/natthan-io">
         <Button color="primary" variant="raised">
 Visit the GitHub repository!

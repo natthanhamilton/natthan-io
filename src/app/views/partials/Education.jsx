@@ -15,7 +15,7 @@ const Education = (props) => {
   const c = props.c;
 
     return (
-      <Grid container className={c.container}>
+      <Grid container className={c.container} spacing={0} alignItems="flex-start" direction="row" justify="flex-start">
 
         <Grid item xs={12}>
           <Typography variant="title"><School className={c.iconLarge} />
@@ -23,7 +23,7 @@ const Education = (props) => {
           </Typography>
         </Grid>
 
-        <Grid item="item" xs={12} className={c.section}>
+        <Grid item xs={12} className={c.section}>
           <Typography variant="title">San Diego State University</Typography>
           <Typography variant="body2"><LocationOn className={c.iconSmall} />
                       &nbsp;San Diego, CA &nbsp;&nbsp;<DateRange className={c.iconSmall} />
@@ -35,7 +35,7 @@ const Education = (props) => {
   }
 
   Education.propTypes = {
-    c: PropTypes.Object
+    c: PropTypes.object
   }
   Education.defaultProps = {
     c: {}
