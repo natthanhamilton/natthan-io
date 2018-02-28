@@ -15,6 +15,9 @@ const styles = theme => ({
     textDecoration: 'none',
     padding: '0 5px'
   },
+  badges: {
+    textAlign: 'center'
+  },
   badge: {
     padding: 5
   }
@@ -32,12 +35,12 @@ Visit the GitHub repository!
         </Button>
       </a>
     </Grid>
-    <Grid item xs={12}>
+    <Grid className={c.badges} item xs={12}>
       <a href='https://travis-ci.org/'><img className={c.badge} alt="Travis-CI" src="https://img.shields.io/travis/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
       <a href='https://ci.appveyor.com/'><img className={c.badge} alt="App-Veyor" src="https://img.shields.io/appveyor/ci/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
-      <a href="https://david-dm.org/natthanhamilton/natthan-io" title="dependencies status"><img className={c.badge} src="https://img.shields.io/david/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
+      <a href="https://david-dm.org/" title="dependencies status"><img className={c.badge} src="https://img.shields.io/david/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
       <a href="https://david-dm.org/natthanhamilton/natthan-io?type=dev" title="devDependencies status"><img className={c.badge} src="https://img.shields.io/david/dev/natthanhamilton/natthan-io.svg?style=for-the-badge" /></a>
-      <a href='https://coveralls.io/github/natthanhamilton/natthan-io?branch=master'><img className={c.badge} src='https://img.shields.io/coveralls/github/natthanhamilton/natthan-io.svg?style=for-the-badge' alt='Coverage Status' /></a>
+      <a href='https://codecov.io/'><img className={c.badge} src='https://img.shields.io/codecov/c/github/natthanhamilton/natthan-io.svg?style=for-the-badge' alt='Coverage Status' /></a>
     </Grid>
   </Grid>);
 }
