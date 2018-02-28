@@ -7,17 +7,18 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin")
 const Dotenv = require('dotenv-webpack');
 
-const srcRoot = path.resolve(__dirname, 'src');
-const appRoot = path.resolve(srcRoot, 'app');
-var BUILD_DIR = path.resolve(__dirname, './dist');
-var APP_DIR = path.resolve(__dirname, './src/app');
+const BUILD_DIR = path.resolve(__dirname, 'dist');
+const APP_DIR = path.resolve(__dirname, 'src/app');
+const SRC_DIR = path.resolve(__dirname, 'src');
+
 module.exports = (env) => {
-  const isDev = env == 'dev';
+  const isDev = env == 'development';
+
   return {
+    mode: env,
     context: path.resolve(__dirname),
-    entry: {
-      main: APP_DIR + '/app.jsx'
-    },
+    entry: APP_DIR + '/app.jsx',
+    // Needed for dependencies
     node: {
       // console: true,
       fs: 'empty',
@@ -46,33 +47,32 @@ module.exports = (env) => {
         },
         exclude: [/node_modules/]
       }, {
-        test: /\.json$/,
-        loader: "json-loader"
-      }, {
-        test: /\.(css|sass|scss)$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader!sass-loader'
-        })
-      }]
+          test: /\.(css|sass|scss)$/,
+          use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' })
+        }]
     },
     resolve: {
       extensions: ['.js', '.jsx', '.json'],
-      modules: [appRoot, 'node_modules']
+      modules: [APP_DIR, 'node_modules']
     },
     devServer: {
-      historyApiFallback: true,
       contentBase: BUILD_DIR,
       port: 3300,
       compress: true,
       publicPath: '/',
+
+      historyApiFallback: true,
+      //contentBase: path.join(__dirname, "dist"),
       stats: "minimal"
     },
-    stats: "minimal",
+    devtool: "source-map",
     performance: {
-      hints: false
+      hints: "warning",
+      maxAssetSize: 200000,
+      maxEntrypointSize: 400000
     },
-    devtool: false,
+    //externals: ["react"],
+    stats: "errors-only",
     plugins: [
       // Environment variables for the app
       new Dotenv(),
@@ -97,10 +97,11 @@ module.exports = (env) => {
         from: './src/assets',
         to: './assets'
       }]),
+
       new HtmlWebpackPlugin({
-        template: path.resolve(srcRoot, 'index.html'),
-        chunksSortMode: 'dependency'
+        template: SRC_DIR+'/index.html'
       }),
+
       /*
       // Optimize the build
       new webpack.optimize.CommonsChunkPlugin({

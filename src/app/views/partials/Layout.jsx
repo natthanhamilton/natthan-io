@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-//import LoadingBar from 'react-redux-loading-bar'
 
 import {withStyles} from 'material-ui/styles';
 import Grid from 'material-ui/Grid';

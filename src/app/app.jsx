@@ -27,19 +27,16 @@ cloudinary.config({
 
 const theme = createMuiTheme();
 
-console.log('--persister')
-console.log(persister)
-
 const App = () => {
     return (<MuiThemeProvider theme={theme}>
       <Provider store={store}>
-        <PersistGate loading={<AppLoading />} persistor={persister.persist}>
-          <Router basename="/">
-            <Switch>
-              <Route path="/" exact component={components.Home} />
-            </Switch>
-          </Router>
-        </PersistGate>
+        {/*}<PersistGate loading={<AppLoading />} persistor={persister}>*/}
+        <Router basename="/">
+          <Switch>
+            <Route path="/" exact component={components.Home} />
+          </Switch>
+        </Router>
+        {/*}</PersistGate>*/}
       </Provider>
     </MuiThemeProvider>);
   }
