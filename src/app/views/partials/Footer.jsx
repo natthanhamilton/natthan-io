@@ -18,7 +18,7 @@ const styles = theme => ({
 
 const Footer = (props) => {
   const c = props.classes
-  
+
 return (
   <Grid className={c.root} container spacing={24} alignItems="flex-start" direction="row" justify="flex-start">
     <Grid className={c.git} item xs={12}>
@@ -29,10 +29,9 @@ Visit the GitHub repository!
       </a>
     </Grid>
     <Grid item xs={12}>
-      {/*}<img alt="Travis-CI" src="https://travis-ci.org/natthanhamilton/natthan-io.svg?branch=master" />*/}
-      {/*}<img alt="App-Veyor" src="https://ci.appveyor.com/api/projects/status/5gywn7y6frv0y2k8?svg=true
-" />
-      <a href='https://david-dm.org/'><img src='https://david-dm.org/natthanhamilton/natthan-io.svg' alt='Dependency Coverage' /></a>
+      <a href='https://travis-ci.org/'><img alt="Travis-CI" src="https://travis-ci.org/natthanhamilton/natthan-io.svg?branch=master" /></a>
+      <a href='https://ci.appveyor.com/'><img alt="App-Veyor" src="https://ci.appveyor.com/api/projects/status/5gywn7y6frv0y2k8?svg=true" /></a>
+      <a href='https://david-dm.org/'><img src='https://david-dm.org/natthanhamilton/natthan-io.svg' alt='David-DM' /></a>
       <a href='https://coveralls.io/github/natthanhamilton/natthan-io?branch=master'><img src='https://coveralls.io/repos/github/natthanhamilton/natthan-io/badge.svg?branch=master' alt='Coverage Status' /></a>
       */}
     </Grid>
