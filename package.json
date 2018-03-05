@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node --presets env ./dist/server.js",
+    "start": "node ./dist/server.js",
     "build:client": "webpack --progress --colors --env production",
     "build:server": "webpack --config webpack.server.config.js --progress --colors --env production",
     "dev": "webpack-dev-server --progress --colors --env development",

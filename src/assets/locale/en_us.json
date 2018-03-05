@@ -182,7 +182,7 @@
       "started": "March 2017",
       "ended": "February 2018",
       "situation": "Prints Charming is a small business around for many years running manual operations, and suddenly experienced growth resulting in bottlenecks and crippling effects on their small business",
-      "task": "",
+      "task": "Of the countless challenges available, I honed my focus on the sales and client facing part of their business",
       "activity": [
         "Innovated a ReactJS based wholesale commerce application to replace phone and email order taking, allowing a retailer, sales rep, or staff to place orders for a retailer, real time product builder, innovative checkout with real time master cartons, order history tracking, administrative capabilities to manage the business and operations, and dashboard analytics for awareness and drill into the business’ health",
         "Focused heavily on salvaging data from existing internal application running MySQL, identifying what the business needs to know, what is currently available in the data, and then extracting into MongoDB and expanding data points to collect from my application"
