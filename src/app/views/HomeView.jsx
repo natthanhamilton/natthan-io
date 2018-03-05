@@ -59,6 +59,9 @@ const styles = theme => ( {
   },
   lazyLoad: {
     display: 'inline-block'
+  },
+  ul: {
+    margin: 0
   }
 } );
 

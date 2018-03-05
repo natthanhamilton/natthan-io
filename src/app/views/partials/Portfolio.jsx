@@ -33,6 +33,7 @@ import locale from '../../../assets/locale/en_us';
 import {
   closePortfolio
 } from '../../redux/actions'
+import GenerateSkillsList from './GenerateSkillsList'
 
 const styles = {
   dialog: {
@@ -48,6 +49,10 @@ const styles = {
   title: {
     paddingBottom: 10
   },
+  cardActions: {
+    textAlign: 'right',
+    display: 'block'
+  }
 };
 
 
@@ -74,20 +79,24 @@ class Portfolio extends Component {
           <CardContent>
             <Typography variant="title">{d.name}</Typography>
             <Typography variant="body1" noWrap>{d.summary}</Typography>
+            <Typography variant="body1" noWrap>&nbsp;</Typography>
+            <Typography variant="body2" noWrap><i>Skills & Toosl on this project</i></Typography>
+            <GenerateSkillsList data={d.tools} />
           </CardContent>
-          <CardActions>
+          <CardActions className={c.cardActions}>
+            {d.website != null && (
+              <Button target="_new" href={d.website} color="primary">
+                View Website
+              </Button>
+              )}
             <Button
               size="small"
               color="primary"
+              variant="raised"
               onClick={() => this.setState({index: i})}
             >
-                Learn More
+            Project Information
             </Button>
-            {d.website != null && (
-              <Button target="_new" href={d.website} color="primary">
-                Website
-              </Button>
-              )}
           </CardActions>
         </Card>
                                                       </Grid> ) )

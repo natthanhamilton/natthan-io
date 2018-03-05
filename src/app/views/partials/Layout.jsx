@@ -36,7 +36,7 @@ const Layout = ( props ) => {
   return ( <div>
     <Helmet>
       <title>{locale.site.title}</title>
-      <meta name="description" content={locale.skillsFull.join(",")} />
+      <meta name="description" content={locale.skillsExperienced.join(",")+locale.skillsFamiliar.join(",")+locale.skillsLearning.join(",")} />
       <meta name="author" content={locale.site.author} />
 
       <meta property="og:title" content={locale.seo.og.title} />

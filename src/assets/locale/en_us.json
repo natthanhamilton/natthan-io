@@ -28,6 +28,21 @@
       "tool": "NSP",
       "link": "https://nodesecurity.io/",
       "image": "https://nodesecurity.io/orgs/natthan-io/projects/78b0cd49-181f-45ac-bdf0-366dac1a0951/badge"
+    },
+    {
+      "tool": "Clode Climate",
+      "link": "https://codeclimate.com/github/natthanhamilton/natthan-io/maintainability",
+      "image": "https://api.codeclimate.com/v1/badges/6fa95640ae6c153b0abe/maintainability"
+    },
+    {
+      "tool": "Inch CI",
+      "link": "https://inch-ci.org/github/natthanhamilton/natthan-io",
+      "image": "http://inch-ci.org/github/natthanhamilton/natthan-io.svg?branch=master"
+    },
+    {
+      "tool": "Github Top Language",
+      "link": "",
+      "image": "https://img.shields.io/github/languages/top/natthanhamilton/natthan-io.svg"
     }
   ],
   "site": {
@@ -182,12 +197,15 @@
       "started": "March 2017",
       "ended": "February 2018",
       "situation": "Prints Charming is a small business around for many years running manual operations, and suddenly experienced growth resulting in bottlenecks and crippling effects on their small business",
-      "task": "Of the countless challenges available, I honed my focus on the sales and client facing part of their business",
+      "task": "Of the countless challenges available, I honed my focus on the sales and client facing part of their business where I noted orders were being handled manually through email or phone calls -- all the way from receiving the order through shipment and tracking of that shipment",
       "activity": [
+        "Spent the first month breaking down their entire business into different blocks. Quickly discovered multiple factors I could make assumptions from that would significantly impact this project: \n(1) the owners I was working with had very limited technical knowledge, but desired to be highly involved, therefore a large amount of resources would be spent here; \n(2) there was no structured data to start with that will benefit the new application; \n (3) They have an existing legacy manufacturing application that I would have to interact with, and that data was in no beneficial condition",
+        "Given the desired nature of this application being client facing, chose a JS tech stack and established the development environment, leading with React.JS for the application (full list of tools can be found in the project)",
+        "Through the progression of this project, I was able to add value across the full spectrum of the business by studying all of their processes and proposing better solutions. Any manual process t",
         "Innovated a ReactJS based wholesale commerce application to replace phone and email order taking, allowing a retailer, sales rep, or staff to place orders for a retailer, real time product builder, innovative checkout with real time master cartons, order history tracking, administrative capabilities to manage the business and operations, and dashboard analytics for awareness and drill into the business’ health",
         "Focused heavily on salvaging data from existing internal application running MySQL, identifying what the business needs to know, what is currently available in the data, and then extracting into MongoDB and expanding data points to collect from my application"
       ],
-      "result": "Designed, developed, tested, deployed, maintained and improved a brand new wholesale commerce application for the sales side of their business revolutionalizing it from a manual operation of email and phone to a ReactJS, data driven solution unlocking their revenue generating potential",
+      "result": "With the maturity of a user's experience with online commerce applications, I knew that this would innovating a client facing application that handles the sales flow would unlock their revenue generating potential.\n Designed, developed, tested, deployed, maintained and improved a brand new wholesale commerce application for the sales side of their business revolutionalizing it from a manual operation of email and phone to a ReactJS, data driven solution unlocking their revenue generating potential.\n\n The impact of the new application on the business was in a lot of cases revolutionary for them. They were able to:\n -- Create orders in minutes versus hours \n -- Expose their entire product line to customers who were previously only aware of what products sales reps told them about\n -- Double digit percentage increase in products purchased from existing customers\n -- For the first time, customers were ordering for themselves, freeing up sales rep time to be more strategic and focus on growth strategies\n -- For the first time, sales rep groups were able to manage their book of business with their partnership to Prints Charming, creating new customer accounts and generating orders for those customers without the manual need for Prints Charming staff\n -- Prints Charming staff, sales reps, or the customer can order for that customer account, each can manage needed properties for the account, causing a higher probability for new orders, and much more\n -- An account's order history was now fully visible to them for the first time, with analytic breakdown never before available, along with reorder capability, making it incredibly simple for a user to gain insight into that account's health, generate conversation with that account on how they are doing, and increase sales volume\n\n The added business value of this targetted, well devised application will single-handedly transform their business and bring it into the digital age. Every day, it is generating more value than ever before for this small company",
       "skills": ""
     },
     {
@@ -217,8 +235,7 @@
         "Selected WordPress for its extensive flexibility, established a multi-site structure to allow easy subdomain expansion with minimal conflict",
         "Custom built theme for the main site targeting sub-second performance focused on corporate feel and custom built product pages unique to each new product launch"
       ],
-      "result": "",
-      "skills": ""
+      "result": ""
     }
   ],
   "portfolio": [{
@@ -226,42 +243,234 @@
       "website": "http://oms.printscharming.biz/",
       "summary": "ReactJS custom wholesale commerce application",
       "content": "Prints Charming is a built from the ground up custom solution for a wholesale company that has been in business for decades. The company has been running manually processes across the board, and through recent growth they have been experiencing, decided to seek a solution to their growing pains. After evaluating their business and their perceived endless problems, the project focused on attacking their problems at the beginning of their business cycle. They traditionally receive orders from customers via email or phone, which then begins a long email process. By developing a custom wholesale commerce application that integrated into, and rebuilt in a lot of cases, their existing business, Prints Charming experienced even greater growth now with an automated application that their customers can order for themselves, allowing for employee time to be spent more strategically. Existing retailers were ordering multiple times more product than they normally would due to a visually driven buying experience where they were exposed to products they did not know existed. The byproduct of choosing this area to attack was the direct need to structure their business and data appropriately so that it was even possible to have an automated system. Streamlining their business in such a way is allowing for tremendous growth at a fraction of the cost previously needed in manual labor",
-      "image": "pc"
+      "image": "pc",
+      "tools": [
+        "ReactJS",
+        "Redux",
+        "React Router",
+        "NodeJS",
+        "ES6",
+        "JSX",
+        "Webpack",
+        "SentryIO",
+        "MongoDB",
+        "MySQL",
+        "Bootstrap",
+        "React-Bootstrap",
+        "GIT",
+        "GitHub",
+        "PHP",
+        "phpStorm",
+        "Laravel",
+        "Lumen",
+        "HTML5",
+        "JavaScript",
+        "JSON",
+        "CSS3",
+        "LESS",
+        "Google Analytics",
+        "Atom",
+        "Mailgun",
+        "npm",
+        "Asana",
+        "Slack",
+        "UberConference"
+      ]
     },
     {
       "name": "Coolpad",
       "website": "https://coolpad.us/",
       "summary": "",
-      "image": "coolpad"
+      "image": "coolpad",
+      "tools": [
+        "MySQL",
+        "Bootstrap",
+        "GIT",
+        "GitHub",
+        "PHP",
+        "phpStorm",
+        "HTML5",
+        "JavaScript",
+        "jQuery",
+        "JSON",
+        "AJAX",
+        "CSS3",
+        "LESS",
+        "WordPress",
+        "WooCommerce",
+        "Flatsome",
+        "Stripe",
+        "Google Apps",
+        "Google Analytics",
+        "Hubspot",
+        "Cloudinary",
+        "MailChimp",
+        "Asana",
+        "InstaGantt",
+        "Slack",
+        "UberConference",
+        "Zeplin",
+        "Waveapp"
+      ]
     },
     {
       "name": "Picture It On Canvas",
       "website": "http://pictureitoncanvas.com/",
       "summary": "",
-      "image": "pioc"
+      "image": "pioc",
+      "tools": [
+        "PHP",
+        "phpStorm",
+        "Symfony2",
+        "HTML5",
+        "JavaScript",
+        "jQuery",
+        "JSON",
+        "AJAX",
+        "CSS3",
+        "LESS",
+        "MySQL",
+        "Bootstrap",
+        "GIT",
+        "GitHub",
+        "Shopify",
+        "Shopify Partner",
+        "NginX",
+        "Apache",
+        "Rackspace",
+
+        "Amazon EC2",
+        "Amazon RDS",
+
+        "Google Analytics",
+        "Atom",
+        "Sublime",
+        "Cloudinary",
+        "MailChimp",
+        "Asana",
+        "Slack"
+      ]
     },
     {
       "name": "Abroadeasy",
       "website": null,
       "summary": "",
-      "image": "ae"
+      "image": "ae",
+      "tools": [
+        "MongoDB",
+        "MySQL",
+        "Material Design",
+        "Bootstrap",
+        "GIT",
+        "GitHub",
+        "PHP",
+        "phpStorm",
+        "Laravel",
+        "CodeIgniter",
+        "HTML5",
+        "JavaScript",
+        "jQuery",
+        "JSON",
+        "AJAX",
+        "CSS3",
+        "LESS",
+        "Sass",
+        "Stripe",
+        "Alipay",
+        "NginX",
+        "Apache",
+        "Amazon EC2",
+        "Amazon RDS",
+        "Amazon Route 53",
+        "Google Apps",
+        "Google Maps",
+        "Google Analytics",
+        "Atom",
+        "Sublime",
+        "Redmine",
+        "Hubspot",
+        "MailChimp",
+        "Mailgun",
+        "PingDom",
+        "WeChat",
+        "InVision",
+        "Asana",
+        "Slack",
+        "UberConference",
+        "Sympli",
+        "Zeplin",
+        "Xtensio",
+        "ProcessOn",
+        "Hackpad",
+        "Jell",
+        "Waveapp",
+        "Skype"
+      ]
     },
     {
       "name": "Huian Garden",
       "website": null,
       "summary": "",
-      "image": "huian"
+      "image": "huian",
+      "tools": [
+        "Shopify",
+        "Shopify Partner",
+        "Stripe",
+        "Amazon Payments",
+        "HTML5",
+        "JavaScript",
+        "CSS3",
+        "MailChimp",
+        "InVision",
+        "Asana",
+        "Slack",
+        "Zeplin"
+      ]
     },
     {
       "name": "Creatique",
       "website": null,
       "summary": "",
-      "image": "creatique"
+      "image": "creatique",
+      "tools": [
+        "ReactJS",
+        "Redux",
+        "React Router",
+        "NodeJS",
+        "ExpressJS",
+        "ES6",
+        "JSX",
+        "Webpack",
+        "ESLint",
+        "Jest",
+        "SentryIO",
+        "David-DM",
+        "Material Design",
+        "MUI",
+        "GIT",
+        "GitHub",
+        "HTML5",
+        "JavaScript",
+        "CSS3",
+        "Sass",
+
+        "Google Apps",
+        "Google Analytics",
+
+        "Atom",
+        "Cloudinary",
+        "MailChimp",
+
+        "npm",
+
+        "Asana",
+        "Slack",
+        "UberConference",
+        "Zeplin"
+      ]
     }
   ],
-  "skillsFull": [
-    "Blockchain",
-
+  "skillsExperienced": [
     "ReactJS",
     "React Native",
     "Redux",
@@ -269,13 +478,8 @@
 
     "NodeJS",
     "ExpressJS",
-    "ElectronJS",
     "ES6",
     "JSX",
-
-    "Python",
-    "PyCharm",
-    "Anaconda",
 
     "Webpack",
     "ESLint",
@@ -294,6 +498,7 @@
     "Material Design",
     "MUI",
     "Bootstrap",
+    "React-Bootstrap",
 
     "GIT",
     "GitHub",
@@ -302,7 +507,6 @@
     "phpStorm",
     "Laravel",
     "Lumen",
-    "Symfony2",
     "CodeIgniter",
 
     "HTML5",
@@ -317,22 +521,11 @@
     "WordPress",
     "WooCommerce",
     "Flatsome",
-
-    "Shopify",
-    "Shopify Partner",
     "Stripe",
-    "Alipay",
 
-    "NginX",
-    "Apache",
-
-    "Amazon EC2",
-    "Amazon RDS",
-    "Amazon Route 53",
-    "Google Apps",
-    "Google Maps",
     "Google Analytics",
 
+    "Atom",
     "Sublime",
     "Redmine",
     "Hubspot",
@@ -341,23 +534,50 @@
     "Mailgun",
 
     "npm",
+    "Asana",
+    "Slack",
+    "UberConference",
+    "Sympli",
+    "Zeplin",
+    "Skype"
+  ],
+  "skillsFamiliar": [
+    "Symfony2",
+
+    "Shopify",
+    "Shopify Partner",
+    "Amazon Payments",
+    "miva",
+    "Alipay",
+
+    "NginX",
+    "Apache",
+    "Rackspace",
+
+    "Amazon EC2",
+    "Amazon RDS",
+    "Amazon Route 53",
+    "Google Apps",
+    "Google Maps",
+
     "PingDom",
     "SalesForce",
     "WeChat",
     "InVision",
-
-    "Asana",
-    "Slack",
-    "Sympli",
-    "Zeplin",
     "Xtensio",
-
     "ProcessOn",
     "InstaGantt",
     "Hackpad",
     "Jell",
     "Waveapp",
     "Skype"
+  ],
+  "skillsLearning": [
+    "Blockchain",
+    "ElectronJS",
+    "Python",
+    "PyCharm",
+    "Anaconda"
   ],
   "actions": [{
       "name": "Mail",

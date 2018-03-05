@@ -12,6 +12,7 @@ import Tooltip from 'material-ui/Tooltip';
 import Star from 'material-ui-icons/Star';
 
 import locale from '../../../assets/locale/en_us';
+import GenerateSkillsList from './GenerateSkillsList'
 
 const styles = theme => ( {
   skillImg: {
@@ -26,24 +27,25 @@ const SkillsBreakdown = ( props ) => {
   const c = { ...props.c,
     ...props.classes
   };
-
-  const list = locale.skillsFull.map( ( d, key ) => (
-    <LazyLoad key={key} className={c.skillImg}>
-      <Tooltip title={d} placement="bottom">
-        <img src={cloudinary.url(`tools/${d.replace(/\s+/g, '-').toLowerCase()}.png`, {quality: 50, width: 48, crop: "scale"})} alt={d} />
-      </Tooltip>
-    </LazyLoad> ) );
-
   return (
-    <Grid item xs={12}>
+    <Grid item sm={12}>
       <Grid container className={c.container} spacing={0}>
-        <Grid item xs={12}>
+        <Grid item sm={12}>
           <Typography variant="title"><Star className={c.iconLarge} />
-            {locale.skillsFull.length}&nbsp;Languages, Tools, and The Kitchen Sink
+            {locale.skillsExperienced.length+locale.skillsFamiliar.length+locale.skillsLearning.length}&nbsp;Languages, Tools, and The Kitchen Sink
           </Typography>
         </Grid>
-        <Grid item xs={12}>
-          {list}
+        <Grid item sm={4}>
+          <Typography variant="body1">Experienced</Typography>
+          <GenerateSkillsList data={locale.skillsExperienced} />
+        </Grid>
+        <Grid item sm={4}>
+          <Typography variant="body1">Familiar</Typography>
+          <GenerateSkillsList data={locale.skillsFamiliar} />
+        </Grid>
+        <Grid item sm={4}>
+          <Typography variant="body1">Learning</Typography>
+          <GenerateSkillsList data={locale.skillsLearning} />
         </Grid>
       </Grid>
     </Grid> );
