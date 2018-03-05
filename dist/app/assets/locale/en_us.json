@@ -1,0 +1,375 @@
+{
+  "badges": [{
+      "tool": "Travis-CI",
+      "link": "https://travis-ci.org/",
+      "image": "https://img.shields.io/travis/natthanhamilton/natthan-io.svg?style=flat"
+    },
+    {
+      "tool": "AppVeyor",
+      "link": "https://ci.appveyor.com/",
+      "image": "https://img.shields.io/appveyor/ci/natthanhamilton/natthan-io.svg?style=flat"
+    },
+    {
+      "tool": "David-DM",
+      "link": "https://david-dm.org/natthanhamilton/natthan-io",
+      "image": "https://img.shields.io/david/natthanhamilton/natthan-io.svg?style=flat"
+    },
+    {
+      "tool": "David-DM",
+      "link": "https://david-dm.org/natthanhamilton/natthan-io?type=dev",
+      "image": "https://img.shields.io/david/dev/natthanhamilton/natthan-io.svg?style=flat"
+    },
+    {
+      "tool": "Code Coverage",
+      "link": "https://codecov.io/",
+      "image": "https://img.shields.io/codecov/c/github/natthanhamilton/natthan-io.svg?style=flat"
+    },
+    {
+      "tool": "NSP",
+      "link": "https://nodesecurity.io/",
+      "image": "https://nodesecurity.io/orgs/natthan-io/projects/78b0cd49-181f-45ac-bdf0-366dac1a0951/badge"
+    }
+  ],
+  "site": {
+    "author": "Natthan Hamilton",
+    "title": "Natthan.io"
+  },
+  "seo": {
+    "og": {
+      "title": "Natthan.io",
+      "description": "Digital Home of Natthan Hamilton, Business Driven Developer",
+      "url": "http://natthan.io",
+      "image": "http://res.cloudinary.com/natthanhamilton/image/upload/v1519557083/natthan-io.jpg"
+    },
+    "twitter": {
+      "card": "summary",
+      "cretor": "@natthanhamilton",
+      "site": "@natthanhamilton",
+      "description": "Digital Home of Natthan Hamilton, Business Driven Developer",
+      "title": "Natthan.io",
+      "image": "http://res.cloudinary.com/natthanhamilton/image/upload/v1519557083/natthan-io.jpg"
+    }
+  },
+  "skills": [{
+      "name": "ReactJS",
+      "experience": "2 Years",
+      "percent": 0
+    }, {
+      "name": "React Native",
+      "experience": "Learning",
+      "percent": 0
+    },
+    {
+      "name": "NodeJS",
+      "experience": "2 Years",
+      "percent": 0
+    },
+    {
+      "name": "ExpressJS",
+      "experience": "2 Years",
+      "percent": 0
+    },
+    {
+      "name": "ElectronJS",
+      "experience": "Learning",
+      "percent": 0
+    },
+    {
+      "name": "Javascript/ES6",
+      "experience": "4 Years",
+      "percent": 0
+    },
+    {
+      "name": "jQuery",
+      "experience": "4 Years",
+      "percent": 0
+    },
+    {
+      "name": "JSON",
+      "experience": "4 Years",
+      "percent": 0
+    },
+    {
+      "name": "AJAX",
+      "experience": "4 Years",
+      "percent": 0
+    },
+    {
+      "name": "PHP",
+      "experience": "4 Years",
+      "percent": 0
+    },
+    {
+      "name": "Python",
+      "experience": "Learning",
+      "percent": 0
+    },
+    {
+      "name": "MongoDB",
+      "experience": "2 Years",
+      "percent": 0
+    },
+    {
+      "name": "MySQL",
+      "experience": "4 Years",
+      "percent": 0
+    },
+    {
+      "name": "Bootstrap",
+      "experience": "4 Years",
+      "percent": 0
+    },
+    {
+      "name": "Material Design",
+      "experience": "1 Year",
+      "percent": 0
+    },
+    {
+      "name": "HTML5",
+      "experience": "4 Years",
+      "percent": 0
+    },
+    {
+      "name": "CSS3",
+      "experience": "4 Years",
+      "percent": 0
+    },
+    {
+      "name": "Sass",
+      "experience": "2 Years",
+      "percent": 0
+    },
+    {
+      "name": "LESS",
+      "experience": "4 Years",
+      "percent": 0
+    },
+    {
+      "name": "Laravel",
+      "experience": "2 Years",
+      "percent": 0
+    },
+    {
+      "name": "Lumen",
+      "experience": "2 Years",
+      "percent": 0
+    },
+    {
+      "name": "Symfony2",
+      "experience": "2 Years",
+      "percent": 0
+    },
+    {
+      "name": "Git",
+      "experience": "4 Years",
+      "percent": 0
+    },
+    {
+      "name": "Webpack",
+      "experience": "2 Years",
+      "percent": 0
+    },
+    {
+      "name": "Wordpress",
+      "experience": "4 Years",
+      "percent": 0
+    }
+  ],
+  "work": [{
+      "company": "Prints Charming",
+      "title": "Consultant Engineer",
+      "location": "Remote",
+      "started": "March 2017",
+      "ended": "February 2018",
+      "situation": "Prints Charming is a small business around for many years running manual operations, and suddenly experienced growth resulting in bottlenecks and crippling effects on their small business",
+      "task": "",
+      "activity": [
+        "Innovated a ReactJS based wholesale commerce application to replace phone and email order taking, allowing a retailer, sales rep, or staff to place orders for a retailer, real time product builder, innovative checkout with real time master cartons, order history tracking, administrative capabilities to manage the business and operations, and dashboard analytics for awareness and drill into the business’ health",
+        "Focused heavily on salvaging data from existing internal application running MySQL, identifying what the business needs to know, what is currently available in the data, and then extracting into MongoDB and expanding data points to collect from my application"
+      ],
+      "result": "Designed, developed, tested, deployed, maintained and improved a brand new wholesale commerce application for the sales side of their business revolutionalizing it from a manual operation of email and phone to a ReactJS, data driven solution unlocking their revenue generating potential",
+      "skills": ""
+    },
+    {
+      "company": "Picture It On Canvas ",
+      "title": "Engineer",
+      "location": "San Diego",
+      "started": "October 2016",
+      "ended": "March 2017",
+      "situation": "Selected Picture It On Canvas (PIOC) out of countless companies for fit and freedom to create. Came into a custom Symfony2 environment used on both server and client. Client side was a manual CMS and main feature of the application was a custom image upload product builder. My tenure at PIOC abruptly ended when the parent company Zazzle absorbed the business and dissolved all staff",
+      "task": "",
+      "activity": [
+        "Ability to very quickly familiarize with new environments and generate results. Hired on with less than a month to peak season, innovated core UX improvements",
+        "Identified one of the biggest manual operational bottlenecks in their business and innovated a new client facing collage product builder tying into and carefully modifying the server side processing application. The application resulted in their design team going from working around the clock in the holiday season to designers being sent to help in production and one designer being let go due to lack of work. Praised by the original developer for being the first one to understand and enhance his application"
+      ],
+      "result": "",
+      "skills": ""
+    },
+    {
+      "company": "Coolpad",
+      "title": "Consultant Engineer",
+      "location": "Remote",
+      "started": "April 2016",
+      "ended": "September 2016",
+      "situation": "Brought in to evaluate existing web solution built on KeystoneJS. Identified unmet needs across the business beyond the known desire to have their own e-commerce store front. On a limited budget and short timetable, a web solution needed to deliver e-commerce, help center, b2b whole sale capability, CMS. At a business level, understood that Coolpad was 4 years into the U.S. market and still learning who they were in a b2c aspect and needed a flexible solution to easily grow and change as they do",
+      "task": "",
+      "activity": [
+        "Selected WordPress for its extensive flexibility, established a multi-site structure to allow easy subdomain expansion with minimal conflict",
+        "Custom built theme for the main site targeting sub-second performance focused on corporate feel and custom built product pages unique to each new product launch"
+      ],
+      "result": "",
+      "skills": ""
+    }
+  ],
+  "portfolio": [{
+      "name": "Prints Charming",
+      "website": "http://oms.printscharming.biz/",
+      "summary": "ReactJS custom wholesale commerce application",
+      "content": "Prints Charming is a built from the ground up custom solution for a wholesale company that has been in business for decades. The company has been running manually processes across the board, and through recent growth they have been experiencing, decided to seek a solution to their growing pains. After evaluating their business and their perceived endless problems, the project focused on attacking their problems at the beginning of their business cycle. They traditionally receive orders from customers via email or phone, which then begins a long email process. By developing a custom wholesale commerce application that integrated into, and rebuilt in a lot of cases, their existing business, Prints Charming experienced even greater growth now with an automated application that their customers can order for themselves, allowing for employee time to be spent more strategically. Existing retailers were ordering multiple times more product than they normally would due to a visually driven buying experience where they were exposed to products they did not know existed. The byproduct of choosing this area to attack was the direct need to structure their business and data appropriately so that it was even possible to have an automated system. Streamlining their business in such a way is allowing for tremendous growth at a fraction of the cost previously needed in manual labor",
+      "image": "pc"
+    },
+    {
+      "name": "Coolpad",
+      "website": "https://coolpad.us/",
+      "summary": "",
+      "image": "coolpad"
+    },
+    {
+      "name": "Picture It On Canvas",
+      "website": "http://pictureitoncanvas.com/",
+      "summary": "",
+      "image": "pioc"
+    },
+    {
+      "name": "Abroadeasy",
+      "website": null,
+      "summary": "",
+      "image": "ae"
+    },
+    {
+      "name": "Huian Garden",
+      "website": null,
+      "summary": "",
+      "image": "huian"
+    },
+    {
+      "name": "Creatique",
+      "website": null,
+      "summary": "",
+      "image": "creatique"
+    }
+  ],
+  "skillsFull": [
+    "Blockchain",
+
+    "ReactJS",
+    "React Native",
+    "Redux",
+    "React Router",
+
+    "NodeJS",
+    "ExpressJS",
+    "ElectronJS",
+    "ES6",
+    "JSX",
+
+    "Python",
+    "PyCharm",
+    "Anaconda",
+
+    "Webpack",
+    "ESLint",
+    "Jest",
+    "SentryIO",
+    "TravisCI",
+    "NSP",
+    "CodeCov",
+    "David-DM",
+    "AppVeyor",
+
+    "MongoDB",
+    "MongooseJS",
+    "MySQL",
+
+    "Material Design",
+    "MUI",
+    "Bootstrap",
+
+    "GIT",
+    "GitHub",
+
+    "PHP",
+    "phpStorm",
+    "Laravel",
+    "Lumen",
+    "Symfony2",
+    "CodeIgniter",
+
+    "HTML5",
+    "JavaScript",
+    "jQuery",
+    "JSON",
+    "AJAX",
+    "CSS3",
+    "LESS",
+    "Sass",
+
+    "WordPress",
+    "WooCommerce",
+    "Flatsome",
+
+    "Shopify",
+    "Shopify Partner",
+    "Stripe",
+    "Alipay",
+
+    "NginX",
+    "Apache",
+
+    "Amazon EC2",
+    "Amazon RDS",
+    "Amazon Route 53",
+    "Google Apps",
+    "Google Maps",
+    "Google Analytics",
+
+    "Sublime",
+    "Redmine",
+    "Hubspot",
+    "Cloudinary",
+    "MailChimp",
+    "Mailgun",
+
+    "npm",
+    "PingDom",
+    "SalesForce",
+    "WeChat",
+    "InVision",
+
+    "Asana",
+    "Slack",
+    "Sympli",
+    "Zeplin",
+    "Xtensio",
+
+    "ProcessOn",
+    "InstaGantt",
+    "Hackpad",
+    "Jell",
+    "Waveapp",
+    "Skype"
+  ],
+  "actions": [{
+      "name": "Mail",
+      "url": "mailto:natthanhamilton@gmail.com"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/natthanhamilton/"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/natthanhamilton/"
+    }
+  ]
+}
