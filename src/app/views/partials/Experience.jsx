@@ -11,43 +11,56 @@ import Work from 'material-ui-icons/Work';
 
 import locale from '../../../assets/locale/en_us';
 
-const Experience = (props) => {
+const Experience = ( props ) => {
   const c = props.c;
 
-    const res = locale.work.map((d, i) => {
-      const description = d.description.map((content, ii) => (<li key={ii}>
-        <Typography className={c.padding} variant="body1">{content}</Typography>
-      </li>));
+  const res = locale.work.map( ( d, i ) => {
+    const description = d.activity.map( ( content, ii ) => ( <li key={ii}>
+      <Typography className={c.padding} variant="body1">{content}</Typography>
+    </li> ) );
 
-      return (<Grid key={i} item xs={12} className={c.section}>
-        {i > 0 && (<Divider className={c.divider} />)}
-        <Typography variant="title">{d.title}</Typography>
-        <Typography className={c.padding} variant="body2"><LocationOn className={c.iconSmall} /> {d.location}
-          &nbsp;&nbsp;
-          <DateRange className={c.iconSmall} /> {d.started}&nbsp;-&nbsp;{d.ended}
-        </Typography>
-        <Typography className={c.padding} variant="body2">
-          <i>{d.summary}</i>
-        </Typography>
-        <ul className={c.ul}>{description}</ul>
-      </Grid>);
-    });
-    
     return (
-      <Grid container className={c.container} spacing={0} alignItems="flex-start" direction="row" justify="flex-start">
-        <Grid item xs={12}>
-          <Typography variant="title"><Work className={c.iconLarge} />
-                      &nbsp;Work Experience
-          </Typography>
+      <div key={i}>
+        <Grid container spacing={0}>
+          {i > 0 && (
+          <Grid item xs={12}>
+            <Divider className={c.divider} />
+          </Grid>
+        )}
+          <Grid item xs={12} className={c.section}>
+            <Typography variant="title">{d.title}</Typography>
+            <Typography className={c.padding} variant="body2"><LocationOn className={c.iconSmall} /> {d.location}
+          &nbsp;&nbsp;
+              <DateRange className={c.iconSmall} /> {d.started}&nbsp;-&nbsp;{d.ended}
+            </Typography>
+            <Typography className={c.padding} variant="body2"><strong>SITUATION</strong></Typography>
+            <Typography className={c.padding} variant="body1">{d.situation}</Typography>
+            <Typography className={c.padding} variant="body2"><strong>TASK</strong></Typography>
+            <Typography className={c.padding} variant="body1">{d.task}</Typography>
+            <Typography className={c.padding} variant="body2"><strong>ACTIVITY</strong></Typography>
+            <ul className={c.ul}>{description}</ul>
+            <Typography className={c.padding} variant="body2"><strong>RESULT</strong></Typography>
+            <Typography className={c.padding} variant="body1">{d.result}</Typography>
+          </Grid>
         </Grid>
-        {res}
-      </Grid>);
-  }
+      </div> );
+  } );
 
-  Experience.propTypes = {
-    c: PropTypes.object
-  }
-  Experience.defaultProps = {
-    c: {}
-  };
+  return (
+    <Grid container className={c.container} spacing={0}>
+      <Grid item xs={12}>
+        <Typography variant="title"><span><Work className={c.iconLarge} /></span>
+                      &nbsp;Work Experience
+        </Typography>
+      </Grid>
+      <Grid item xs={12}>{res}</Grid>
+    </Grid> );
+}
+
+Experience.propTypes = {
+  c: PropTypes.object
+}
+Experience.defaultProps = {
+  c: {}
+};
 export default Experience;

@@ -1,8 +1,9 @@
 {
   "parser": "babel-eslint",
-    "plugins": [
-        "react"
-    ],
+  "plugins": [
+      "react",
+      "security"
+  ],
   "parserOptions": {
       "ecmaVersion": 6,
       "sourceType": "module",
@@ -20,12 +21,14 @@
   },
     "extends": [
     "airbnb",
-        "eslint:recommended",
-        "plugin:react/recommended"
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:security/recommended"
     ],
     "rules": {
       "no-unused-vars": 0,
       "max-len": [1, 120, 2, {ignoreComments: true}],
-      "no-array-index-key": "off"
+      "no-array-index-key": "off",
+      "import/extensions": "off"
     },
  }

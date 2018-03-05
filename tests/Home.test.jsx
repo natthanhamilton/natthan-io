@@ -41,7 +41,6 @@ describe("homeome", () => {
   });
 
   it("always renders a div", () => {
-    //expect(process.env.CLOUDINARY_USER).toBe('natthanhamilton');
     const divs = home().find("div");
     expect(divs.length).toBeGreaterThan(0);
   });

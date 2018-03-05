@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {withStyles} from 'material-ui/styles';
+import {
+  withStyles
+} from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
 import Button from 'material-ui/Button';
@@ -10,10 +12,20 @@ import Snackbar from 'material-ui/Snackbar';
 
 import GroupWork from 'material-ui-icons/GroupWork';
 
-import {Layout, Portfolio, PortfolioModal, SkillsBreakdown, Skills, Experience, Person, About, Education, Footer} from './partials';
+import {
+  Layout,
+  Portfolio,
+  SkillsBreakdown,
+  Skills,
+  Experience,
+  Person,
+  About,
+  Education,
+  Footer
+} from './partials';
 import locale from '../../assets/locale/en_us';
 
-const styles = theme => ({
+const styles = theme => ( {
   root: {
     flexGrow: 1,
     margin: 0,
@@ -36,7 +48,7 @@ const styles = theme => ({
     height: 10
   },
   section: {
-    paddingLeft: '40px !important'
+    padding: '10px 0 10px 40px !important'
   },
   padding: {
     paddingTop: 2.5,
@@ -44,34 +56,37 @@ const styles = theme => ({
   },
   snackbar: {
     color: '#fff'
+  },
+  lazyLoad: {
+    display: 'inline-block'
   }
-});
+} );
 
-const HomeView = (props) => {
+const HomeView = ( props ) => {
   const c = props.classes;
 
-    return (<Layout>
-      <Paper>
-        <Grid container className={c.root} spacing={0} alignItems="flex-start" direction="row" justify="flex-start">
-          <Grid item xs={12} sm={5}>
-            <Person c={c} />
-            <About c={c} />
-            <Skills c={c} />
-          </Grid>
-          <Grid item xs={12} sm={7}>
-            <Experience c={c} />
-            <Education c={c} />
-          </Grid>
-
-          <Grid item xs={12}>
-            <Portfolio c={c} />
-          </Grid>
-
-          <SkillsBreakdown c={c} />
+  return ( <Layout>
+    <Paper>
+      <Grid container className={c.root} spacing={0}>
+        <Grid item xs={12} sm={5}>
+          <Person c={c} />
+          <About c={c} />
+          <Skills c={c} />
         </Grid>
-      </Paper>
-      <Footer />
-      {/*}
+        <Grid item xs={12} sm={7}>
+          <Experience c={c} />
+          <Education c={c} />
+        </Grid>
+
+        <Grid item xs={12}>
+          <Portfolio c={c} />
+        </Grid>
+
+        <SkillsBreakdown c={c} />
+      </Grid>
+    </Paper>
+    <Footer c={c} />
+    {/*}
       <Snackbar
         anchorOrigin={{
           vertical: 'bottom',
@@ -84,8 +99,7 @@ const HomeView = (props) => {
         action={<Button color="primary" onClick={closeSnackbar()}>Close</Button>}
       />
       */}
-      <PortfolioModal />
-    </Layout>);
+  </Layout> );
 }
 
 HomeView.propTypes = {
@@ -94,4 +108,4 @@ HomeView.propTypes = {
 HomeView.defaultProps = {
   classes: {}
 };
-export default withStyles(styles)(HomeView);
+export default withStyles( styles )( HomeView );

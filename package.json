@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:prod": "./node_modules/.bin/webpack --config webpack.config.js --progress --colors  --env prod",
-    "build:stage": "./node_modules/.bin/webpack --config webpack.config.js --progress --colors  --env stage",
+    "start": "babel-node --presets env ./dist/server.js",
+    "build:client": "webpack --progress --colors --env production",
+    "build:server": "webpack --config webpack.server.config.js --progress --colors --env production",
     "dev": "webpack-dev-server --progress --colors --env development",
     "test": "jest && codecov"
   },
@@ -13,11 +14,19 @@
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
   },
-  "keywords": [],
+  "keywords": [
+    "portfolio-website",
+    "portfolio-website",
+    "personal-site",
+    "reactjs"
+  ],
   "dependencies": {
     "cloudinary": "^1.10.0",
+    "compression": "^1.7.2",
     "express": "^4.16.2",
+    "express-static-gzip": "^0.3.2",
     "ip": "^1.1.5",
+    "loadable-components": "^1.1.1",
     "material-ui": "^1.0.0-beta.35",
     "material-ui-icons": "^1.0.0-beta.35",
     "prop-types": "^15.6.1",
@@ -26,6 +35,7 @@
     "react-helmet": "^5.2.0",
     "react-hot-loader": "^4.0.0",
     "react-image-smooth-loading": "^2.0.0",
+    "react-lazy-load": "^3.0.13",
     "react-redux": "^5.0.7",
     "react-redux-i18n": "^1.9.2",
     "react-router": "^4.2.0",
@@ -38,6 +48,7 @@
     "styled-components": "^3.1.6"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.1",
@@ -46,16 +57,17 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
+    "brotli-webpack-plugin": "^0.5.0",
     "clean-webpack-plugin": "^0.1.18",
     "codecov": "^3.0.0",
     "compression-webpack-plugin": "^1.1.10",
-    "copy-webpack-plugin": "^4.4.2",
+    "copy-webpack-plugin": "^4.5.0",
     "coveralls": "^3.0.0",
     "css-loader": "^0.28.10",
     "dotenv-webpack": "^1.5.5",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^4.18.1",
+    "eslint": "^4.18.2",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-import": "^2.9.0",
@@ -63,20 +75,21 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^3.0.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "has": "^1.0.1",
-    "html-webpack-plugin": "github:webpack-contrib/html-webpack-plugin",
+    "html-webpack-plugin": "^3.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.2",
     "jest-webpack": "^0.4.0",
     "node-sass": "^4.7.2",
     "regenerator-runtime": "^0.11.1",
-    "sass-loader": "^6.0.6",
+    "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
     "webpack": "^4.0.1",
-    "webpack-cli": "^2.0.9",
-    "webpack-dev-server": "^3.1.0"
-  },
-  "html-webpack-plugin": "webpack-contrib/html-webpack-plugin"
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0",
+    "workbox-webpack-plugin": "^3.0.0-alpha.5"
+  }
 }

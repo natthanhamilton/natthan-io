@@ -11,11 +11,11 @@ import School from 'material-ui-icons/School';
 
 import locale from '../../../assets/locale/en_us';
 
-const Education = (props) => {
+const Education = ( props ) => {
   const c = props.c;
 
-    return (
-      <Grid container className={c.container} spacing={0} alignItems="flex-start" direction="row" justify="flex-start">
+  return (
+    <Grid container className={c.container} spacing={0}>
 
         <Grid item xs={12}>
           <Typography variant="title"><School className={c.iconLarge} />
@@ -31,13 +31,13 @@ const Education = (props) => {
           </Typography>
           <Typography variant="body1">Bachelor's of Science, Business Administration</Typography>
         </Grid>
-      </Grid>);
-  }
+      </Grid> );
+}
 
-  Education.propTypes = {
-    c: PropTypes.object
-  }
-  Education.defaultProps = {
-    c: {}
-  };
+Education.propTypes = {
+  c: PropTypes.object
+}
+Education.defaultProps = {
+  c: {}
+};
 export default Education;

@@ -1,21 +1,20 @@
-import Layout from './Layout'
-import Portfolio from './Portfolio'
-import PortfolioModal from './PortfolioModal'
-import SkillsBreakdown from './SkillsBreakdown'
-import Skills from './Skills'
-import Experience from './Experience'
-import Education from './Education'
-import Person from './Person'
-import About from './About'
-import Footer from './Footer'
+import loadable from 'loadable-components'
 
-export {Layout}
-export {Portfolio}
-export {PortfolioModal}
-export {SkillsBreakdown}
-export {Skills}
-export {Experience}
-export {Education}
-export {Person}
-export {About}
-export {Footer}
+export const Layout = loadable( () =>
+  import ( './Layout' ) )
+export const Portfolio = loadable( () =>
+  import ( './Portfolio' ) )
+export const SkillsBreakdown = loadable( () =>
+  import ( './SkillsBreakdown' ) )
+export const Skills = loadable( () =>
+  import ( './Skills' ) )
+export const Experience = loadable( () =>
+  import ( './Experience' ) )
+export const Person = loadable( () =>
+  import ( './Person' ) )
+export const About = loadable( () =>
+  import ( './About' ) )
+export const Education = loadable( () =>
+  import ( './Education' ) )
+export const Footer = loadable( () =>
+  import ( './Footer' ) )

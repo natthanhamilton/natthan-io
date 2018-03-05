@@ -1,11 +1,8 @@
-export const PORTFOLIO_UPDATE = 'PORTFOLIO_UPDATE';
-export const PORTFOLIO_CLOSE = 'PORTFOLIO_CLOSE';
+export const USER_UPDATE = 'USER_UPDATE';
 
-export function updatePortfolio(d) {
-  console.log('--getting actiom')
-  console.log(d)
-  return { type: PORTFOLIO_UPDATE, payload: d }
-}
-export function closePortfolio() {
-  return { type: PORTFOLIO_CLOSE }
+export function updateUser( d ) {
+  return {
+    type: USER_UPDATE,
+    payload: d
+  }
 }

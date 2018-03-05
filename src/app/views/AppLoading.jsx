@@ -1,9 +1,11 @@
 import React from 'react';
 
 import Grid from 'material-ui/Grid';
-import {CircularProgress} from 'material-ui/Progress';
+import {
+  CircularProgress
+} from 'material-ui/Progress';
 
-const AppLoading = (
+const AppLoading = () => (
   <Grid
     container
     alignItems='center'

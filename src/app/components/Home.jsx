@@ -1,7 +1,11 @@
-import React, {Component} from 'react'
-import {HomeView} from '../views'
+import React, {
+  Component
+} from 'react'
+import {
+  HomeView
+} from '../views'
 
 const Home = () => {
-    return (<HomeView />)
-  }
+  return ( <HomeView /> )
+}
 export default Home

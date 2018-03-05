@@ -11,32 +11,32 @@ import Email from 'material-ui-icons/Email';
 
 import locale from '../../../assets/locale/en_us';
 
-const Person = (props) => {
+const Person = ( props ) => {
   const c = props.c;
-return (
-  <Grid container className={c.container} spacing={24} alignItems="flex-start" direction="row" justify="flex-start">
-    <Grid item xs={12}>
-      <Typography variant="title"><AccountCircle className={c.iconLarge} />
+  return (
+    <Grid container className={c.container} spacing={24}>
+      <Grid item xs={12}>
+        <Typography variant="title"><AccountCircle className={c.iconLarge} />
           &nbsp;About Me
-      </Typography>
-    </Grid>
-    <Grid item xs={12}>
-      <Typography variant="body1">Blending strong business experience with technical talents empowers me to think differently, leading to creative problem solving and aggressively fast learning. With tea direct from the source in China, sleep is optional.</Typography>
-    </Grid>
-    <Grid item xs={12}>
-      <Typography variant="title"><Phone className={c.iconLarge} />
+        </Typography>
+      </Grid>
+      <Grid item xs={12}>
+        <Typography variant="body1">Blending strong business experience with technical talents empowers me to think differently, leading to creative problem solving and aggressively fast learning. With tea direct from the source in China, sleep is optional.</Typography>
+      </Grid>
+      <Grid item xs={12}>
+        <Typography variant="title"><Phone className={c.iconLarge} />
           &nbsp;Contact Me
-      </Typography>
-    </Grid>
-    <Grid item xs={12}>
-      <Typography variant="body1"><LocationOn className={c.iconSmall} />
+        </Typography>
+      </Grid>
+      <Grid item xs={12}>
+        <Typography variant="body1"><LocationOn className={c.iconSmall} />
           &nbsp;San Diego, California
-      </Typography>
-      <Typography variant="body1"><Email className={c.iconSmall} />
+        </Typography>
+        <Typography variant="body1"><Email className={c.iconSmall} />
           &nbsp;NatthanHamilton@gmail.com
-      </Typography>
-    </Grid>
-  </Grid>);
+        </Typography>
+      </Grid>
+    </Grid> );
 }
 
 

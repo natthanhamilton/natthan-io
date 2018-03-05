@@ -1,29 +1,50 @@
-import {createStore, combineReducers, applyMiddleware, compose} from 'redux'
+import {
+  createStore,
+  combineReducers,
+  applyMiddleware,
+  compose
+} from 'redux'
 import thunk from 'redux-thunk'
-import {persistStore, persistCombineReducers} from 'redux-persist'
+import {
+  persistStore,
+  persistReducer
+} from 'redux-persist'
 import hardSet from 'redux-persist/lib/stateReconciler/hardSet'
 import storage from 'redux-persist/lib/storage'
 import promiseMiddleware from 'redux-promise-middleware';
 
-import portfolioReducer from './redux/reducers'
+import userReducer from './redux/reducers'
 
 const config = {
   key: 'root',
   storage,
-  stateReconciler: hardSet,
-  debug: true
+  stateReconciler: hardSet
 }
-const reducer = persistCombineReducers(config, {
-  portfolio: portfolioReducer
-})
+
+const rootReducer = combineReducers( {
+  user: userReducer
+} )
+
+const persistedReducer = persistReducer( config, rootReducer )
 
 // Un-persisted store for testing purposes
-export const JestStore = createStore(combineReducers({
-  portfolio: portfolioReducer
-}), compose(applyMiddleware(thunk)))
+export const JestStore = createStore( combineReducers( {
+  user: userReducer
+} ), compose( applyMiddleware( thunk ) ) )
 
 // Persisted Store
-export const store = createStore(reducer, undefined, compose(applyMiddleware(thunk, promiseMiddleware())))
+const store = createStore( persistedReducer, undefined, compose( applyMiddleware( thunk, promiseMiddleware() ) ) )
 
-// Persister for app.jsx
-export const persister = persistStore(store)
+const persistor = persistStore( store )
+
+export {
+  persistor,
+  store
+};
+
+export default () => {
+  return {
+    store,
+    persistor
+  }
+}
