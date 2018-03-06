@@ -174,4 +174,4 @@ Portfolio.defaultProps = {
   c: {}
 };
 
-export default withStyles( styles )( translate( 'translations' )( Portfolio ) );
+export default withStyles( styles )( translate()( Portfolio ) );

@@ -71,4 +71,4 @@ Experience.defaultProps = {
   c: {}
 };
 
-export default translate( 'translations' )( Experience );
+export default translate()( Experience );

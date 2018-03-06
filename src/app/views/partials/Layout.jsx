@@ -44,21 +44,21 @@ const Layout = ( props ) => {
 
   return ( <div>
     <Helmet>
-      <title>{t(`site.title`)}</title>
+      <title>{t('site.title')}</title>
       <meta name="description" content={skillsExperienced+skillsFamiliar+skillsLearning} />
-      <meta name="author" content={t(`site.author`)} />
+      <meta name="author" content={t('site.author')} />
 
-      <meta property="og:title" content={t(`seo.og.title`)} />
-      <meta property="og:description" content={t(`seo.og.description`)} />
-      <meta property="og:url" content={t(`seo.og.url`)} />
-      <meta property="og:image" content={t(`seo.og.image`)} />
+      <meta property="og:title" content={t('seo.og.title')} />
+      <meta property="og:description" content={t('seo.og.description')} />
+      <meta property="og:url" content={t('seo.og.url')} />
+      <meta property="og:image" content={t('seo.og.image')} />
 
-      <meta name="twitter:card" content={t(`seo.twitter.card`)} />
-      <meta name="twitter:site" content={t(`seo.twitter.site`)} />
-      <meta name="twitter:creator" content={t(`seo.twitter.creator`)} />
-      <meta name="twitter:title" content={t(`seo.twitter.title`)} />
-      <meta name="twitter:description" content={t(`seo.twitter.description`)} />
-      <meta name="twitter:image" content={t(`seo.twitter.image`)} />
+      <meta name="twitter:card" content={t('seo.twitter.card')} />
+      <meta name="twitter:site" content={t('seo.twitter.site')} />
+      <meta name="twitter:creator" content={t('seo.twitter.creator')} />
+      <meta name="twitter:title" content={t('seo.twitter.title')} />
+      <meta name="twitter:description" content={t('seo.twitter.description')} />
+      <meta name="twitter:image" content={t('seo.twitter.image')} />
     </Helmet>
     {/*}<LoadingBar className={c.loadingBar} showFastActions="showFastActions" updateTime={200} maxProgress={90} />*/}
     <AppBar position="fixed">
@@ -80,4 +80,4 @@ Layout.defaultProps = {
   classes: {}
 };
 
-export default withStyles( styles )( translate( 'translations' )( Layout ) );
+export default withStyles( styles )( translate()( Layout ) );

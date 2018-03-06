@@ -47,4 +47,4 @@ Education.defaultProps = {
   c: {}
 };
 
-export default translate( 'translations' )( Education );
+export default translate()( Education );

@@ -62,4 +62,4 @@ Skills.defaultProps = {
   c: {}
 };
 
-export default withStyles( styles )( translate( 'translations' )( Skills ) );
+export default withStyles( styles )( translate()( Skills ) );

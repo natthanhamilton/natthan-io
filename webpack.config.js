@@ -110,12 +110,6 @@ module.exports = ( env ) => {
     //externals: ["react"],
     stats: "errors-only",
     plugins: [
-
-      // Automatically build in sw.js
-      new GenerateSW( {
-        clientsClaim: true,
-        skipWaiting: true
-      } ),
       // Environment variables for the app
       new Dotenv(),
       // Inject the build environment
@@ -164,12 +158,18 @@ module.exports = ( env ) => {
         threshold: 10240,
         minRatio: 0.8
       } ),
+
  new BrotliPlugin( {
         asset: '[path].br[query]',
         test: /\.js$|\.css$|\.html$/,
         threshold: 10240,
         minRatio: 0.8
-      } )
+      } ),
+
+            // Automatically build in sw.js
+            new GenerateSW( {
+        swSrc: APP_DIR + '/sw.jsx',
+      } ),
     ]
   }
 };

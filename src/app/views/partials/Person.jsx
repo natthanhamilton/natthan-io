@@ -81,4 +81,4 @@ Person.defaultProps = {
   c: {}
 };
 
-export default withStyles( styles )( translate( 'translations' )( Person ) );
+export default withStyles( styles )( translate()( Person ) );

@@ -57,4 +57,4 @@ GenerateSkillsList.defaultProps = {
   item: null
 };
 
-export default withStyles( styles )( translate( 'translations' )( GenerateSkillsList ) );
+export default withStyles( styles )( translate()( GenerateSkillsList ) );

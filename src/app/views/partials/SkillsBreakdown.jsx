@@ -66,4 +66,4 @@ SkillsBreakdown.defaultProps = {
   c: {}
 };
 
-export default withStyles( styles )( translate( 'translations' )( SkillsBreakdown ) );
+export default withStyles( styles )( translate()( SkillsBreakdown ) );

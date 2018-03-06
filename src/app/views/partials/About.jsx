@@ -52,4 +52,4 @@ About.defaultProps = {
   c: {}
 };
 
-export default translate( 'translations' )( About );
+export default translate()( About );

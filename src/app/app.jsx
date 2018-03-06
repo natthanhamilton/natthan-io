@@ -18,12 +18,15 @@ import {
   createMuiTheme,
 } from 'material-ui/styles';
 import cloudinary from 'cloudinary'
+import {
+  I18nextProvider
+} from 'react-i18next';
 
 import {
   persistor,
   store
 } from './store';
-import './i18n';
+import i18n from './i18n';
 
 import * as components from './components';
 import {
@@ -32,7 +35,10 @@ import {
 
 if ( 'serviceWorker' in navigator ) {
   window.addEventListener( 'load', () => {
-    navigator.serviceWorker.register( '/service-worker.js' ).then( registration => {
+    navigator.serviceWorker.register( '/sw.js' ).then( registration => {
+      registration.pushManager.subscribe( {
+        userVisibleOnly: true
+      } );
       //console.log( 'SW registered: ', registration );
     } ).catch( registrationError => {
       //console.log( 'SW registration failed: ', registrationError );
@@ -50,15 +56,17 @@ const theme = createMuiTheme();
 
 const App = () => {
   return ( <MuiThemeProvider theme={theme}>
-    <Provider store={store}>
-      <PersistGate loading={<AppLoading />} persistor={persistor}>
-        <Router basename="/">
-          <Switch>
-            <Route path="/" exact component={components.Home} />
-          </Switch>
-        </Router>
-      </PersistGate>
-    </Provider>
+    <I18nextProvider i18n={i18n}>
+      <Provider store={store}>
+        <PersistGate loading={<AppLoading />} persistor={persistor}>
+          <Router basename="/">
+            <Switch>
+              <Route path="/" exact component={components.Home} />
+            </Switch>
+          </Router>
+        </PersistGate>
+      </Provider>
+    </I18nextProvider>
   </MuiThemeProvider> );
 }
 

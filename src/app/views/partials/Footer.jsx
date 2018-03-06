@@ -69,4 +69,4 @@ Footer.defaultProps = {
   c: {}
 };
 
-export default withStyles( styles )( translate( 'translations' )( Footer ) );
+export default withStyles( styles )( translate()( Footer ) );
