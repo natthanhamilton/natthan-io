@@ -62,6 +62,15 @@ const styles = theme => ( {
   },
   ul: {
     margin: 0
+  },
+  sectionTitle: {
+    borderBottom: '2px solid #3f51b5',
+    paddingBottom: '5px',
+    '& span': {
+      position: 'relative',
+      top: '4px',
+      paddingRight: '5px'
+    }
   }
 } );
 

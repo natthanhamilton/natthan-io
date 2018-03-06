@@ -42,7 +42,7 @@ const Skills = ( props ) => {
     <Grid container className={c.container} spacing={24}>
 
       <Grid item xs={12}>
-        <Typography variant="title"><Star className={c.iconLarge} />
+        <Typography className={c.sectionTitle} variant="title"><span><Star className={c.iconLarge} /></span>
           {t( `skills.title` )}
         </Typography>
       </Grid>
@@ -55,12 +55,11 @@ const Skills = ( props ) => {
 Skills.propTypes = {
   classes: PropTypes.object,
   c: PropTypes.object,
-  t: PropTypes.object
+  t: PropTypes.func.isRequired
 }
 Skills.defaultProps = {
   classes: {},
-  c: {},
-  t: {}
+  c: {}
 };
 
 export default withStyles( styles )( translate( 'translations' )( Skills ) );

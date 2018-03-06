@@ -6,7 +6,7 @@ const expressStaticGzip = require( 'express-static-gzip' );
 
 const port = process.env.PORT || 3000;
 const app = express();
-const APP_DIR = path.join( __dirname, './app' )
+const APP_DIR = __dirname + '/app'
 
 app.use( compression() )
 app.get( '*.js', expressStaticGzip( APP_DIR, {
@@ -15,8 +15,6 @@ app.get( '*.js', expressStaticGzip( APP_DIR, {
   enableBrotli: true,
 } ) );
 
-app.get( '/', function ( req, res ) {
-  res.sendFile( path.join( __dirname, './app/index.html' ) );
-} );
+app.use( express.static( APP_DIR ) );
 
 app.listen( port );

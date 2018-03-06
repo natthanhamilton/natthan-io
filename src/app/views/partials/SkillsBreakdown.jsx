@@ -33,23 +33,23 @@ const SkillsBreakdown = ( props ) => {
   const t = props.t;
 
   return (
-    <Grid item sm={12}>
+    <Grid item xs={12}>
       <Grid container className={c.container} spacing={0}>
-        <Grid item sm={12}>
-          <Typography variant="title"><Star className={c.iconLarge} />
+        <Grid item xs={12}>
+          <Typography className={c.sectionTitle} variant="title"><span><Star className={c.iconLarge} /></span>
             {locale.skillsExperienced.length+locale.skillsFamiliar.length+locale.skillsLearning.length}&nbsp;{t( `skills.breakdownTitle` )}
           </Typography>
         </Grid>
-        <Grid item sm={4}>
-          <Typography variant="body1">Experienced</Typography>
+        <Grid item xs={12} sm={4}>
+          <Typography variant="title">{t( `skills.experienced` )}</Typography>
           <GenerateSkillsList item='skillsExperienced' data={locale.skillsExperienced} />
         </Grid>
-        <Grid item sm={4}>
-          <Typography variant="body1">Familiar</Typography>
+        <Grid item xs={12} sm={4}>
+          <Typography variant="title">{t( `skills.familiar` )}</Typography>
           <GenerateSkillsList item='skillsFamiliar' data={locale.skillsFamiliar} />
         </Grid>
-        <Grid item sm={4}>
-          <Typography variant="body1">Learning</Typography>
+        <Grid item xs={12} sm={4}>
+          <Typography variant="title">{t( `skills.learning` )}</Typography>
           <GenerateSkillsList item='skillsLearning' data={locale.skillsLearning} />
         </Grid>
       </Grid>
@@ -59,12 +59,11 @@ const SkillsBreakdown = ( props ) => {
 SkillsBreakdown.propTypes = {
   classes: PropTypes.object,
   c: PropTypes.object,
-  t: PropTypes.object
+  t: PropTypes.func.isRequired
 }
 SkillsBreakdown.defaultProps = {
   classes: {},
-  c: {},
-  t: {}
+  c: {}
 };
 
 export default withStyles( styles )( translate( 'translations' )( SkillsBreakdown ) );

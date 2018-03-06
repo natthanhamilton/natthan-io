@@ -74,11 +74,10 @@ const Layout = ( props ) => {
 
 Layout.propTypes = {
   classes: PropTypes.object,
-  t: PropTypes.object
+  t: PropTypes.func.isRequired
 }
 Layout.defaultProps = {
-  classes: {},
-  t: {}
+  classes: {}
 };
 
 export default withStyles( styles )( translate( 'translations' )( Layout ) );

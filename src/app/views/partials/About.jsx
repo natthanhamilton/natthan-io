@@ -21,7 +21,7 @@ const About = ( props ) => {
   return (
     <Grid container className={c.container} spacing={24}>
       <Grid item xs={12}>
-        <Typography variant="title"><AccountCircle className={c.iconLarge} />
+        <Typography className={c.sectionTitle} variant="title"><span><AccountCircle className={c.iconLarge} /></span>
           &nbsp;{t('about.aboutTitle')}
         </Typography>
       </Grid>
@@ -29,16 +29,16 @@ const About = ( props ) => {
         <Typography variant="body1">{t('about.aboutContent')}</Typography>
       </Grid>
       <Grid item xs={12}>
-        <Typography variant="title"><Phone className={c.iconLarge} />
-          &nbsp;{t('contact.contactTitle')}
+        <Typography className={c.sectionTitle} variant="title"><span><Phone className={c.iconLarge} /></span>
+          &nbsp;{t('about.contactTitle')}
         </Typography>
       </Grid>
       <Grid item xs={12}>
         <Typography variant="body1"><LocationOn className={c.iconSmall} />
-          &nbsp;{t('contact.contactLocation')}
+          &nbsp;{t('about.contactLocation')}
         </Typography>
         <Typography variant="body1"><Email className={c.iconSmall} />
-          &nbsp;{t('contact.contactEmail')}
+          &nbsp;{t('about.contactEmail')}
         </Typography>
       </Grid>
     </Grid> );
@@ -46,11 +46,10 @@ const About = ( props ) => {
 
 About.propTypes = {
   c: PropTypes.object,
-  t: PropTypes.object
+  t: PropTypes.func.isRequired
 }
 About.defaultProps = {
-  c: {},
-  t: {}
+  c: {}
 };
 
 export default translate( 'translations' )( About );

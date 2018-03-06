@@ -62,12 +62,11 @@ const Footer = ( props ) => {
 Footer.propTypes = {
   classes: PropTypes.object,
   c: PropTypes.object,
-  t: PropTypes.object
+  t: PropTypes.func.isRequired
 }
 Footer.defaultProps = {
   classes: {},
-  c: {},
-  t: {}
+  c: {}
 };
 
 export default withStyles( styles )( translate( 'translations' )( Footer ) );

@@ -55,6 +55,17 @@ const styles = {
   cardActions: {
     textAlign: 'right',
     display: 'block'
+  },
+  listImage: {
+    position: 'relative',
+    '& div': {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundSize: 'cover !important'
+    }
   }
 };
 
@@ -77,8 +88,10 @@ class Portfolio extends Component {
     const list = () => {
       const res = locale.portfolio.list.map( ( d, i ) => ( <Grid key={i} item xs={12} sm={6}>
         <Card>
-          <LazyLoad className={c.lazyLoad} height={200}>
-            <img className={c.imgPlaceholder} src={cloudinary.url(`portfolio/${d.image}.jpg`, {height: 200, quality: "auto:good", crop: "scale"})} title={t( `portfolio.list.${i}.name` )} alt={t( `portfolio.list.${i}.name` )} />
+          <LazyLoad className={c.listImage} height={200}>
+            <div
+              style={{ background: `url(${cloudinary.url(`portfolio/${d.image}.jpg`, {height: 200, quality: "auto:good", crop: "scale"})}) 50% 50% no-repeat` }}
+            />
           </LazyLoad>
           <CardContent>
             <Typography variant="title">{t( `portfolio.list.${i}.name` )}</Typography>
@@ -136,7 +149,7 @@ class Portfolio extends Component {
     return ( <div>
       <Grid container className={c.container} spacing={0}>
         <Grid item xs={12}>
-          <Typography variant="title"><GroupWork className={c.iconLarge} />
+          <Typography className={c.sectionTitle} variant="title"><span><GroupWork className={c.iconLarge} /></span>
             {t( `portfolio.title` )}
           </Typography>
         </Grid>
@@ -154,12 +167,11 @@ class Portfolio extends Component {
 Portfolio.propTypes = {
   classes: PropTypes.object,
   c: PropTypes.object,
-  t: PropTypes.object
+  t: PropTypes.func.isRequired
 }
 Portfolio.defaultProps = {
   classes: {},
-  c: {},
-  t: {}
+  c: {}
 };
 
 export default withStyles( styles )( translate( 'translations' )( Portfolio ) );

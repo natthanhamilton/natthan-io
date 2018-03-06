@@ -1,12 +1,12 @@
 {
   "prompts": {
     "close": "Close",
-    "viewWebsite": "View Website",
-    "projectInformation": "Project Information"
+    "viewWebsite": "View Site",
+    "projectInformation": "More Info"
   },
   "person": {
     "name": "Natthan Hamilton",
-    "description": "Former long time PHP engineer all in on the cutting edge JS world.\nBusiness driven developer.\nPassionate to create beneficial solutions.\nDesign, develop, test, deploy, maintain and improve software"
+    "description": "Business driven developer.\nFormer long time PHP engineer all in on the cutting edge JS world.\nPassionate to create beneficial solutions.\nDesign, develop, test, deploy, maintain and improve software"
   },
   "about": {
     "aboutTitle": "About Me",
@@ -169,6 +169,31 @@
       "tool": "Code Style",
       "link": "",
       "image": "https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg"
+    },
+    {
+      "tool": "Lighthouse Performance",
+      "link": "",
+      "image": "https://img.shields.io/badge/Lighthouse%20Performance-39%25-brightgreen.svg"
+    },
+    {
+      "tool": "Lighthouse PWA",
+      "link": "",
+      "image": "https://img.shields.io/badge/Lighthouse%20PWA-82%25-brightgreen.svg"
+    },
+    {
+      "tool": "Lighthouse Accessibility",
+      "link": "",
+      "image": "https://img.shields.io/badge/Lighthouse%20Accessibility-100%25-brightgreen.svg"
+    },
+    {
+      "tool": "Lighthouse Practices",
+      "link": "",
+      "image": "https://img.shields.io/badge/Lighthouse%20Practices-100%25-brightgreen.svg"
+    },
+    {
+      "tool": "Lighthouse SEO",
+      "link": "",
+      "image": "https://img.shields.io/badge/Lighthouse%20SEO-100%25-brightgreen.svg"
     }
   ],
   "github": {
@@ -187,7 +212,7 @@
     },
     "twitter": {
       "card": "summary",
-      "cretor": "@natthanhamilton",
+      "creator": "@natthanhamilton",
       "site": "@natthanhamilton",
       "description": "Digital Home of Natthan Hamilton, Business Driven Developer",
       "title": "Natthan.io",
@@ -197,6 +222,9 @@
   "skills": {
     "title": "Skills Overview",
     "breakdownTitle": "Languages, Tools, and The Kitchen Sink",
+    "experienced": "Experienced",
+    "familiar": "Familiar",
+    "learning": "Learning",
     "list": [{
         "name": "ReactJS",
         "experience": "2 Years",

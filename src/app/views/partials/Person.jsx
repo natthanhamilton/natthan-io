@@ -51,13 +51,13 @@ const Person = ( props ) => {
 
   const list = locale.actions.map( ( d, i ) => (
     <a key={i} target="_new" href={d.url}>
-      <Img className={c.imgPlaceholder} src={cloudinary.url(`icons/${d.name.toLowerCase()}.png`, {width: 36, crop: "scale", secure: true})} alt={t( `actions.${i}` )} />
+      <Img className={c.imgPlaceholder} src={cloudinary.url(`icons/${d.name.toLowerCase()}.png`, {width: 36, crop: "scale", secure: true})} alt={t( `actions.${i}.name` )} title={t( `actions.${i}.name` )} />
     </a> ) );
 
   return (
     <Grid container className={c.container} spacing={24}>
       <Grid item xs={12}>
-        <Avatar alt="Natthan Hamilton" src={cloudinary.url(`portraits/nate.jpg`, {height: 113, quality: 60, width: 100, crop: "scale"})} className={c.avatar} />
+        <Avatar alt="Natthan Hamilton" src={cloudinary.url(`portraits/nate.jpg`, {height: 113, quality: 60, width: 100, crop: "scale", secure: true})} className={c.avatar} />
       </Grid>
       <Grid item xs={12}>
         <Typography variant="title" align="center">{t( `person.name` )}</Typography>
@@ -74,12 +74,11 @@ const Person = ( props ) => {
 Person.propTypes = {
   classes: PropTypes.object,
   c: PropTypes.object,
-  t: PropTypes.object
+  t: PropTypes.func.isRequired
 }
 Person.defaultProps = {
   classes: {},
-  c: {},
-  t: {}
+  c: {}
 };
 
 export default withStyles( styles )( translate( 'translations' )( Person ) );

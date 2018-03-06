@@ -46,14 +46,14 @@ const GenerateSkillsList = ( props ) => {
 GenerateSkillsList.propTypes = {
   classes: PropTypes.object,
   c: PropTypes.object,
-  t: PropTypes.object,
-  data: PropTypes.object,
+  t: PropTypes.func.isRequired,
+  data: PropTypes.array,
   item: PropTypes.string
 }
 GenerateSkillsList.defaultProps = {
   classes: {},
   c: {},
-  data: {},
+  data: [],
   item: null
 };
 

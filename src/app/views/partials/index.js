@@ -1,4 +1,6 @@
+/*
 import loadable from 'loadable-components'
+
 
 export const Layout = loadable( () =>
   import ( './Layout' ) )
@@ -18,3 +20,42 @@ export const Education = loadable( () =>
   import ( './Education' ) )
 export const Footer = loadable( () =>
   import ( './Footer' ) )
+  */
+
+import Layout from './Layout'
+import Portfolio from './Portfolio'
+import SkillsBreakdown from './SkillsBreakdown'
+import Skills from './Skills'
+import Experience from './Experience'
+import Person from './Person'
+import About from './About'
+import Education from './Education'
+import Footer from './Footer'
+
+export {
+  Layout
+}
+export {
+  Portfolio
+}
+export {
+  SkillsBreakdown
+}
+export {
+  Skills
+}
+export {
+  Experience
+}
+export {
+  Person
+}
+export {
+  About
+}
+export {
+  Education
+}
+export {
+  Footer
+}

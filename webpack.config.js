@@ -156,7 +156,6 @@ module.exports = ( env ) => {
 
 
       // Optimize the build
-      /*
       new webpack.optimize.AggressiveMergingPlugin(),
  new CompressionPlugin( {
         asset: '[path].gz[query]',
@@ -171,7 +170,6 @@ module.exports = ( env ) => {
         threshold: 10240,
         minRatio: 0.8
       } )
-*/
     ]
   }
 };

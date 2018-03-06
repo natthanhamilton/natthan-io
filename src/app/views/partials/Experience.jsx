@@ -55,7 +55,7 @@ const Experience = ( props ) => {
   return (
     <Grid container className={c.container} spacing={0}>
       <Grid item xs={12}>
-        <Typography variant="title"><span><Work className={c.iconLarge} /></span>
+        <Typography className={c.sectionTitle} variant="title"><span><Work className={c.iconLarge} /></span>
           {t('experience.title')}
         </Typography>
       </Grid>
@@ -65,11 +65,10 @@ const Experience = ( props ) => {
 
 Experience.propTypes = {
   c: PropTypes.object,
-  t: PropTypes.object
+  t: PropTypes.func.isRequired
 }
 Experience.defaultProps = {
-  c: {},
-  t: {}
+  c: {}
 };
 
 export default translate( 'translations' )( Experience );

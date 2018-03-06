@@ -10,6 +10,7 @@ i18n
   .use( LanguageDetector )
   .use( reactI18nextModule )
   .init( {
+    lng: "en-US",
     fallbackLng: 'en-US',
 
     // have a common namespace used around the full app
@@ -28,7 +29,9 @@ i18n
 
     backend: {
       loadPath: 'assets/locales/{{lng}}/{{ns}}.json'
-    }
+    },
+
+    load: 'currentOnly',
   } );
 
 
