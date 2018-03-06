@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/server.js",
-    "build:client": "webpack --progress --colors --env production",
-    "build:server": "webpack --config webpack.server.config.js --progress --colors --env production",
+    "build": "webpack --progress --colors --env production",
     "dev": "webpack-dev-server --progress --colors --env development",
     "test": "jest && codecov"
   },

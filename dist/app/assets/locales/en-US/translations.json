@@ -6,7 +6,11 @@
   },
   "person": {
     "name": "Natthan Hamilton",
-    "description": "Business driven developer.\nFormer long time PHP engineer all in on the cutting edge JS world.\nPassionate to create beneficial solutions.\nDesign, develop, test, deploy, maintain and improve software"
+    "description": "Business driven full stack progressive web developer.\nFormer long time PHP engineer all in on the cutting edge JS world.\nPassionate to create beneficial solutions.\nDesign, develop, test, deploy, maintain and improve software.\nPreference for Front End JS innovation!"
+  },
+  "story": {
+    "title": "My Story",
+    "content": "Being around technology my whole life as a second generation engineer, I first engaged code at ten years old, creating PHP and MySQL applications. At ten, I wanted to build game communities for the groups of friends I was always playing online video games with (shout out to Counter-Strike!).\n\n Homeschooling through high school not by choice, I chose to end that torture as quickly as possible by graduating high school at fifteen and a half, and get onto junior college. After spending my teenage years deep in technology, I started to shy away from it as I was progressing into my young college life eager to fit into groups and be more cool. Being able to teach myself, I chose to study the inner workings of business and subsequently spend my first years out of college in sales roles to gain a deep understanding of how a business operates. I can attribute the insight to take such a direction to the teachings of my father -- Technology serves the business, or there is no business for the technologist to thrive in!\n\n Bringing it full circle, I am now fortunate to have well crafted skills on both sides of the spectrum and have tested it in various fashions. Now, after having proven that I can craft something from nothing, my interest is now understanding at a deep level the meaning of \"massive scale\""
   },
   "about": {
     "aboutTitle": "About Me",
@@ -178,7 +182,7 @@
     {
       "tool": "Lighthouse PWA",
       "link": "",
-      "image": "https://img.shields.io/badge/Lighthouse%20PWA-82%25-brightgreen.svg"
+      "image": "https://img.shields.io/badge/Lighthouse%20PWA-91%25-brightgreen.svg"
     },
     {
       "tool": "Lighthouse Accessibility",
@@ -220,33 +224,104 @@
     }
   },
   "skills": {
-    "title": "Skills Overview",
+    "title": "Who Am I..",
     "breakdownTitle": "Languages, Tools, and The Kitchen Sink",
+    "techTitle": "I Love Tech..",
+    "bizTitle": "And I Love Business..",
     "experienced": "Experienced",
     "familiar": "Familiar",
     "learning": "Learning",
-    "list": [{
-        "name": "ReactJS",
+    "tech": [{
+      "name": "Full Stack",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "Web Developer",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "Front End",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "Progressive Web App",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "Back End",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "Database",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "DevOps",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "QA",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "User Experience Design",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "User Interface Design",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "Product Management",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "Project Management",
+      "experience": "",
+      "percent": 0
+    }],
+    "biz": [{
+      "name": "Innovator",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "Entrepreneur",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "Growth Hacker",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "Sales Hunter",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "Networker",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "People Person",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "",
+      "experience": "",
+      "percent": 0
+    }],
+    "_list": [{
+        "name": "React",
         "experience": "2 Years",
-        "percent": 0
-      }, {
-        "name": "React Native",
-        "experience": "Learning",
         "percent": 0
       },
       {
-        "name": "NodeJS",
+        "name": "Node",
         "experience": "2 Years",
         "percent": 0
       },
       {
-        "name": "ExpressJS",
+        "name": "Express",
         "experience": "2 Years",
-        "percent": 0
-      },
-      {
-        "name": "ElectronJS",
-        "experience": "Learning",
         "percent": 0
       },
       {
@@ -275,12 +350,7 @@
         "percent": 0
       },
       {
-        "name": "Python",
-        "experience": "Learning",
-        "percent": 0
-      },
-      {
-        "name": "MongoDB",
+        "name": "Mongo",
         "experience": "2 Years",
         "percent": 0
       },
@@ -353,7 +423,7 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "skillsTitle": "Skills & Toosl on this project",
+    "skillsTitle": "Skills & Tools on this project",
     "list": [{
         "name": "Prints Charming",
         "website": "http://oms.printscharming.biz/",

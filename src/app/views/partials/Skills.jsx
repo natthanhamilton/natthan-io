@@ -31,11 +31,18 @@ const Skills = ( props ) => {
   };
   const t = props.t;
 
-  const res = locale.skills.list.map( ( d, i ) => ( <div key={i}>
-    <Typography variant="body2">{t( `skills.list.${i}.name` )}
-      <small className={c.skillExp}>{t( `skills.list.${i}.experience` )}</small>
+  const tech = locale.skills.tech.map( ( d, i ) => ( <div key={i}>
+    <Typography variant="body2">{t( `skills.tech.${i}.name` )}
+      <small className={c.skillExp}>{t( `skills.tech.${i}.experience` )}</small>
     </Typography>
-    <LinearProgress className={c.progressBar} variant="determinate" value={t( `skills.list.${i}.percent` )} />
+    <LinearProgress className={c.progressBar} variant="determinate" value={t( `skills.tech.${i}.percent` )} />
+  </div> ) );
+
+  const biz = locale.skills.biz.map( ( d, i ) => ( <div key={i}>
+    <Typography variant="body2">{t( `skills.biz.${i}.name` )}
+      <small className={c.skillExp}>{t( `skills.biz.${i}.experience` )}</small>
+    </Typography>
+    <LinearProgress className={c.progressBar} variant="determinate" value={t( `skills.biz.${i}.percent` )} />
   </div> ) );
 
   return (
@@ -47,7 +54,12 @@ const Skills = ( props ) => {
         </Typography>
       </Grid>
       <Grid item xs={12}>
-        {res}
+        <Typography variant="body2"><strong>{t( `skills.techTitle` )}</strong></Typography>
+        {tech}
+      </Grid>
+      <Grid item xs={12}>
+        <Typography variant="body2"><strong>{t( `skills.bizTitle` )}</strong></Typography>
+        {biz}
       </Grid>
     </Grid> );
 }

@@ -112,12 +112,14 @@ module.exports = ( env ) => {
     plugins: [
       // Environment variables for the app
       new Dotenv(),
+
       // Inject the build environment
       new webpack.DefinePlugin( {
         env: {
           NODE_ENV: isDev ? 'development' : 'production'
         },
       } ),
+
       // Delete current build
       new CleanWebpackPlugin( [ BUILD_DIR ] ),
 
@@ -147,33 +149,29 @@ module.exports = ( env ) => {
       new HtmlWebpackPlugin( {
         template: SRC_DIR + '/index.html'
       } ),
-
-
-      // Optimize the build
+/*
       new webpack.optimize.AggressiveMergingPlugin(),
- new CompressionPlugin( {
+      new CompressionPlugin( {
         asset: '[path].gz[query]',
         algorithm: 'gzip',
         test: /\.js$|\.css$|\.html$/,
         threshold: 10240,
         minRatio: 0.8
       } ),
-
- new BrotliPlugin( {
+      new BrotliPlugin( {
         asset: '[path].br[query]',
         test: /\.js$|\.css$|\.html$/,
         threshold: 10240,
         minRatio: 0.8
       } ),
-
-            // Automatically build in sw.js
-            new GenerateSW( {
+*/
+      new GenerateSW( {
         globDirectory: DIST_DIR,
         globPatterns: [ '**/*.{html,js}' ],
         swDest: 'sw.js',
         clientsClaim: true,
         skipWaiting: true,
-      } ),
+      } )
     ]
   }
 };

@@ -21,7 +21,8 @@ import {
   Person,
   About,
   Education,
-  Footer
+  Footer,
+  MyStory
 } from './partials';
 import locale from '../../assets/locales/en-US/translations';
 
@@ -78,6 +79,7 @@ const HomeView = ( props ) => {
   const c = props.classes;
 
   return ( <Layout>
+    <MyStory />
     <Paper>
       <Grid container className={c.root} spacing={0}>
         <Grid item xs={12} sm={5}>

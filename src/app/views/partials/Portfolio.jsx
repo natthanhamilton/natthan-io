@@ -31,6 +31,11 @@ import Button from 'material-ui/Button';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography'
 import GroupWork from 'material-ui-icons/GroupWork';
+import ExpansionPanel, {
+  ExpansionPanelSummary,
+  ExpansionPanelDetails,
+} from 'material-ui/ExpansionPanel';
+import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 
 import locale from '../../../assets/locales/en-US/translations';
 import {
@@ -97,8 +102,14 @@ class Portfolio extends Component {
             <Typography variant="title">{t( `portfolio.list.${i}.name` )}</Typography>
             <Typography variant="body1" noWrap>{t( `portfolio.list.${i}.summary` )}</Typography>
             <Typography variant="body1" noWrap>&nbsp;</Typography>
-            <Typography variant="body2" noWrap><i>{t( `portfolio.skillsTitle` )}</i></Typography>
-            <GenerateSkillsList item={`portfolio.list.${i}.tools`} data={d.tools} />
+            <ExpansionPanel>
+              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography variant="body2" noWrap><i>{t( `portfolio.skillsTitle` )}</i></Typography>
+              </ExpansionPanelSummary>
+              <ExpansionPanelDetails>
+                <GenerateSkillsList item={`portfolio.list.${i}.tools`} data={d.tools} />
+              </ExpansionPanelDetails>
+            </ExpansionPanel>
           </CardContent>
           <CardActions className={c.cardActions}>
             {d.website != null && (

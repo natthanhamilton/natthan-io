@@ -31,6 +31,7 @@ import Person from './Person'
 import About from './About'
 import Education from './Education'
 import Footer from './Footer'
+import MyStory from './MyStory'
 
 export {
   Layout
@@ -58,4 +59,7 @@ export {
 }
 export {
   Footer
+}
+export {
+  MyStory
 }
