@@ -168,7 +168,11 @@ module.exports = ( env ) => {
 
             // Automatically build in sw.js
             new GenerateSW( {
-        swSrc: APP_DIR + '/sw.jsx',
+        globDirectory: DIST_DIR,
+        globPatterns: [ '**/*.{html,js}' ],
+        swDest: 'sw.js',
+        clientsClaim: true,
+        skipWaiting: true,
       } ),
     ]
   }
