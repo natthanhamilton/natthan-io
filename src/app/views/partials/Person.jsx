@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cloudinary from 'cloudinary';
 import Img from 'react-image-smooth-loading'
+import {
+  translate
+} from 'react-i18next';
 
 import {
   withStyles
@@ -11,7 +14,7 @@ import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
 import Avatar from 'material-ui/Avatar';
 
-import locale from '../../../assets/locale/en_us';
+import locale from '../../../assets/locales/en-US/translations';
 
 const styles = theme => ( {
   avatar: {
@@ -42,10 +45,13 @@ const Person = ( props ) => {
   const c = { ...props.c,
     ...props.classes
   };
+  const {
+    t
+  } = props;
 
   const list = locale.actions.map( ( d, i ) => (
     <a key={i} target="_new" href={d.url}>
-      <Img className={c.imgPlaceholder} src={cloudinary.url(`icons/${d.name.toLowerCase()}.png`, {width: 36, crop: "scale"})} alt={d.name} />
+      <Img className={c.imgPlaceholder} src={cloudinary.url(`icons/${d.name.toLowerCase()}.png`, {width: 36, crop: "scale", secure: true})} alt={t( `actions.${i}` )} />
     </a> ) );
 
   return (
@@ -54,13 +60,8 @@ const Person = ( props ) => {
         <Avatar alt="Natthan Hamilton" src={cloudinary.url(`portraits/nate.jpg`, {height: 113, quality: 60, width: 100, crop: "scale"})} className={c.avatar} />
       </Grid>
       <Grid item xs={12}>
-        <Typography variant="title" align="center">Natthan Hamilton</Typography>
-        <Typography variant="body1" align="center">
-        Former long time PHP engineer all in on the cutting edge JS world.<br />
-                Business driven developer.<br />
-                Passionate to create beneficial solutions.<br />
-                Design, develop, test, deploy, maintain and improve software<br />
-        </Typography>
+        <Typography variant="title" align="center">{t( `person.name` )}</Typography>
+        <Typography variant="body1" align="center">{t( `person.description` )}</Typography>
       </Grid>
       <Grid className={c.actions} item xs={12}>{list}</Grid>
       <Grid item xs={12}>
@@ -72,11 +73,13 @@ const Person = ( props ) => {
 
 Person.propTypes = {
   classes: PropTypes.object,
-  c: PropTypes.object
+  c: PropTypes.object,
+  t: PropTypes.object
 }
 Person.defaultProps = {
   classes: {},
-  c: {}
+  c: {},
+  t: {}
 };
 
-export default withStyles( styles )( Person );
+export default withStyles( styles )( translate( 'translations' )( Person ) );

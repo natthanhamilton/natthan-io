@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
+  translate
+} from 'react-i18next';
+
+import {
   withStyles
 } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
@@ -8,7 +12,7 @@ import Button from 'material-ui/Button';
 import Tooltip from 'material-ui/Tooltip';
 import LazyLoad from 'react-lazy-load';
 
-import locale from '../../../assets/locale/en_us';
+import locale from '../../../assets/locales/en-US/translations';
 
 const styles = theme => ( {
   root: {
@@ -36,10 +40,11 @@ const Footer = ( props ) => {
   const c = { ...props.c,
     ...props.classes
   };
+  const t = props.t;
 
-  const list = locale.badges.map( ( d, key ) => ( <LazyLoad key={key} className={c.lazyLoad}>
-    <Tooltip title={d.tool} placement="bottom">
-      <a href={d.link}><img className={c.badge} src={d.image} alt={d.tool} /></a>
+  const list = locale.badges.map( ( d, i ) => ( <LazyLoad key={i} className={c.lazyLoad}>
+    <Tooltip title={t(`badges.${i}.tool`)} placement="bottom">
+      <a href={d.link}><img className={c.badge} src={d.image} alt={t(`badges.${i}.tool`)} /></a>
     </Tooltip>
   </LazyLoad> ) );
 
@@ -48,20 +53,21 @@ const Footer = ( props ) => {
       <Grid className={c.badges} item xs={12}>{list}</Grid>
       <Grid className={c.git} item xs={12}>
         <a className={c.gitLink} target="_new" href="https://github.com/natthanhamilton/natthan-io">
-          <Button color="primary" variant="raised">
-Visit the GitHub repository!
-          </Button>
+          <Button color="primary" variant="raised">{t(`github.linkText`)}</Button>
         </a>
       </Grid>
     </Grid> );
 }
+
 Footer.propTypes = {
   classes: PropTypes.object,
-  c: PropTypes.object
+  c: PropTypes.object,
+  t: PropTypes.object
 }
 Footer.defaultProps = {
   classes: {},
-  c: {}
+  c: {},
+  t: {}
 };
 
-export default withStyles( styles )( Footer );
+export default withStyles( styles )( translate( 'translations' )( Footer ) );

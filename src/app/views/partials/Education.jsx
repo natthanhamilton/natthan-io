@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  translate
+} from 'react-i18next';
 
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
@@ -9,35 +12,40 @@ import LocationOn from 'material-ui-icons/LocationOn';
 import DateRange from 'material-ui-icons/DateRange';
 import School from 'material-ui-icons/School';
 
-import locale from '../../../assets/locale/en_us';
-
 const Education = ( props ) => {
-  const c = props.c;
+  const {
+    c,
+    t
+  } = props;
+
 
   return (
     <Grid container className={c.container} spacing={0}>
 
-        <Grid item xs={12}>
-          <Typography variant="title"><School className={c.iconLarge} />
-                      &nbsp;Education
-          </Typography>
-        </Grid>
+      <Grid item xs={12}>
+        <Typography variant="title"><School className={c.iconLarge} />
+          {t('education.title')}
+        </Typography>
+      </Grid>
 
-        <Grid item xs={12} className={c.section}>
-          <Typography variant="title">San Diego State University</Typography>
-          <Typography variant="body2"><LocationOn className={c.iconSmall} />
-                      &nbsp;San Diego, CA &nbsp;&nbsp;<DateRange className={c.iconSmall} />
-                      &nbsp;2009&nbsp;-&nbsp;2011
-          </Typography>
-          <Typography variant="body1">Bachelor's of Science, Business Administration</Typography>
-        </Grid>
-      </Grid> );
+      <Grid item xs={12} className={c.section}>
+        <Typography variant="title">{t('education.uName')}</Typography>
+        <Typography variant="body2"><LocationOn className={c.iconSmall} />
+          {t('education.uLocation')} &nbsp;&nbsp;<DateRange className={c.iconSmall} />
+          {t('education.uStart')}&nbsp;-&nbsp;{t('education.uEnd')}
+        </Typography>
+        <Typography variant="body1">{t('education.uDegree')}</Typography>
+      </Grid>
+    </Grid> );
 }
 
 Education.propTypes = {
-  c: PropTypes.object
+  c: PropTypes.object,
+  t: PropTypes.object
 }
 Education.defaultProps = {
-  c: {}
+  c: {},
+  t: {}
 };
-export default Education;
+
+export default translate( 'translations' )( Education );

@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  translate
+} from 'react-i18next';
 
 import {
   withStyles
@@ -11,7 +14,7 @@ import {
 import Typography from 'material-ui/Typography';
 import Star from 'material-ui-icons/Star';
 
-import locale from '../../../assets/locale/en_us';
+import locale from '../../../assets/locales/en-US/translations';
 
 const styles = theme => ( {
   skillExp: {
@@ -26,12 +29,13 @@ const Skills = ( props ) => {
   const c = { ...props.c,
     ...props.classes
   };
+  const t = props.t;
 
-  const res = locale.skills.map( ( d, i ) => ( <div key={i}>
-    <Typography variant="body2">{d.name}
-      <small className={c.skillExp}>{d.experience}</small>
+  const res = locale.skills.list.map( ( d, i ) => ( <div key={i}>
+    <Typography variant="body2">{t( `skills.list.${i}.name` )}
+      <small className={c.skillExp}>{t( `skills.list.${i}.experience` )}</small>
     </Typography>
-    <LinearProgress className={c.progressBar} variant="determinate" value={d.percent} />
+    <LinearProgress className={c.progressBar} variant="determinate" value={t( `skills.list.${i}.percent` )} />
   </div> ) );
 
   return (
@@ -39,7 +43,7 @@ const Skills = ( props ) => {
 
       <Grid item xs={12}>
         <Typography variant="title"><Star className={c.iconLarge} />
-                    &nbsp;Skills Overview
+          {t( `skills.title` )}
         </Typography>
       </Grid>
       <Grid item xs={12}>
@@ -49,10 +53,14 @@ const Skills = ( props ) => {
 }
 
 Skills.propTypes = {
-  c: PropTypes.object
+  classes: PropTypes.object,
+  c: PropTypes.object,
+  t: PropTypes.object
 }
 Skills.defaultProps = {
-  c: {}
+  classes: {},
+  c: {},
+  t: {}
 };
 
-export default withStyles( styles )( Skills );
+export default withStyles( styles )( translate( 'translations' )( Skills ) );

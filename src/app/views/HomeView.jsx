@@ -23,7 +23,7 @@ import {
   Education,
   Footer
 } from './partials';
-import locale from '../../assets/locale/en_us';
+import locale from '../../assets/locales/en-US/translations';
 
 const styles = theme => ( {
   root: {

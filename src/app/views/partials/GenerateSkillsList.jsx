@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cloudinary from 'cloudinary';
 import LazyLoad from 'react-lazy-load';
+import {
+  translate
+} from 'react-i18next';
 
 import {
   withStyles
@@ -10,8 +13,6 @@ import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
 import Tooltip from 'material-ui/Tooltip';
 import Star from 'material-ui-icons/Star';
-
-import locale from '../../../assets/locale/en_us';
 
 const styles = theme => ( {
   skillImg: {
@@ -23,12 +24,19 @@ const styles = theme => ( {
 } );
 
 const GenerateSkillsList = ( props ) => {
-  const c = props.classes
+  const c = { ...props.c,
+    ...props.classes
+  };
+  const {
+    data,
+    item,
+    t
+  } = props;
 
-  const list = props.data.map( ( d, key ) => (
-    <LazyLoad key={key} className={c.skillImg}>
-      <Tooltip title={d} placement="bottom">
-        <img src={cloudinary.url(`tools/${d.replace(/\s+/g, '-').toLowerCase()}.png`, {quality: 50, width: 48, crop: "scale"})} alt={d} />
+  const list = data.map( ( d, i ) => (
+    <LazyLoad key={i} className={c.skillImg}>
+      <Tooltip title={t(`${item}.${i}`)} placement="bottom">
+        <img src={cloudinary.url(`tools/${d.replace(/\s+/g, '-').toLowerCase()}.png`, {quality: 50, width: 48, crop: "scale", secure: true})} alt={t(`${item}.${i}`)} />
       </Tooltip>
     </LazyLoad> ) );
 
@@ -37,11 +45,16 @@ const GenerateSkillsList = ( props ) => {
 
 GenerateSkillsList.propTypes = {
   classes: PropTypes.object,
-  data: PropTypes.object
+  c: PropTypes.object,
+  t: PropTypes.object,
+  data: PropTypes.object,
+  item: PropTypes.string
 }
 GenerateSkillsList.defaultProps = {
   classes: {},
-  data: {}
+  c: {},
+  data: {},
+  item: null
 };
 
-export default withStyles( styles )( GenerateSkillsList );
+export default withStyles( styles )( translate( 'translations' )( GenerateSkillsList ) );

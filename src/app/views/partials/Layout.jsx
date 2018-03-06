@@ -1,5 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import {
+  translate
+} from 'react-i18next';
 
 import {
   withStyles
@@ -10,7 +13,8 @@ import Toolbar from 'material-ui/Toolbar';
 import {
   Helmet
 } from "react-helmet";
-import locale from '../../../assets/locale/en_us'
+
+import locale from '../../../assets/locales/en-US/translations';
 
 const styles = theme => ( {
   root: {
@@ -32,24 +36,29 @@ const styles = theme => ( {
 
 const Layout = ( props ) => {
   const c = props.classes
+  const t = props.t;
+
+  const skillsExperienced = locale.skillsExperienced.map( ( d, i ) => t( `skillsExperienced.${i}` ) );
+  const skillsFamiliar = locale.skillsFamiliar.map( ( d, i ) => t( `skillsExperienced.${i}` ) );
+  const skillsLearning = locale.skillsLearning.map( ( d, i ) => t( `skillsExperienced.${i}` ) );
 
   return ( <div>
     <Helmet>
-      <title>{locale.site.title}</title>
-      <meta name="description" content={locale.skillsExperienced.join(",")+locale.skillsFamiliar.join(",")+locale.skillsLearning.join(",")} />
-      <meta name="author" content={locale.site.author} />
+      <title>{t(`site.title`)}</title>
+      <meta name="description" content={skillsExperienced+skillsFamiliar+skillsLearning} />
+      <meta name="author" content={t(`site.author`)} />
 
-      <meta property="og:title" content={locale.seo.og.title} />
-      <meta property="og:description" content={locale.seo.og.description} />
-      <meta property="og:url" content={locale.seo.og.url} />
-      <meta property="og:image" content={locale.seo.og.image} />
+      <meta property="og:title" content={t(`seo.og.title`)} />
+      <meta property="og:description" content={t(`seo.og.description`)} />
+      <meta property="og:url" content={t(`seo.og.url`)} />
+      <meta property="og:image" content={t(`seo.og.image`)} />
 
-      <meta name="twitter:card" content={locale.seo.twitter.card} />
-      <meta name="twitter:site" content={locale.seo.twitter.site} />
-      <meta name="twitter:creator" content={locale.seo.twitter.creator} />
-      <meta name="twitter:title" content={locale.seo.twitter.title} />
-      <meta name="twitter:description" content={locale.seo.twitter.description} />
-      <meta name="twitter:image" content={locale.seo.twitter.image} />
+      <meta name="twitter:card" content={t(`seo.twitter.card`)} />
+      <meta name="twitter:site" content={t(`seo.twitter.site`)} />
+      <meta name="twitter:creator" content={t(`seo.twitter.creator`)} />
+      <meta name="twitter:title" content={t(`seo.twitter.title`)} />
+      <meta name="twitter:description" content={t(`seo.twitter.description`)} />
+      <meta name="twitter:image" content={t(`seo.twitter.image`)} />
     </Helmet>
     {/*}<LoadingBar className={c.loadingBar} showFastActions="showFastActions" updateTime={200} maxProgress={90} />*/}
     <AppBar position="fixed">
@@ -64,10 +73,12 @@ const Layout = ( props ) => {
 }
 
 Layout.propTypes = {
-  classes: PropTypes.object
+  classes: PropTypes.object,
+  t: PropTypes.object
 }
 Layout.defaultProps = {
-  classes: {}
+  classes: {},
+  t: {}
 };
 
-export default withStyles( styles )( Layout )
+export default withStyles( styles )( translate( 'translations' )( Layout ) );

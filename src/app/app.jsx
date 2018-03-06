@@ -23,6 +23,7 @@ import {
   persistor,
   store
 } from './store';
+import './i18n';
 
 import * as components from './components';
 import {

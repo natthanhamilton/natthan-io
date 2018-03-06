@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  translate
+} from 'react-i18next';
 
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
@@ -9,42 +12,45 @@ import AccountCircle from 'material-ui-icons/AccountCircle';
 import LocationOn from 'material-ui-icons/LocationOn';
 import Email from 'material-ui-icons/Email';
 
-import locale from '../../../assets/locale/en_us';
+const About = ( props ) => {
+  const {
+    c,
+    t
+  } = props;
 
-const Person = ( props ) => {
-  const c = props.c;
   return (
     <Grid container className={c.container} spacing={24}>
       <Grid item xs={12}>
         <Typography variant="title"><AccountCircle className={c.iconLarge} />
-          &nbsp;About Me
+          &nbsp;{t('about.aboutTitle')}
         </Typography>
       </Grid>
       <Grid item xs={12}>
-        <Typography variant="body1">Blending strong business experience with technical talents empowers me to think differently, leading to creative problem solving and aggressively fast learning. With tea direct from the source in China, sleep is optional.</Typography>
+        <Typography variant="body1">{t('about.aboutContent')}</Typography>
       </Grid>
       <Grid item xs={12}>
         <Typography variant="title"><Phone className={c.iconLarge} />
-          &nbsp;Contact Me
+          &nbsp;{t('contact.contactTitle')}
         </Typography>
       </Grid>
       <Grid item xs={12}>
         <Typography variant="body1"><LocationOn className={c.iconSmall} />
-          &nbsp;San Diego, California
+          &nbsp;{t('contact.contactLocation')}
         </Typography>
         <Typography variant="body1"><Email className={c.iconSmall} />
-          &nbsp;NatthanHamilton@gmail.com
+          &nbsp;{t('contact.contactEmail')}
         </Typography>
       </Grid>
     </Grid> );
 }
 
-
-Person.propTypes = {
-  c: PropTypes.object
+About.propTypes = {
+  c: PropTypes.object,
+  t: PropTypes.object
 }
-Person.defaultProps = {
-  c: {}
+About.defaultProps = {
+  c: {},
+  t: {}
 };
 
-export default Person;
+export default translate( 'translations' )( About );
