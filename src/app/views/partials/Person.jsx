@@ -61,7 +61,7 @@ const Person = ( props ) => {
       </Grid>
       <Grid item xs={12}>
         <Typography variant="title" align="center">{t( `person.name` )}</Typography>
-        <Typography variant="body1" align="center">{t( `person.description` )}</Typography>
+        <Typography variant="body1">{t( `person.description` )}</Typography>
       </Grid>
       <Grid className={c.actions} item xs={12}>{list}</Grid>
       <Grid item xs={12}>

@@ -23,6 +23,9 @@ const styles = theme => ( {
     width: '48px !important',
     height: '48px !important',
     padding: '7 !important'
+  },
+  section: {
+    padding: '10px 0'
   }
 } );
 
@@ -40,15 +43,15 @@ const SkillsBreakdown = ( props ) => {
             {locale.skillsExperienced.length+locale.skillsFamiliar.length+locale.skillsLearning.length}&nbsp;{t( `skills.breakdownTitle` )}
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid className={c.section} item sm={12}>
           <Typography variant="title">{t( `skills.experienced` )}</Typography>
           <GenerateSkillsList item='skillsExperienced' data={locale.skillsExperienced} />
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid className={c.section} item sm={12}>
           <Typography variant="title">{t( `skills.familiar` )}</Typography>
           <GenerateSkillsList item='skillsFamiliar' data={locale.skillsFamiliar} />
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid className={c.section} item sm={12}>
           <Typography variant="title">{t( `skills.learning` )}</Typography>
           <GenerateSkillsList item='skillsLearning' data={locale.skillsLearning} />
         </Grid>

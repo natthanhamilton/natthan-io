@@ -170,22 +170,22 @@
     },
     {
       "tool": "Github Language Most Used",
-      "link": "",
+      "link": "https://github.com/natthanhamilton/natthan-io",
       "image": "https://img.shields.io/github/languages/top/natthanhamilton/natthan-io.svg"
     },
     {
       "tool": "Github Release Date",
-      "link": "",
+      "link": "https://github.com/natthanhamilton/natthan-io",
       "image": "https://img.shields.io/github/release-date/natthanhamilton/natthan-io.svg"
     },
     {
       "tool": "Github License",
-      "link": "",
+      "link": "https://github.com/natthanhamilton/natthan-io",
       "image": "https://img.shields.io/github/license/natthanhamilton/natthan-io.svg"
     },
     {
       "tool": "Github Last Commit",
-      "link": "",
+      "link": "https://github.com/natthanhamilton/natthan-io",
       "image": "https://img.shields.io/github/last-commit/natthanhamilton/natthan-io.svg"
     },
     {
@@ -326,10 +326,6 @@
       "percent": 0
     }, {
       "name": "People Person",
-      "experience": "",
-      "percent": 0
-    }, {
-      "name": "",
       "experience": "",
       "percent": 0
     }],

@@ -117,6 +117,7 @@ class Portfolio extends Component {
                 {t( `prompts.viewWebsite` )}
               </Button>
               )}
+            {/*}
             <Button
               size="small"
               color="primary"
@@ -125,6 +126,7 @@ class Portfolio extends Component {
             >
               {t( `prompts.projectInformation` )}
             </Button>
+            */}
           </CardActions>
         </Card>
       </Grid> ) )
@@ -161,7 +163,7 @@ class Portfolio extends Component {
       <Grid container className={c.container} spacing={0}>
         <Grid item xs={12}>
           <Typography className={c.sectionTitle} variant="title"><span><GroupWork className={c.iconLarge} /></span>
-            {t( `portfolio.title` )}
+            {t( `portfolio.title` )}&nbsp;<i><small>Content currently under development!</small></i>
           </Typography>
         </Grid>
         <Grid item xs={12}>

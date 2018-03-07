@@ -12,6 +12,10 @@ import {
   LinearProgress
 } from 'material-ui/Progress';
 import Typography from 'material-ui/Typography';
+import Chip from 'material-ui/Chip';
+import Avatar from 'material-ui/Avatar';
+
+
 import Star from 'material-ui-icons/Star';
 
 import locale from '../../../assets/locales/en-US/translations';
@@ -23,6 +27,9 @@ const styles = theme => ( {
   progressBar: {
     marginBottom: 5
   },
+  chip: {
+    margin: theme.spacing.unit / 2,
+  },
 } );
 
 const Skills = ( props ) => {
@@ -31,19 +38,11 @@ const Skills = ( props ) => {
   };
   const t = props.t;
 
-  const tech = locale.skills.tech.map( ( d, i ) => ( <div key={i}>
-    <Typography variant="body2">{t( `skills.tech.${i}.name` )}
-      <small className={c.skillExp}>{t( `skills.tech.${i}.experience` )}</small>
-    </Typography>
-    <LinearProgress className={c.progressBar} variant="determinate" value={t( `skills.tech.${i}.percent` )} />
-  </div> ) );
+  const tech = locale.skills.tech.map( ( d, i ) => (
+    <Chip key={i} label={<small>{t( `skills.tech.${i}.name` )}</small>} className={c.chip} /> ) );
 
-  const biz = locale.skills.biz.map( ( d, i ) => ( <div key={i}>
-    <Typography variant="body2">{t( `skills.biz.${i}.name` )}
-      <small className={c.skillExp}>{t( `skills.biz.${i}.experience` )}</small>
-    </Typography>
-    <LinearProgress className={c.progressBar} variant="determinate" value={t( `skills.biz.${i}.percent` )} />
-  </div> ) );
+  const biz = locale.skills.biz.map( ( d, i ) => (
+    <Chip key={i} label={<small>{t( `skills.biz.${i}.name` )}</small>} className={c.chip} /> ) );
 
   return (
     <Grid container className={c.container} spacing={24}>

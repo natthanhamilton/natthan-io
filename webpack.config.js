@@ -21,7 +21,6 @@ module.exports = ( env ) => {
 
   return {
     mode: env,
-    //mode: 'production',
 
     context: path.resolve( __dirname ),
     entry: {
@@ -64,7 +63,7 @@ module.exports = ( env ) => {
     module: {
       rules: [
         {
-          test: /\.jsx?$/, // A regexp to test the require path. accepts either js or jsx
+          test: /\.jsx?$/,
           loader: 'babel-loader',
           query: {
             "presets": [
@@ -139,7 +138,7 @@ module.exports = ( env ) => {
           from: './src/assets',
           to: './assets'
       }, {
-          from: './server',
+          from: './distAssets',
           to: '../'
       }, {
           from: './manifest.json',
