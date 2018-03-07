@@ -190,37 +190,37 @@
     },
     {
       "tool": "ESLint Config",
-      "link": "",
+      "link": "https://www.npmjs.com/package/eslint",
       "image": "https://img.shields.io/badge/eslint%20preset-airbnb-brightgreen.svg"
     },
     {
       "tool": "Code Style",
-      "link": "",
+      "link": "https://www.npmjs.com/package/eslint",
       "image": "https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg"
     },
     {
       "tool": "Lighthouse Performance",
-      "link": "",
+      "link": "https://developers.google.com/web/tools/lighthouse/",
       "image": "https://img.shields.io/badge/Lighthouse%20Performance-46%25-brightgreen.svg"
     },
     {
       "tool": "Lighthouse PWA",
-      "link": "",
+      "link": "https://developers.google.com/web/tools/lighthouse/",
       "image": "https://img.shields.io/badge/Lighthouse%20PWA-91%25-brightgreen.svg"
     },
     {
       "tool": "Lighthouse Accessibility",
-      "link": "",
+      "link": "https://developers.google.com/web/tools/lighthouse/",
       "image": "https://img.shields.io/badge/Lighthouse%20Accessibility-100%25-brightgreen.svg"
     },
     {
       "tool": "Lighthouse Practices",
-      "link": "",
+      "link": "https://developers.google.com/web/tools/lighthouse/",
       "image": "https://img.shields.io/badge/Lighthouse%20Practices-100%25-brightgreen.svg"
     },
     {
       "tool": "Lighthouse SEO",
-      "link": "",
+      "link": "https://developers.google.com/web/tools/lighthouse/",
       "image": "https://img.shields.io/badge/Lighthouse%20SEO-100%25-brightgreen.svg"
     }
   ],
