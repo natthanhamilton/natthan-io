@@ -7,10 +7,15 @@ import {
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
+import ExpansionPanel, {
+  ExpansionPanelSummary,
+  ExpansionPanelDetails,
+} from 'material-ui/ExpansionPanel';
 
 import LocationOn from 'material-ui-icons/LocationOn';
 import DateRange from 'material-ui-icons/DateRange';
 import Work from 'material-ui-icons/Work';
+import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 
 import locale from '../../../assets/locales/en-US/translations';
 
@@ -34,19 +39,28 @@ const Experience = ( props ) => {
           </Grid>
         )}
           <Grid item xs={12} className={c.section}>
-            <Typography variant="title">{t(`experience.jobs.${i}.title`)}</Typography>
+            <Typography variant="title">{t(`experience.jobs.${i}.company`)}&nbsp;&nbsp;<i><small>{t(`experience.jobs.${i}.title`)}</small></i></Typography>
             <Typography className={c.padding} variant="body2"><LocationOn className={c.iconSmall} /> {t(`experience.jobs.${i}.location`)}
           &nbsp;&nbsp;
               <DateRange className={c.iconSmall} /> {t(`experience.jobs.${i}.started`)}&nbsp;-&nbsp;{t(`experience.jobs.${i}.ended`)}
             </Typography>
-            <Typography className={c.padding} variant="body2"><strong>SITUATION</strong></Typography>
-            <Typography className={c.padding} variant="body1">{t(`experience.jobs.${i}.situation`)}</Typography>
-            <Typography className={c.padding} variant="body2"><strong>TASK</strong></Typography>
-            <Typography className={c.padding} variant="body1">{t(`experience.jobs.${i}.task`)}</Typography>
-            <Typography className={c.padding} variant="body2"><strong>ACTIVITY</strong></Typography>
-            <ul className={c.ul}>{activities}</ul>
-            <Typography className={c.padding} variant="body2"><strong>RESULT</strong></Typography>
-            <Typography className={c.padding} variant="body1">{t(`experience.jobs.${i}.result`)}</Typography>
+            <ExpansionPanel>
+              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography variant="body2" noWrap>{t(`prompts.viewExperience`)}</Typography>
+              </ExpansionPanelSummary>
+              <ExpansionPanelDetails>
+                <div>
+                  <Typography className={c.padding} variant="body2"><strong>SITUATION</strong></Typography>
+                  <Typography className={c.padding} variant="body1">{t(`experience.jobs.${i}.situation`)}</Typography>
+                  <Typography className={c.padding} variant="body2"><strong>TASK</strong></Typography>
+                  <Typography className={c.padding} variant="body1">{t(`experience.jobs.${i}.task`)}</Typography>
+                  <Typography className={c.padding} variant="body2"><strong>ACTIVITY</strong></Typography>
+                  <ul className={c.ul}>{activities}</ul>
+                  <Typography className={c.padding} variant="body2"><strong>RESULT</strong></Typography>
+                  <Typography className={c.padding} variant="body1">{t(`experience.jobs.${i}.result`)}</Typography>
+                </div>
+              </ExpansionPanelDetails>
+            </ExpansionPanel>
           </Grid>
         </Grid>
       </div> );

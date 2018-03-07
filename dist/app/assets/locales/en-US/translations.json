@@ -1,8 +1,10 @@
 {
   "prompts": {
     "close": "Close",
+    "hideStory": "Hide Story",
     "viewWebsite": "View Site",
-    "projectInformation": "More Info"
+    "projectInformation": "More Info",
+    "viewExperience": "View Experience"
   },
   "person": {
     "name": "Natthan Hamilton",
@@ -31,6 +33,18 @@
   "experience": {
     "title": "Work Experience",
     "jobs": [{
+        "company": "aeCreative, Inc",
+        "title": "Partner",
+        "location": "San Diego, CA",
+        "started": "March 2016",
+        "ended": "Present",
+        "situation": "aeCreative is a web and marketing consulting agency targetted at Chinese small to medium sized companies in the US market or abroad. ",
+        "task": "",
+        "activity": [
+          ""
+        ],
+        "result": ""
+      }, {
         "company": "Prints Charming",
         "title": "Consultant Engineer",
         "location": "Remote",
@@ -45,23 +59,22 @@
           "Innovated a ReactJS based wholesale commerce application to replace phone and email order taking, allowing a retailer, sales rep, or staff to place orders for a retailer, real time product builder, innovative checkout with real time master cartons, order history tracking, administrative capabilities to manage the business and operations, and dashboard analytics for awareness and drill into the business’ health",
           "Focused heavily on salvaging data from existing internal application running MySQL, identifying what the business needs to know, what is currently available in the data, and then extracting into MongoDB and expanding data points to collect from my application"
         ],
-        "result": "With the maturity of a user's experience with online commerce applications, I knew that this would innovating a client facing application that handles the sales flow would unlock their revenue generating potential.\n Designed, developed, tested, deployed, maintained and improved a brand new wholesale commerce application for the sales side of their business revolutionalizing it from a manual operation of email and phone to a ReactJS, data driven solution unlocking their revenue generating potential.\n\n The impact of the new application on the business was in a lot of cases revolutionary for them. They were able to:\n -- Create orders in minutes versus hours \n -- Expose their entire product line to customers who were previously only aware of what products sales reps told them about\n -- Double digit percentage increase in products purchased from existing customers\n -- For the first time, customers were ordering for themselves, freeing up sales rep time to be more strategic and focus on growth strategies\n -- For the first time, sales rep groups were able to manage their book of business with their partnership to Prints Charming, creating new customer accounts and generating orders for those customers without the manual need for Prints Charming staff\n -- Prints Charming staff, sales reps, or the customer can order for that customer account, each can manage needed properties for the account, causing a higher probability for new orders, and much more\n -- An account's order history was now fully visible to them for the first time, with analytic breakdown never before available, along with reorder capability, making it incredibly simple for a user to gain insight into that account's health, generate conversation with that account on how they are doing, and increase sales volume\n\n The added business value of this targetted, well devised application will single-handedly transform their business and bring it into the digital age. Every day, it is generating more value than ever before for this small company",
-        "skills": ""
+        "result": "With the maturity of a user's experience with online commerce applications, I knew that this would innovating a client facing application that handles the sales flow would unlock their revenue generating potential.\n Designed, developed, tested, deployed, maintained and improved a brand new wholesale commerce application for the sales side of their business revolutionalizing it from a manual operation of email and phone to a ReactJS, data driven solution unlocking their revenue generating potential.\n\n The impact of the new application on the business was in a lot of cases revolutionary for them. They were able to:\n -- Create orders in minutes versus hours \n -- Expose their entire product line to customers who were previously only aware of what products sales reps told them about\n -- Double digit percentage increase in products purchased from existing customers\n -- For the first time, customers were ordering for themselves, freeing up sales rep time to be more strategic and focus on growth strategies\n -- For the first time, sales rep groups were able to manage their book of business with their partnership to Prints Charming, creating new customer accounts and generating orders for those customers without the manual need for Prints Charming staff\n -- Prints Charming staff, sales reps, or the customer can order for that customer account, each can manage needed properties for the account, causing a higher probability for new orders, and much more\n -- An account's order history was now fully visible to them for the first time, with analytic breakdown never before available, along with reorder capability, making it incredibly simple for a user to gain insight into that account's health, generate conversation with that account on how they are doing, and increase sales volume\n\n The added business value of this targetted, well devised application will single-handedly transform their business and bring it into the digital age. Every day, it is generating more value than ever before for this small company"
       },
       {
-        "company": "Picture It On Canvas ",
+        "company": "Picture It On Canvas",
         "title": "Engineer",
         "location": "San Diego",
         "started": "October 2016",
         "ended": "March 2017",
-        "situation": "Selected Picture It On Canvas (PIOC) out of countless companies for fit and freedom to create. Came into a custom Symfony2 environment used on both server and client. Client side was a manual CMS and main feature of the application was a custom image upload product builder. My tenure at PIOC abruptly ended when the parent company Zazzle absorbed the business and dissolved all staff",
-        "task": "",
+        "situation": "Picture It On Canvas (PIOC) was a founded and operated in San Diego company innovating their own proprietary code to deliver a custom user uploaded image on arts and crafts type of product. Up to the point of my coming on board, they have been outsourcing all technology. The original application was built years ago, the back end very lightly maintained, and the front end maintained by a European agency building out static HTML pages",
+        "task": "They desired to bring web development in house and my objective to be focus on all revenue generating opportunities. My arrival was right at the peak of their busiest season.",
         "activity": [
-          "Ability to very quickly familiarize with new environments and generate results. Hired on with less than a month to peak season, innovated core UX improvements",
-          "Identified one of the biggest manual operational bottlenecks in their business and innovated a new client facing collage product builder tying into and carefully modifying the server side processing application. The application resulted in their design team going from working around the clock in the holiday season to designers being sent to help in production and one designer being let go due to lack of work. Praised by the original developer for being the first one to understand and enhance his application"
+          "Immediately identified the poor state that the whole application was in and made the first prioity to be identifying the biggest areas for return on investment with as little effort invested possible by working closely with my talented and highly knowledge manager, the Director of Marketing, who had intimate knowledge of the application. This greatly decreased my ramp up time and allowed for an intelligent strategy",
+          "Worked quickly to move the client side to a more dynamic content driven application, eliminating static pages as much as possible, to allow for a single developer to manage the whole application in a sensible amount of time and effort",
+          "Worked closely with the Director of Marketing to upgrade the website's UI and UX elements, starting at the highest revenue generating points, such as the product builder. For example, identified areas that the user may get confused on which action to take, duplication of steps, unneccessary steps that the user must take"
         ],
-        "result": "",
-        "skills": ""
+        "result": "In my short tenure at PIOC due to the parent company Zazzle absorbing the company and closing the San Diego office, I was able to make a profound impact to their business in a very short period of time. It turned out that their collage product line caused severe pain to the manufacturing process. Veteran staff told me stories of how every year prior was wraught with around the clock shifts, product backed up for weeks, thousands of backlogged images to process, and so forth. \n\nThe collage builder eliminated such an extreme amount of labor from the top down:\n -- designers had no work to do and were thus going into production to add extra support, allowing for backlogs to dwindle to nothing, which allowed staff to rest and perform at their best\n -- Morale was up\n -- No 24 shifts happened the whole season\n -- All deadlines were hit and product shipped\n -- Less mistakes happened during production, causing less returned product\n\n By fixing the biggest pain point in their product's production cycle, it managed to directly impact all parts of their business.\n The collage builder would go on to product tens of thousands of prints by itself without any designer involvement. Unfortunately, for such a great achievement and the design team having no work to do, it caused members of the design team to be laid off."
       },
       {
         "company": "Coolpad",
@@ -69,11 +82,27 @@
         "location": "Remote",
         "started": "April 2016",
         "ended": "September 2016",
-        "situation": "Brought in to evaluate existing web solution built on KeystoneJS. Identified unmet needs across the business beyond the known desire to have their own e-commerce store front. On a limited budget and short timetable, a web solution needed to deliver e-commerce, help center, b2b whole sale capability, CMS. At a business level, understood that Coolpad was 4 years into the U.S. market and still learning who they were in a b2c aspect and needed a flexible solution to easily grow and change as they do",
+        "situation": "Coolpad is a large multinational corporation that, at the time, was still in its fair bit of infancy in the U.S. market, and was looking to make its first strong venture out into the consumer facing market, away from its core competency of B2B",
+        "task": "Brought in to evaluate existing online solution built on KeystoneJS. Identified unmet needs across the business beyond the known desire to have their own e-commerce store front. On a limited budget and short timetable, a web solution needed to deliver e-commerce, help center, b2b whole sale capability, CMS, and flexibility to expand on demand. At a business level, understood that Coolpad was still learning its customer base in the U.S. market and needed a flexible solution to easily grow and change as they will certainly be changing regularly",
+        "activity": [
+          "Selected WordPress over Shopify for its extensive flexibility, and chose a multi-site structure to allow easy subdomain expansion with minimal conflict to account for new requirements on demand",
+          "Worked with an existing graphic designer of theirs for the UI of the site, teaching the graphic designer about responsive design. Given the nature that the designer wanted to go in, chose to go with a minimally built custom theme from the ground up to account for the continously changing requirements and demands placed on the application",
+          "Leveraged WordPress's popular Visual Composer plugin and customized their plug-and-play components as needed, leveraging that as a layer on top of a traditional WordPress theme, but easier for Coolpad staff to go in and change components out on a page",
+          "Strived to contain all elements of a WordPress page visible through the administrative panel to be just Visual Composer components with modified CSS and JS behind the scenes, which came out to about an 80% success rate. The rest is raw code to achieve objectives that Visual Composer could not, but still maintain modularity and ease of use for Coolpad staff",
+          "Performance was a huge concern for the application, which by going 'theme-less,' I was able to achieve a huge performance boost, and received a lot of notoriety from long time WordPress developers for the performance I was able to achieve on the project"
+        ],
+        "result": "On time and under budget was the biggest concerns for this project, and those were achieved through careful craftsmanship at the beginning of the project to not waste time and resources, plan effectively, know exactly what is needed and limit the noise and project scope screep.\n\n Being Coolpad's fourth full website rebuild in 4 years, they were eager that this comes out much better than past experiences. Given that the website is still operational today and I am still asked to maintain the website, I am confident to say that the project was a huge success."
+      },
+      {
+        "company": "Abroadeasy",
+        "title": "Co-Founder",
+        "location": "Shanghai, China",
+        "started": "April 2014",
+        "ended": "March 2016",
+        "situation": "Abroadeasy was a startup thought up in the US for the China market. There is a billion dollar industry around assisting the Chinese to go international for various purposes, the biggest being international education. The industry, however, was and still is extremely expensive and not financially feasible for the vast majority of Chinese. Abroadeasy aimed to change that.",
         "task": "",
         "activity": [
-          "Selected WordPress for its extensive flexibility, established a multi-site structure to allow easy subdomain expansion with minimal conflict",
-          "Custom built theme for the main site targeting sub-second performance focused on corporate feel and custom built product pages unique to each new product launch"
+          ""
         ],
         "result": ""
       }
@@ -160,11 +189,6 @@
       "image": "https://img.shields.io/github/last-commit/natthanhamilton/natthan-io.svg"
     },
     {
-      "tool": "Github Code Size",
-      "link": "",
-      "image": "https://img.shields.io/github/languages/code-size/natthanhamilton/natthan-io.svg"
-    },
-    {
       "tool": "ESLint Config",
       "link": "",
       "image": "https://img.shields.io/badge/eslint%20preset-airbnb-brightgreen.svg"
@@ -177,7 +201,7 @@
     {
       "tool": "Lighthouse Performance",
       "link": "",
-      "image": "https://img.shields.io/badge/Lighthouse%20Performance-39%25-brightgreen.svg"
+      "image": "https://img.shields.io/badge/Lighthouse%20Performance-46%25-brightgreen.svg"
     },
     {
       "tool": "Lighthouse PWA",

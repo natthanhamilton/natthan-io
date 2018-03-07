@@ -149,7 +149,7 @@ module.exports = ( env ) => {
       new HtmlWebpackPlugin( {
         template: SRC_DIR + '/index.html'
       } ),
-/*
+
       new webpack.optimize.AggressiveMergingPlugin(),
       new CompressionPlugin( {
         asset: '[path].gz[query]',
@@ -164,7 +164,7 @@ module.exports = ( env ) => {
         threshold: 10240,
         minRatio: 0.8
       } ),
-*/
+
       new GenerateSW( {
         globDirectory: DIST_DIR,
         globPatterns: [ '**/*.{html,js}' ],
