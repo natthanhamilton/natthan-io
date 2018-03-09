@@ -60,13 +60,10 @@ const Person = ( props ) => {
         <Avatar alt="Natthan Hamilton" src={cloudinary.url(`portraits/nate.jpg`, {height: 113, quality: 60, width: 100, crop: "scale", secure: true})} className={c.avatar} />
       </Grid>
       <Grid item xs={12}>
-        <Typography variant="title" align="center">{t( `person.name` )}</Typography>
+        <Typography variant="title" align="center">{t( `person.name` )}</Typography><br/>
         <Typography variant="body1">{t( `person.description` )}</Typography>
       </Grid>
       <Grid className={c.actions} item xs={12}>{list}</Grid>
-      <Grid item xs={12}>
-        <Divider />
-      </Grid>
     </Grid> );
 }
 

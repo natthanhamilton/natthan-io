@@ -72,7 +72,7 @@ class MyStory extends Component {
                   <Paper className={c.portraitPaper} elevation={4}>
                     <LazyLoad className={c.portait} height={400}>
                       <div
-                        style={{ background: `url(${cloudinary.url(`portraits/fam.jpg`, {height: 400, quality: "auto:good", crop: "scale"})}) 50% 50% no-repeat` }}
+                        style={{ background: `url(${cloudinary.url(`portraits/fam.jpg`, {height: 400, quality: "auto:good", crop: "scale", secure: true})}) 50% 50% no-repeat` }}
                       />
                     </LazyLoad>
                   </Paper>
@@ -88,7 +88,14 @@ class MyStory extends Component {
               </Grid>
               <Grid className={c.close} item xs={12}>
                 <Zoom in style={{ transitionDelay: 1500 }}>
-                  <Button onClick={() => this.setState({open: false})} variant="raised" color="primary">
+                  <Button
+                    onClick={() => {
+                    this.setState({open: false})
+                    window.scrollTo(0, 0)
+                  }}
+                    variant="raised"
+                    color="primary"
+                  >
                     {t( `prompts.hideStory` )}
                   </Button>
                 </Zoom>

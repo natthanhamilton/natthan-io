@@ -71,6 +71,9 @@ const styles = {
       height: '100%',
       backgroundSize: 'cover !important'
     }
+  },
+  skillsPanel: {
+    textAlign: 'center'
   }
 };
 
@@ -95,18 +98,18 @@ class Portfolio extends Component {
         <Card>
           <LazyLoad className={c.listImage} height={200}>
             <div
-              style={{ background: `url(${cloudinary.url(`portfolio/${d.image}.jpg`, {height: 200, quality: "auto:good", crop: "scale"})}) 50% 50% no-repeat` }}
+              style={{ background: `url(${cloudinary.url(`portfolio/${d.image}.jpg`, {quality: "auto:good", crop: "scale"})}) 50% 50% no-repeat` }}
             />
           </LazyLoad>
           <CardContent>
             <Typography variant="title">{t( `portfolio.list.${i}.name` )}</Typography>
             <Typography variant="body1" noWrap>{t( `portfolio.list.${i}.summary` )}</Typography>
-            <Typography variant="body1" noWrap>&nbsp;</Typography>
+            <br />
             <ExpansionPanel>
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="body2" noWrap><i>{t( `portfolio.skillsTitle` )}</i></Typography>
               </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
+              <ExpansionPanelDetails className={c.skillsPanel}>
                 <GenerateSkillsList item={`portfolio.list.${i}.tools`} data={d.tools} />
               </ExpansionPanelDetails>
             </ExpansionPanel>
@@ -162,8 +165,8 @@ class Portfolio extends Component {
     return ( <div>
       <Grid container className={c.container} spacing={0}>
         <Grid item xs={12}>
-          <Typography className={c.sectionTitle} variant="title"><span><GroupWork className={c.iconLarge} /></span>
-            {t( `portfolio.title` )}&nbsp;<i><small>Content currently under development!</small></i>
+          <Typography className={c.sectionTitle} variant="headline"><span><GroupWork className={c.iconLarge} /></span>
+            {t( `portfolio.title` )}{" "}<i><small>Content currently under development!</small></i>
           </Typography>
         </Grid>
         <Grid item xs={12}>

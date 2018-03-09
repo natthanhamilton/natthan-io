@@ -249,18 +249,27 @@
   },
   "skills": {
     "title": "Who Am I..",
-    "breakdownTitle": "Languages, Tools, and The Kitchen Sink",
+    "breakdownTitle": "Languages, Skills, Tools",
     "techTitle": "I Love Tech..",
     "bizTitle": "And I Love Business..",
-    "experienced": "Experienced",
-    "familiar": "Familiar",
-    "learning": "Learning",
+    "experiencedTitle": "Experienced",
+    "familiarTitle": "Familiar",
+    "learningTitle": "Learning",
+    "toolsTitle": "Supporting Tool Set",
     "tech": [{
+      "name": "React.js",
+      "experience": "",
+      "percent": 0
+    },{
       "name": "Full Stack",
       "experience": "",
       "percent": 0
     }, {
-      "name": "Web Developer",
+      "name": "Web Development",
+      "experience": "",
+      "percent": 0
+    }, {
+      "name": "Web Applications",
       "experience": "",
       "percent": 0
     }, {
@@ -268,7 +277,7 @@
       "experience": "",
       "percent": 0
     }, {
-      "name": "Progressive Web App",
+      "name": "Progressive Web App (PWA)",
       "experience": "",
       "percent": 0
     }, {
@@ -288,11 +297,11 @@
       "experience": "",
       "percent": 0
     }, {
-      "name": "User Experience Design",
+      "name": "User Experience (UX) Design",
       "experience": "",
       "percent": 0
     }, {
-      "name": "User Interface Design",
+      "name": "User Interface (UI) Design",
       "experience": "",
       "percent": 0
     }, {
@@ -443,7 +452,7 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "skillsTitle": "Skills & Tools on this project",
+    "skillsTitle": "Skills/Tools",
     "list": [{
         "name": "Prints Charming",
         "website": "http://oms.printscharming.biz/",
@@ -679,7 +688,6 @@
   },
   "skillsExperienced": [
     "ReactJS",
-    "React Native",
     "Redux",
     "React Router",
 
@@ -687,6 +695,7 @@
     "ExpressJS",
     "ES6",
     "JSX",
+    "Progressive Web App",
 
     "Webpack",
     "ESLint",
@@ -711,6 +720,7 @@
     "GitHub",
 
     "PHP",
+    "Composer",
     "phpStorm",
     "Laravel",
     "Lumen",
@@ -738,17 +748,31 @@
     "Hubspot",
     "Cloudinary",
     "MailChimp",
-    "Mailgun",
-
-    "npm",
-    "Asana",
-    "Slack",
-    "UberConference",
-    "Sympli",
-    "Zeplin",
-    "Skype"
+    "Mailgun"
   ],
   "skillsFamiliar": [
+    "Babel",
+    "PassportJS",
+    "MomentJS",
+
+    "Docker",
+    "Laradock",
+
+    "Cloudflare",
+    "Google Cloud",
+    "Google App Engine",
+    "Google Kubernetes",
+    "Google Workbox",
+    "Google Lighthouse",
+    "Brotli Compression",
+    "Google Apps",
+    "Google Maps",
+
+    "Amazon Web Services",
+    "Amazon EC2",
+    "Amazon RDS",
+    "Amazon Route 53",
+
     "Symfony2",
 
     "Shopify",
@@ -756,17 +780,22 @@
     "Amazon Payments",
     "miva",
     "Alipay",
+    "Yelp",
 
     "NginX",
     "Apache",
-    "Rackspace",
-
-    "Amazon EC2",
-    "Amazon RDS",
-    "Amazon Route 53",
-    "Google Apps",
-    "Google Maps",
-
+    "Rackspace"
+  ],
+  "skillsLearning": [
+    "Blockchain",
+    "Flutter",
+    "ElectronJS",
+    "React Native",
+    "Python",
+    "PyCharm",
+    "Anaconda"
+  ],
+  "skillsTools": [
     "PingDom",
     "SalesForce",
     "WeChat",
@@ -777,14 +806,15 @@
     "Hackpad",
     "Jell",
     "Waveapp",
+    "Skype",
+
+    "npm",
+    "Asana",
+    "Slack",
+    "UberConference",
+    "Sympli",
+    "Zeplin",
     "Skype"
-  ],
-  "skillsLearning": [
-    "Blockchain",
-    "ElectronJS",
-    "Python",
-    "PyCharm",
-    "Anaconda"
   ],
   "actions": [{
       "name": "Mail",

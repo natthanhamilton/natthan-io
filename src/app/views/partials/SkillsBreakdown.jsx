@@ -39,21 +39,25 @@ const SkillsBreakdown = ( props ) => {
     <Grid item xs={12}>
       <Grid container className={c.container} spacing={0}>
         <Grid item xs={12}>
-          <Typography className={c.sectionTitle} variant="title"><span><Star className={c.iconLarge} /></span>
-            {locale.skillsExperienced.length+locale.skillsFamiliar.length+locale.skillsLearning.length}&nbsp;{t( `skills.breakdownTitle` )}
+          <Typography className={c.sectionTitle} variant="headline"><span><Star className={c.iconLarge} /></span>
+            {locale.skillsExperienced.length+locale.skillsFamiliar.length+locale.skillsLearning.length+locale.skillsTools.length}{" "}{t( `skills.breakdownTitle` )}
           </Typography>
         </Grid>
-        <Grid className={c.section} item sm={12}>
-          <Typography variant="title">{t( `skills.experienced` )}</Typography>
+        <Grid className={c.section} item xs={12}>
+          <Typography variant="title">{t( `skills.experiencedTitle` )}</Typography>
           <GenerateSkillsList item='skillsExperienced' data={locale.skillsExperienced} />
         </Grid>
-        <Grid className={c.section} item sm={12}>
-          <Typography variant="title">{t( `skills.familiar` )}</Typography>
+        <Grid className={c.section} item xs={12}>
+          <Typography variant="title">{t( `skills.familiarTitle` )}</Typography>
           <GenerateSkillsList item='skillsFamiliar' data={locale.skillsFamiliar} />
         </Grid>
-        <Grid className={c.section} item sm={12}>
-          <Typography variant="title">{t( `skills.learning` )}</Typography>
+        <Grid className={c.section} item xs={12}>
+          <Typography variant="title">{t( `skills.learningTitle` )}</Typography>
           <GenerateSkillsList item='skillsLearning' data={locale.skillsLearning} />
+        </Grid>
+        <Grid className={c.section} item xs={12}>
+          <Typography variant="title">{t( `skills.toolsTitle` )}</Typography>
+          <GenerateSkillsList item='skillsTools' data={locale.skillsTools} />
         </Grid>
       </Grid>
     </Grid> );

@@ -17,6 +17,7 @@ import {
   MuiThemeProvider,
   createMuiTheme,
 } from 'material-ui/styles';
+import blue from 'material-ui/colors/blue';
 import cloudinary from 'cloudinary'
 import {
   I18nextProvider
@@ -52,7 +53,42 @@ cloudinary.config( {
   api_secret: process.env.CLOUDINARY_API_SECRET
 } );
 
-const theme = createMuiTheme();
+const theme = createMuiTheme( {
+  palette: {
+    primary: blue,
+  },
+  typography: {
+    // Use the system font.
+    fontFamily: '-apple-system,system-ui,BlinkMacSystemFont,' +
+      '"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
+    headline: {
+      color: blue[ 700 ],
+      borderBottom: '2px solid',
+      borderColor: blue[ 500 ],
+      paddingBottom: '5px',
+      '& span': {
+        position: 'relative',
+        top: '4px',
+        paddingRight: '5px'
+      }
+    }
+  },
+  MuiDivider: {
+    margin: '10 0'
+  },
+  MuiSnackbar: {
+    color: '#fff'
+  },
+  overrides: {
+    MuiExpansionPanelDetails: {
+      root: {
+        '@media (max-width: 960px)': {
+          padding: '8px'
+        }
+      }
+    }
+  }
+} );
 
 const App = () => {
   return ( <MuiThemeProvider theme={theme}>

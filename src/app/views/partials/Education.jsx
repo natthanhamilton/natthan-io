@@ -6,7 +6,6 @@ import {
 
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
-import Divider from 'material-ui/Divider';
 
 import LocationOn from 'material-ui-icons/LocationOn';
 import DateRange from 'material-ui-icons/DateRange';
@@ -23,7 +22,7 @@ const Education = ( props ) => {
     <Grid container className={c.container} spacing={0}>
 
       <Grid item xs={12}>
-        <Typography className={c.sectionTitle} variant="title"><span><School className={c.iconLarge} /></span>
+        <Typography className={c.sectionTitle} variant="headline"><span><School className={c.iconLarge} /></span>
           {t('education.title')}
         </Typography>
       </Grid>
@@ -31,8 +30,8 @@ const Education = ( props ) => {
       <Grid item xs={12} className={c.section}>
         <Typography variant="title">{t('education.uName')}</Typography>
         <Typography variant="body2"><LocationOn className={c.iconSmall} />
-          {t('education.uLocation')} &nbsp;&nbsp;<DateRange className={c.iconSmall} />
-          {t('education.uStart')}&nbsp;-&nbsp;{t('education.uEnd')}
+          {t('education.uLocation')} {" "}{" "}<DateRange className={c.iconSmall} />
+          {t('education.uStart')}{" "}-{" "}{t('education.uEnd')}
         </Typography>
         <Typography variant="body1">{t('education.uDegree')}</Typography>
       </Grid>

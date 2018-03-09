@@ -21,24 +21,24 @@ const About = ( props ) => {
   return (
     <Grid container className={c.container} spacing={24}>
       <Grid item xs={12}>
-        <Typography className={c.sectionTitle} variant="title"><span><AccountCircle className={c.iconLarge} /></span>
-          &nbsp;{t('about.aboutTitle')}
+        <Typography className={c.sectionTitle} variant="headline"><span><AccountCircle className={c.iconLarge} /></span>
+          {" "}{t('about.aboutTitle')}
         </Typography>
       </Grid>
       <Grid item xs={12}>
         <Typography variant="body1">{t('about.aboutContent')}</Typography>
       </Grid>
       <Grid item xs={12}>
-        <Typography className={c.sectionTitle} variant="title"><span><Phone className={c.iconLarge} /></span>
-          &nbsp;{t('about.contactTitle')}
+        <Typography className={c.sectionTitle} variant="headline"><span><Phone className={c.iconLarge} /></span>
+          {" "}{t('about.contactTitle')}
         </Typography>
       </Grid>
       <Grid item xs={12}>
         <Typography variant="body1"><LocationOn className={c.iconSmall} />
-          &nbsp;{t('about.contactLocation')}
+          {" "}{t('about.contactLocation')}
         </Typography>
         <Typography variant="body1"><Email className={c.iconSmall} />
-          &nbsp;{t('about.contactEmail')}
+          {" "}{t('about.contactEmail')}
         </Typography>
       </Grid>
     </Grid> );

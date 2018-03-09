@@ -37,9 +37,6 @@ const styles = theme => ( {
     padding: 12,
     width: '100% !important'
   },
-  divider: {
-    margin: '10 0'
-  },
   iconLarge: {
     width: 25,
     height: 25
@@ -49,30 +46,11 @@ const styles = theme => ( {
     height: 10
   },
   section: {
-    padding: '10px 0 10px 40px !important'
-  },
-  padding: {
-    paddingTop: 2.5,
-    paddingBottom: 2.5
-  },
-  snackbar: {
-    color: '#fff'
-  },
-  lazyLoad: {
-    display: 'inline-block'
-  },
-  ul: {
-    margin: 0
-  },
-  sectionTitle: {
-    borderBottom: '2px solid #3f51b5',
-    paddingBottom: '5px',
-    '& span': {
-      position: 'relative',
-      top: '4px',
-      paddingRight: '5px'
+    padding: '10px 0 10px 0',
+    '@media (min-width: 960px)': {
+      paddingLeft: '40px'
     }
-  }
+  },
 } );
 
 const HomeView = ( props ) => {
@@ -109,7 +87,7 @@ const HomeView = ( props ) => {
         open={s.snackbar}
         autoHideDuration={20000}
         onClose={closeSnackbar()}
-        message={<Typography className={c.snackbar} variant="body1">Hello! Thank you for visiting my digital home! This site is currently under active development and content curation. If you would like to connect, please visit my LinkedIn. Thanks!</Typography>}
+        message={<Typography variant="body1">Hello! Thank you for visiting my digital home! This site is currently under active development and content curation. If you would like to connect, please visit my LinkedIn. Thanks!</Typography>}
         action={<Button color="primary" onClick={closeSnackbar()}>Close</Button>}
       />
       */}

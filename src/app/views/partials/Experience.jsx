@@ -4,6 +4,9 @@ import {
   translate
 } from 'react-i18next';
 
+import {
+  withStyles
+} from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
@@ -19,9 +22,21 @@ import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 
 import locale from '../../../assets/locales/en-US/translations';
 
+const styles = theme => ( {
+  padding: {
+    paddingTop: 2.5,
+    paddingBottom: 2.5
+  },
+  ul: {
+    margin: 0
+  },
+} );
+
 const Experience = ( props ) => {
+  const c = { ...props.c,
+    ...props.classes
+  };
   const {
-    c,
     t
   } = props;
 
@@ -34,16 +49,17 @@ const Experience = ( props ) => {
       <div key={i}>
         <Grid container spacing={0}>
           {i > 0 && (
-          <Grid item xs={12}>
-            <Divider className={c.divider} />
+          <Grid item xs={12} className={c.section}>
+            <Divider />
           </Grid>
         )}
           <Grid item xs={12} className={c.section}>
-            <Typography variant="title">{t(`experience.jobs.${i}.company`)}&nbsp;&nbsp;<i><small>{t(`experience.jobs.${i}.title`)}</small></i></Typography>
+            <Typography variant="title">{t(`experience.jobs.${i}.company`)}{"  "}<i><small>{t(`experience.jobs.${i}.title`)}</small></i></Typography>
             <Typography className={c.padding} variant="body2"><LocationOn className={c.iconSmall} /> {t(`experience.jobs.${i}.location`)}
-          &nbsp;&nbsp;
-              <DateRange className={c.iconSmall} /> {t(`experience.jobs.${i}.started`)}&nbsp;-&nbsp;{t(`experience.jobs.${i}.ended`)}
+              {"  "}
+              <DateRange className={c.iconSmall} /> {t(`experience.jobs.${i}.started`)}{" - "}{t(`experience.jobs.${i}.ended`)}
             </Typography>
+            <br />
             <ExpansionPanel>
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="body2" noWrap>{t(`prompts.viewExperience`)}</Typography>
@@ -69,7 +85,7 @@ const Experience = ( props ) => {
   return (
     <Grid container className={c.container} spacing={0}>
       <Grid item xs={12}>
-        <Typography className={c.sectionTitle} variant="title"><span><Work className={c.iconLarge} /></span>
+        <Typography className={c.sectionTitle} variant="headline"><span><Work className={c.iconLarge} /></span>
           {t('experience.title')}
         </Typography>
       </Grid>
@@ -78,11 +94,12 @@ const Experience = ( props ) => {
 }
 
 Experience.propTypes = {
+  classes: PropTypes.object,
   c: PropTypes.object,
   t: PropTypes.func.isRequired
 }
 Experience.defaultProps = {
+  classes: {},
   c: {}
 };
-
-export default translate()( Experience );
+export default withStyles( styles )( translate()( Experience ) );

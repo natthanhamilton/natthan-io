@@ -33,7 +33,10 @@ const styles = theme => ( {
   },
   badge: {
     padding: 5
-  }
+  },
+  lazyLoad: {
+    display: 'inline-block'
+  },
 } );
 
 const Footer = ( props ) => {

@@ -48,7 +48,7 @@ const Skills = ( props ) => {
     <Grid container className={c.container} spacing={24}>
 
       <Grid item xs={12}>
-        <Typography className={c.sectionTitle} variant="title"><span><Star className={c.iconLarge} /></span>
+        <Typography className={c.sectionTitle} variant="headline"><span><Star className={c.iconLarge} /></span>
           {t( `skills.title` )}
         </Typography>
       </Grid>

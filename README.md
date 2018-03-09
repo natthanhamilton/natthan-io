@@ -8,3 +8,4 @@ Digital Home of Natthan Hamilton
 - Finish portfolio piece
 -- Need new portfolio images
 - Complete converting all experiences into STAR structure
+- Refactor home view partials into single file
