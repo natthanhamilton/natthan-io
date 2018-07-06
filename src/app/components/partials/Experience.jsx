@@ -6,7 +6,9 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import ExpansionPanel, { ExpansionPanelSummary, ExpansionPanelDetails } from '@material-ui/core/ExpansionPanel';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 
 import LocationOn from '@material-ui/icons/LocationOn';
 import DateRange from '@material-ui/icons/DateRange';
@@ -38,15 +40,14 @@ const Experience = props => {
       );
     const title = (
       <Typography variant="title">
-        {t(`experience.jobs.${i}.company`)}
-        {'  '}
-        <i>
-          <small>
-            {jobTitle}
-          </small>
-        </i>
+        {jobTitle}
       </Typography>
-    );
+);
+    const company = (
+      <Typography variant="body2">
+        {t(`experience.jobs.${i}.company`)}
+      </Typography>
+);
     const description = (
       <Typography className={classes.padding} variant="body2" paragraph>
         <LocationOn className={classes.iconSmall} /> 
@@ -66,6 +67,7 @@ const Experience = props => {
         {divider}
         <Grid item xs={12} className={classes.section}>
           {title}
+          {company}
           {description}
           <ExpansionPanel>
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
@@ -74,33 +76,35 @@ const Experience = props => {
               </Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails className={classes.padding}>
-              <Typography className={classes.sectionHeader} variant="body2">
-                SITUATION
-              </Typography>
-              <Typography variant="body1" paragraph>
-                {t(`experience.jobs.${i}.situation`)}
-              </Typography>
+              <div>
+                <Typography className={classes.sectionHeader} variant="body2">
+                  SITUATION
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  {t(`experience.jobs.${i}.situation`)}
+                </Typography>
 
-              <Typography className={classes.sectionHeader} variant="body2">
-                TASK
-              </Typography>
-              <Typography variant="body1" paragraph>
-                {t(`experience.jobs.${i}.task`)}
-              </Typography>
+                <Typography className={classes.sectionHeader} variant="body2">
+                  TASK
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  {t(`experience.jobs.${i}.task`)}
+                </Typography>
 
-              <Typography className={classes.sectionHeader} variant="body2">
-                ACTIVITY
-              </Typography>
-              <ul className={classes.ul}>
-                {activities}
-              </ul>
+                <Typography className={classes.sectionHeader} variant="body2">
+                  ACTIVITY
+                </Typography>
+                <ul className={classes.ul}>
+                  {activities}
+                </ul>
 
-              <Typography className={classes.sectionHeader} variant="body2">
-                RESULT
-              </Typography>
-              <Typography variant="body1" paragraph>
-                {t(`experience.jobs.${i}.result`)}
-              </Typography>
+                <Typography className={classes.sectionHeader} variant="body2">
+                  RESULT
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  {t(`experience.jobs.${i}.result`)}
+                </Typography>
+              </div>
             </ExpansionPanelDetails>
           </ExpansionPanel>
         </Grid>

@@ -61,7 +61,6 @@ const theme = createMuiTheme({
     primary: blue
   },
   typography: {
-    // Use the system font.
     headline: {
       color: blue[700],
       borderBottom: '2px solid',
@@ -76,9 +75,6 @@ const theme = createMuiTheme({
   },
   MuiDivider: {
     margin: '10 0'
-  },
-  MuiSnackbar: {
-    color: '#fff'
   },
   overrides: {
     MuiExpansionPanelDetails: {

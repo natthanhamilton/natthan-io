@@ -46,6 +46,7 @@ class Portfolio extends Component {
 
     return locale.portfolio.list.map((portfolio, i) => {
       const title = t(`portfolio.skillsTitle`);
+      const key = `portfolio-${title}-${i}`;
       const cover = (
         <LazyLoad className={classes.listImage} height={200}>
           <div
@@ -55,15 +56,9 @@ class Portfolio extends Component {
           />
         </LazyLoad>
       );
-      const action =
-        portfolio.website == null ? null : (
-          <Button target="_new" href={portfolio.website} color="primary">
-            {t(`prompts.viewWebsite`)}
-          </Button>
-        );
 
       return (
-        <Grid key={title} item xs={12} sm={6}>
+        <Grid key={key} item xs={12} sm={6}>
           <Card>
             {cover}
             <CardContent>
@@ -73,20 +68,8 @@ class Portfolio extends Component {
               <Typography variant="body1" noWrap paragraph>
                 {t(`portfolio.list.${i}.summary`)}
               </Typography>
-              <ExpansionPanel>
-                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography variant="body2" className={classes.italic} noWrap>
-                    {title}
-                  </Typography>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className={classes.skillsPanel}>
-                  <GenerateSkillsList item={`portfolio.list.${i}.tools`} data={portfolio.tools} />
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
+              <GenerateSkillsList item={`portfolio.list.${i}.tools`} data={portfolio.tools} />
             </CardContent>
-            <CardActions className={classes.cardActions}>
-              {action}
-            </CardActions>
           </Card>
         </Grid>
       );

@@ -12,26 +12,26 @@ const Home = props => {
 
   return (
     <Layout>
-      <Paper>
-        <Grid container className={classes.root}>
-          <Grid item xs={12} sm={5}>
-            <Person />
-            <About />
-            <Skills />
-          </Grid>
-
-          <Grid item xs={12} sm={7}>
-            <Experience />
-            <Education />
-          </Grid>
-
-          <Grid item xs={12}>
-            <Portfolio />
-          </Grid>
-
-          <SkillsBreakdown />
+      {/* <Paper> */}
+      <Grid container className={classes.root}>
+        <Grid item xs={12} sm={5}>
+          <Person />
+          <About />
+          <Skills />
         </Grid>
-      </Paper>
+
+        <Grid item xs={12} sm={7}>
+          <Experience />
+          <Education />
+        </Grid>
+
+        <Grid item xs={12}>
+          <Portfolio />
+        </Grid>
+
+        <SkillsBreakdown />
+      </Grid>
+      {/* </Paper> */}
       <Footer />
     </Layout>
   );

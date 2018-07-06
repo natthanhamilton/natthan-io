@@ -17,7 +17,7 @@ const Layout = props => {
 
   return (
     <Grid container className={classes.root} alignItems="flex-start" justify="center">
-      <Grid item xs={12} sm={10} md={8}>
+      <Grid item className={classes.container} xs={12} sm={10} md={8}>
         {children}
       </Grid>
 
@@ -57,19 +57,10 @@ Layout.defaultProps = {
 //Theme
 const styles = theme => ({
   root: {
-    position: 'relative',
-    zIndex: 1111111,
-    flexGrow: 1,
-    padding: theme.spacing.unit * 5
+    flexGrow: 1
   },
-  loadingBar: {
-    backgroundColor: '#039be5',
-    zIndex: '999999'
-  },
-  toolBar: {
-    width: '100%',
-    zIndex: 0,
-    height: 100
+  container: {
+    padding: theme.spacing.unit * 2
   }
 });
 

@@ -13,9 +13,10 @@ const GenerateSkillsList = props => {
   return data.map((skill, i) => {
     const title = t(`${item}.${i}`);
     const path = skill.replace(/\s+/g, '-').toLowerCase();
+    const key = `skill-list-${title}-${i}`;
 
     return (
-      <LazyLoad key={title} className={classes.skillImg}>
+      <LazyLoad key={key} className={classes.skillImg}>
         <Tooltip title={title} placement="bottom">
           <img src={cloudinary.url(`tools/${path}.png`, cloudinaryOpts)} alt={title} />
         </Tooltip>
