@@ -59,7 +59,7 @@
     "brotli-webpack-plugin": "^1.0.0",
     "clean-webpack-plugin": "^0.1.19",
     "codecov": "^3.0.3",
-    "compression-webpack-plugin": "^1.1.11",
+    "compression-webpack-plugin": "^2.0.0",
     "copy-webpack-plugin": "^4.5.2",
     "coveralls": "^3.0.2",
     "css-loader": "^1.0.0",
