@@ -24,7 +24,7 @@
     "@material-ui/icons": "^1.1.0",
     "cloudinary": "^1.11.0",
     "i18next": "^11.3.5",
-    "i18next-browser-languagedetector": "^2.2.0",
+    "i18next-browser-languagedetector": "^3.0.0",
     "i18next-xhr-backend": "^1.5.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
