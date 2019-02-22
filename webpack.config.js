@@ -102,6 +102,10 @@ module.exports = (env) => {
 					from: './distAssets',
 					to: '../',
 				},
+				{
+					from: './.elasticbeanstalk',
+					to: './.elasticbeanstalk',
+				},
 			]),
 
 			new HtmlWebpackPlugin({

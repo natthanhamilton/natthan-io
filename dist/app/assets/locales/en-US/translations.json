@@ -1,0 +1,490 @@
+{
+	"prompts": {
+		"close": "Close",
+		"hideStory": "Hide Story",
+		"viewWebsite": "View Site",
+		"projectInformation": "More Info",
+		"viewExperience": "View Experience"
+	},
+	"person": {
+		"name": "Natthan Hamilton",
+		"description": "Business driven full stack progressive web developer.\nFormer long time PHP engineer all in on the cutting edge JS world.\nPassionate to create beneficial solutions.\nDesign, develop, test, deploy, maintain and improve software.\nPreference for Front End JS innovation!"
+	},
+	"story": {
+		"title": "My Story",
+		"content": "Being around technology my whole life as a second generation engineer, I first engaged code at ten years old, creating PHP and MySQL applications. At ten, I wanted to build game communities for the groups of friends I was always playing online video games with (shout out to Counter-Strike!).\n\n Homeschooling through high school not by choice, I chose to end that torture as quickly as possible by graduating high school at fifteen and a half, and get onto junior college. After spending my teenage years deep in technology, I started to shy away from it as I was progressing into my young college life eager to fit into groups and be more cool. Being able to teach myself, I chose to study the inner workings of business and subsequently spend my first years out of college in sales roles to gain a deep understanding of how a business operates. I can attribute the insight to take such a direction to the teachings of my father -- Technology serves the business, or there is no business for the technologist to thrive in!\n\n Bringing it full circle, I am now fortunate to have well crafted skills on both sides of the spectrum and have tested it in various fashions. Now, after having proven that I can craft something from nothing, my interest is now understanding at a deep level the meaning of \"massive scale\""
+	},
+	"about": {
+		"aboutTitle": "About Me",
+		"aboutContent": "Blending strong business experience with technical talents empowers me to think differently, leading to creative problem solving and aggressively fast learning. With tea direct from the source in China, sleep is optional.",
+		"contactTitle": "Contact Me",
+		"contactLocation": "Camarillo, California",
+		"contactEmail": "NatthanHamilton@gmail.com",
+		"uDegree": "Bachelor's of Science, Business Administration"
+	},
+	"education": {
+		"title": "Education",
+		"uName": "San Diego State University",
+		"uLocation": "San Diego, CA",
+		"uStart": "2009",
+		"uEnd": "2011",
+		"uDegree": "Bachelor's of Science in Business Administration"
+	},
+	"experience": {
+		"title": "Work Experience",
+		"jobs": [
+			{
+				"company": "Abroadeasy",
+				"title": "Partner, Growth Hacker",
+				"location": "Camarillo, CA",
+				"started": "April 2014",
+				"ended": "Present",
+				"situation": "Abroadeasy is my own agency I’ve operated to focus on growth in the ever-changing ecommerce space.",
+				"task": "Project based, small agency work.",
+				"activity": [
+					"Developed a tool that tracks product health on ecommerce sites and reports any changes",
+					"Actively develop dozens of Shopify stores, focusing on innovating a brand’s user buying experience",
+					"Developed, including custom built WooCommerce theme, and operated their ecommerce initiatives"
+				],
+				"result": ""
+			},
+			{
+				"company": "Intelligent Investor",
+				"title": "Cofounder, CTO",
+				"location": "San Diego, CA",
+				"started": "September 2018",
+				"ended": "February 2019",
+				"situation": "Intelligent Investor was born out of a struggle to keep up with fast moving stock trading information. Having tried my own hand at trading, I always felt overwhelmed, behind on information, and hesitating on moves to make.",
+				"task": "Concept proving with a Discord group and then moving to a web application proof of concept, things looked good to focus on a crossroads of real time chatting and alerts",
+				"activity": [
+					"Innovated a web app proof of concept for social trading across localizations, focusing on real time alerting",
+					"Ported the concept into a React Native with Expo mobile application, releasing on Apple and Google stores",
+					"Wrapped the web app with Electron to build out desktop applications."
+				],
+				"result": "As things progressed towards an ecosystem solution, the startup began to prove unviable due to changes in the horizon. Project was ultimately scrapped, but not without incredibly valuable lessons gained."
+			},
+			{
+				"company": "Dthera Sciences",
+				"title": "Software Engineer",
+				"location": "San Diego, CA",
+				"started": "March 2018",
+				"ended": "September 2018",
+				"situation": "Dthera Sciences was a life sciences startup focused on a technology solution to combat Alzheimer's disease.",
+				"task": "As they were ramping up for an initial launch, I was brought on to focus on an internal administrative application that will become the central nervous system to their business operations. As that task was swiftly accomplished, I was given charge of a new initiative to engineer a big data pipeline that would be responsible for injesting data from their product in the wild, transforming, and then feeding into the administrative application.",
+				"activity": [
+					"Architected and developed their administrative application with a high level of autonomy. \nChose to go with stock Material design, eliminating any need of custom UI dependencies. \nCollaborated on UX needs, proposing initial directions requiring minimal feedback to keep a high tempo. \nThe application also became their B2B portal, leveraging permission based access",
+					"Developed a big data pipeline on AWS infrastructure, leveraging Lambdas. \n Cloud Formation architecture housed all necessary pieces such as API Gateways, Kinesis buffering, S3 buckets, RDS databases injesting the buffered data. \n With 2 core lambdas on both sides, it became an operation of injesting and preparing the raw data, and then taking that raw data and transforming it. \n The core of my work centered around transforming the data, validated through Jest unit testing, which became hundreds of finite tests performed"
+				],
+				"result": "During my short tenure with Dthera, I was able to deliver two large impacts to the business under minimal guidance, high autonomy. Life events happening, my tenure with Dthera was cut short as working remote did not pan out."
+			},
+			{
+				"company": "Prints Charming",
+				"title": "Architect",
+				"location": "Remote",
+				"started": "March 2017",
+				"ended": "March 2018",
+				"situation": "Prints Charming is a small business around for many years running manual operations, and suddenly experienced growth resulting in bottlenecks and crippling effects on their small business",
+				"task": "Of the countless challenges available, I honed my focus on the sales and client facing part of their business where I noted orders were being handled manually through email or phone calls -- all the way from receiving the order through shipment and tracking of that shipment",
+				"activity": [
+					"Spent the first month breaking down their entire business into different blocks. Quickly discovered multiple factors I could make assumptions from that would significantly impact this project: \n(1) the owners I was working with had very limited technical knowledge, but desired to be highly involved, therefore a large amount of resources would be spent here; \n(2) there was no structured data to start with that will benefit the new application; \n (3) They have an existing legacy manufacturing application that I would have to interact with, and that data was in no beneficial condition",
+					"Given the desired nature of this application being client facing, chose a JS tech stack and established the development environment, leading with React.JS for the application (full list of tools can be found in the project)",
+					"Through the progression of this project, I was able to add value across the full spectrum of the business by studying all of their processes and proposing better solutions. Any manual process t",
+					"Innovated a ReactJS based wholesale commerce application to replace phone and email order taking, allowing a retailer, sales rep, or staff to place orders for a retailer, real time product builder, innovative checkout with real time master cartons, order history tracking, administrative capabilities to manage the business and operations, and dashboard analytics for awareness and drill into the business’ health",
+					"Focused heavily on salvaging data from existing internal application running MySQL, identifying what the business needs to know, what is currently available in the data, and then extracting into MongoDB and expanding data points to collect from my application"
+				],
+				"result": "With the maturity of a user's experience with online commerce applications, I knew that this would innovating a client facing application that handles the sales flow would unlock their revenue generating potential.\n Designed, developed, tested, deployed, maintained and improved a brand new wholesale commerce application for the sales side of their business revolutionalizing it from a manual operation of email and phone to a ReactJS, data driven solution unlocking their revenue generating potential.\n\n The impact of the new application on the business was in a lot of cases revolutionary for them. They were able to:\n -- Create orders in minutes versus hours \n -- Expose their entire product line to customers who were previously only aware of what products sales reps told them about\n -- Double digit percentage increase in products purchased from existing customers\n -- For the first time, customers were ordering for themselves, freeing up sales rep time to be more strategic and focus on growth strategies\n -- For the first time, sales rep groups were able to manage their book of business with their partnership to Prints Charming, creating new customer accounts and generating orders for those customers without the manual need for Prints Charming staff\n -- Prints Charming staff, sales reps, or the customer can order for that customer account, each can manage needed properties for the account, causing a higher probability for new orders, and much more\n -- An account's order history was now fully visible to them for the first time, with analytic breakdown never before available, along with reorder capability, making it incredibly simple for a user to gain insight into that account's health, generate conversation with that account on how they are doing, and increase sales volume\n\n The added business value of this targetted, well devised application will single-handedly transform their business and bring it into the digital age. Every day, it is generating more value than ever before for this small company"
+			},
+			{
+				"company": "Picture It On Canvas",
+				"title": "Software Engineer",
+				"location": "San Diego",
+				"started": "October 2016",
+				"ended": "March 2017",
+				"situation": "Picture It On Canvas (PIOC) was a founded and operated in San Diego company innovating their own proprietary code to deliver a custom user uploaded image on arts and crafts type of product. Up to the point of my coming on board, they have been outsourcing all technology. The original application was built years ago, the back end very lightly maintained, and the front end maintained by a European agency building out static HTML pages",
+				"task": "They desired to bring web development in house and my objective to be focus on all revenue generating opportunities. My arrival was right at the peak of their busiest season.",
+				"activity": [
+					"Immediately identified the poor state that the whole application was in and made the first prioity to be identifying the biggest areas for return on investment with as little effort invested possible by working closely with my talented and highly knowledge manager, the Director of Marketing, who had intimate knowledge of the application. This greatly decreased my ramp up time and allowed for an intelligent strategy",
+					"Worked quickly to move the client side to a more dynamic content driven application, eliminating static pages as much as possible, to allow for a single developer to manage the whole application in a sensible amount of time and effort",
+					"Worked closely with the Director of Marketing to upgrade the website's UI and UX elements, starting at the highest revenue generating points, such as the product builder. For example, identified areas that the user may get confused on which action to take, duplication of steps, unneccessary steps that the user must take"
+				],
+				"result": "In my short tenure at PIOC due to the parent company Zazzle absorbing the company and closing the San Diego office, I was able to make a profound impact to their business in a very short period of time. It turned out that their collage product line caused severe pain to the manufacturing process. Veteran staff told me stories of how every year prior was wraught with around the clock shifts, product backed up for weeks, thousands of backlogged images to process, and so forth. \n\nThe collage builder eliminated such an extreme amount of labor from the top down:\n -- designers had no work to do and were thus going into production to add extra support, allowing for backlogs to dwindle to nothing, which allowed staff to rest and perform at their best\n -- Morale was up\n -- No 24 shifts happened the whole season\n -- All deadlines were hit and product shipped\n -- Less mistakes happened during production, causing less returned product\n\n By fixing the biggest pain point in their product's production cycle, it managed to directly impact all parts of their business.\n The collage builder would go on to product tens of thousands of prints by itself without any designer involvement. Unfortunately, for such a great achievement and the design team having no work to do, it caused members of the design team to be laid off."
+			}
+		]
+	},
+	"badges": [
+		{
+			"tool": "Travis-CI",
+			"link": "https://travis-ci.org/",
+			"image": "https://img.shields.io/travis/natthanhamilton/natthan-io.svg?style=flat"
+		},
+		{
+			"tool": "AppVeyor",
+			"link": "https://ci.appveyor.com/",
+			"image": "https://img.shields.io/appveyor/ci/natthanhamilton/natthan-io.svg?style=flat"
+		},
+		{
+			"tool": "David-DM dependencies",
+			"link": "https://david-dm.org/natthanhamilton/natthan-io",
+			"image": "https://img.shields.io/david/natthanhamilton/natthan-io.svg?style=flat"
+		},
+		{
+			"tool": "David-DM devDependencies",
+			"link": "https://david-dm.org/natthanhamilton/natthan-io?type=dev",
+			"image": "https://img.shields.io/david/dev/natthanhamilton/natthan-io.svg?style=flat"
+		},
+		{
+			"tool": "Code Coverage",
+			"link": "https://codecov.io/",
+			"image": "https://img.shields.io/codecov/c/github/natthanhamilton/natthan-io.svg?style=flat"
+		},
+		{
+			"tool": "Clode Climate",
+			"link": "https://codeclimate.com/github/natthanhamilton/natthan-io/maintainability",
+			"image": "https://api.codeclimate.com/v1/badges/6fa95640ae6c153b0abe/maintainability"
+		},
+		{
+			"tool": "Inch CI",
+			"link": "https://inch-ci.org/github/natthanhamilton/natthan-io",
+			"image": "http://inch-ci.org/github/natthanhamilton/natthan-io.svg?branch=master"
+		},
+		{
+			"tool": "Github Language Most Used",
+			"link": "https://github.com/natthanhamilton/natthan-io",
+			"image": "https://img.shields.io/github/languages/top/natthanhamilton/natthan-io.svg"
+		},
+		{
+			"tool": "Github Release Date",
+			"link": "https://github.com/natthanhamilton/natthan-io",
+			"image": "https://img.shields.io/github/release-date/natthanhamilton/natthan-io.svg"
+		},
+		{
+			"tool": "Github License",
+			"link": "https://github.com/natthanhamilton/natthan-io",
+			"image": "https://img.shields.io/github/license/natthanhamilton/natthan-io.svg"
+		},
+		{
+			"tool": "Github Last Commit",
+			"link": "https://github.com/natthanhamilton/natthan-io",
+			"image": "https://img.shields.io/github/last-commit/natthanhamilton/natthan-io.svg"
+		},
+		{
+			"tool": "ESLint Config",
+			"link": "https://www.npmjs.com/package/eslint",
+			"image": "https://img.shields.io/badge/eslint%20preset-airbnb-brightgreen.svg"
+		},
+		{
+			"tool": "Code Style",
+			"link": "https://www.npmjs.com/package/eslint",
+			"image": "https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg"
+		},
+		{
+			"tool": "Lighthouse Performance",
+			"link": "https://developers.google.com/web/tools/lighthouse/",
+			"image": "https://img.shields.io/badge/Lighthouse%20Performance-46%25-brightgreen.svg"
+		},
+		{
+			"tool": "Lighthouse PWA",
+			"link": "https://developers.google.com/web/tools/lighthouse/",
+			"image": "https://img.shields.io/badge/Lighthouse%20PWA-91%25-brightgreen.svg"
+		},
+		{
+			"tool": "Lighthouse Accessibility",
+			"link": "https://developers.google.com/web/tools/lighthouse/",
+			"image": "https://img.shields.io/badge/Lighthouse%20Accessibility-100%25-brightgreen.svg"
+		},
+		{
+			"tool": "Lighthouse Practices",
+			"link": "https://developers.google.com/web/tools/lighthouse/",
+			"image": "https://img.shields.io/badge/Lighthouse%20Practices-100%25-brightgreen.svg"
+		},
+		{
+			"tool": "Lighthouse SEO",
+			"link": "https://developers.google.com/web/tools/lighthouse/",
+			"image": "https://img.shields.io/badge/Lighthouse%20SEO-100%25-brightgreen.svg"
+		}
+	],
+	"github": {
+		"linkText": "Visit the GitHub repository!"
+	},
+	"site": {
+		"author": "Natthan Hamilton",
+		"title": "Natthan.io"
+	},
+	"seo": {
+		"og": {
+			"title": "Natthan.io",
+			"description": "Digital Home of Natthan Hamilton, Business Driven Developer",
+			"url": "http://natthan.io",
+			"image": "http://res.cloudinary.com/natthanhamilton/image/upload/v1519557083/natthan-io.jpg"
+		},
+		"twitter": {
+			"card": "summary",
+			"creator": "@natthanhamilton",
+			"site": "@natthanhamilton",
+			"description": "Digital Home of Natthan Hamilton, Business Driven Developer",
+			"title": "Natthan.io",
+			"image": "http://res.cloudinary.com/natthanhamilton/image/upload/v1519557083/natthan-io.jpg"
+		}
+	},
+	"skills": {
+		"title": "Who Am I..",
+		"breakdownTitle": "Languages, Skills, Tools",
+		"techTitle": "I Love Tech..",
+		"bizTitle": "And I Love Business..",
+		"experiencedTitle": "Experienced",
+		"familiarTitle": "Familiar",
+		"learningTitle": "Learning",
+		"toolsTitle": "Supporting Tool Set",
+		"tech": [
+			"React",
+			"Full Stack",
+			"Web Development",
+			"Web Applications",
+			"Front End",
+			"Progressive Web App (PWA)",
+			"Back End",
+			"Database",
+			"DevOps",
+			"QA",
+			"User Experience (UX) Design",
+			"User Interface (UI) Design",
+			"Product Management",
+			"Project Management"
+		],
+		"biz": [
+			"Innovator",
+			"Entrepreneur",
+			"Growth Hacker",
+			"Sales Hunter",
+			"Networker",
+			"People Person"
+		]
+	},
+	"portfolio": {
+		"title": "Portfolio",
+		"skillsTitle": "Skills/Tools",
+		"list": [
+			{
+				"name": "Prints Charming",
+				"website": "http://oms.printscharming.biz/",
+				"summary": "ReactJS custom wholesale commerce application",
+				"content": "Prints Charming is a built from the ground up custom solution for a wholesale company that has been in business for decades. The company has been running manually processes across the board, and through recent growth they have been experiencing, decided to seek a solution to their growing pains. After evaluating their business and their perceived endless problems, the project focused on attacking their problems at the beginning of their business cycle. They traditionally receive orders from customers via email or phone, which then begins a long email process. By developing a custom wholesale commerce application that integrated into, and rebuilt in a lot of cases, their existing business, Prints Charming experienced even greater growth now with an automated application that their customers can order for themselves, allowing for employee time to be spent more strategically. Existing retailers were ordering multiple times more product than they normally would due to a visually driven buying experience where they were exposed to products they did not know existed. The byproduct of choosing this area to attack was the direct need to structure their business and data appropriately so that it was even possible to have an automated system. Streamlining their business in such a way is allowing for tremendous growth at a fraction of the cost previously needed in manual labor",
+				"image": "pc",
+				"title": "Principal Consulting Engineer",
+				"location": "Remote",
+				"started": "March 2017",
+				"ended": "February 2018",
+				"situation": "Prints Charming is a small business around for many years running manual operations, and suddenly experienced growth resulting in bottlenecks and crippling effects on their small business",
+				"task": "Of the countless challenges available, I honed my focus on the sales and client facing part of their business where I noted orders were being handled manually through email or phone calls -- all the way from receiving the order through shipment and tracking of that shipment",
+				"activity": [
+					"Spent the first month breaking down their entire business into different blocks. Quickly discovered multiple factors I could make assumptions from that would significantly impact this project: \n(1) the owners I was working with had very limited technical knowledge, but desired to be highly involved, therefore a large amount of resources would be spent here; \n(2) there was no structured data to start with that will benefit the new application; \n (3) They have an existing legacy manufacturing application that I would have to interact with, and that data was in no beneficial condition",
+					"Given the desired nature of this application being client facing, chose a JS tech stack and established the development environment, leading with React.JS for the application (full list of tools can be found in the project)",
+					"Through the progression of this project, I was able to add value across the full spectrum of the business by studying all of their processes and proposing better solutions. Any manual process t",
+					"Innovated a ReactJS based wholesale commerce application to replace phone and email order taking, allowing a retailer, sales rep, or staff to place orders for a retailer, real time product builder, innovative checkout with real time master cartons, order history tracking, administrative capabilities to manage the business and operations, and dashboard analytics for awareness and drill into the business’ health",
+					"Focused heavily on salvaging data from existing internal application running MySQL, identifying what the business needs to know, what is currently available in the data, and then extracting into MongoDB and expanding data points to collect from my application"
+				],
+				"result": "With the maturity of a user's experience with online commerce applications, I knew that this would innovating a client facing application that handles the sales flow would unlock their revenue generating potential.\n Designed, developed, tested, deployed, maintained and improved a brand new wholesale commerce application for the sales side of their business revolutionalizing it from a manual operation of email and phone to a ReactJS, data driven solution unlocking their revenue generating potential.\n\n The impact of the new application on the business was in a lot of cases revolutionary for them. They were able to:\n -- Create orders in minutes versus hours \n -- Expose their entire product line to customers who were previously only aware of what products sales reps told them about\n -- Double digit percentage increase in products purchased from existing customers\n -- For the first time, customers were ordering for themselves, freeing up sales rep time to be more strategic and focus on growth strategies\n -- For the first time, sales rep groups were able to manage their book of business with their partnership to Prints Charming, creating new customer accounts and generating orders for those customers without the manual need for Prints Charming staff\n -- Prints Charming staff, sales reps, or the customer can order for that customer account, each can manage needed properties for the account, causing a higher probability for new orders, and much more\n -- An account's order history was now fully visible to them for the first time, with analytic breakdown never before available, along with reorder capability, making it incredibly simple for a user to gain insight into that account's health, generate conversation with that account on how they are doing, and increase sales volume\n\n The added business value of this targetted, well devised application will single-handedly transform their business and bring it into the digital age. Every day, it is generating more value than ever before for this small company",
+				"tools": [
+					"ReactJS",
+					"Redux",
+					"React Router",
+					"NodeJS",
+					"ES6",
+					"JSX",
+					"Webpack",
+					"MongoDB",
+					"MySQL",
+					"Bootstrap",
+					"React-Bootstrap",
+					"PHP",
+					"Laravel",
+					"Lumen",
+					"HTML5",
+					"JavaScript",
+					"JSON",
+					"CSS3",
+					"LESS"
+				]
+			},
+			{
+				"name": "Coolpad",
+				"website": "https://coolpad.us/",
+				"summary": "",
+				"image": "coolpad",
+				"title": "Consultant Engineer",
+				"location": "Remote",
+				"started": "April 2016",
+				"ended": "September 2016",
+				"situation": "Coolpad is a large multinational corporation that, at the time, was still in its fair bit of infancy in the U.S. market, and was looking to make its first strong venture out into the consumer facing market, away from its core competency of B2B",
+				"task": "Brought in to evaluate existing online solution built on KeystoneJS. Identified unmet needs across the business beyond the known desire to have their own e-commerce store front. On a limited budget and short timetable, a web solution needed to deliver e-commerce, help center, b2b whole sale capability, CMS, and flexibility to expand on demand. At a business level, understood that Coolpad was still learning its customer base in the U.S. market and needed a flexible solution to easily grow and change as they will certainly be changing regularly",
+				"activity": [
+					"Selected WordPress over Shopify for its extensive flexibility, and chose a multi-site structure to allow easy subdomain expansion with minimal conflict to account for new requirements on demand",
+					"Worked with an existing graphic designer of theirs for the UI of the site, teaching the graphic designer about responsive design. Given the nature that the designer wanted to go in, chose to go with a minimally built custom theme from the ground up to account for the continously changing requirements and demands placed on the application",
+					"Leveraged WordPress's popular Visual Composer plugin and customized their plug-and-play components as needed, leveraging that as a layer on top of a traditional WordPress theme, but easier for Coolpad staff to go in and change components out on a page",
+					"Strived to contain all elements of a WordPress page visible through the administrative panel to be just Visual Composer components with modified CSS and JS behind the scenes, which came out to about an 80% success rate. The rest is raw code to achieve objectives that Visual Composer could not, but still maintain modularity and ease of use for Coolpad staff",
+					"Performance was a huge concern for the application, which by going 'theme-less,' I was able to achieve a huge performance boost, and received a lot of notoriety from long time WordPress developers for the performance I was able to achieve on the project"
+				],
+				"result": "On time and under budget was the biggest concerns for this project, and those were achieved through careful craftsmanship at the beginning of the project to not waste time and resources, plan effectively, know exactly what is needed and limit the noise and project scope screep.\n\n Being Coolpad's fourth full website rebuild in 4 years, they were eager that this comes out much better than past experiences. Given that the website is still operational today and I am still asked to maintain the website, I am confident to say that the project was a huge success.",
+				"tools": [
+					"MySQL",
+					"Bootstrap",
+					"PHP",
+					"HTML5",
+					"JavaScript",
+					"jQuery",
+					"JSON",
+					"AJAX",
+					"CSS3",
+					"LESS",
+					"WordPress",
+					"WooCommerce",
+					"Flatsome",
+					"Stripe"
+				]
+			},
+			{
+				"name": "Abroadeasy",
+				"website": null,
+				"summary": "",
+				"image": "ae",
+				"tools": [
+					"MongoDB",
+					"MySQL",
+					"Material Design",
+					"Bootstrap",
+					"PHP",
+					"Laravel",
+					"HTML5",
+					"JavaScript",
+					"jQuery",
+					"JSON",
+					"AJAX",
+					"CSS3",
+					"LESS",
+					"Sass"
+				]
+			}
+		]
+	},
+	"skillsExperienced": [
+		"ReactJS",
+		"Redux",
+		"React Router",
+		"Electron",
+		"React Native",
+
+		"NodeJS",
+		"ExpressJS",
+		"ES6",
+		"JSX",
+		"Babel",
+		"PassportJS",
+		"MomentJS",
+		"Progressive Web App",
+
+		"Webpack",
+		"ESLint",
+		"Jest",
+
+		"MongoDB",
+		"MongooseJS",
+		"MySQL",
+
+		"Material Design",
+		"MUI",
+		"Bootstrap",
+		"React-Bootstrap",
+
+		"GitHub",
+
+		"PHP",
+		"phpStorm",
+		"Laravel",
+		"Lumen",
+		"CodeIgniter",
+
+		"HTML5",
+		"JavaScript",
+		"jQuery",
+		"JSON",
+		"AJAX",
+		"CSS3",
+		"LESS",
+		"Sass",
+
+		"Shopify",
+		"WordPress",
+		"WooCommerce",
+		"Flatsome",
+		"Stripe"
+	],
+	"skillsFamiliar": [
+		"Python",
+
+		"Docker",
+		"Laradock",
+
+		"Google Cloud",
+		"Google Apps",
+		"Google Analytics",
+		"Amazon Web Services",
+
+		"Symfony2",
+
+		"Yelp",
+
+		"NginX",
+		"Apache"
+	],
+	"skillsLearning": [],
+	"skillsTools": [
+		"Cloudflare",
+		"SentryIO",
+		"TravisCI",
+		"CodeCov",
+		"David-DM",
+		"AppVeyor",
+
+		"PingDom",
+		"SalesForce",
+		"WeChat",
+		"InVision",
+		"Xtensio",
+		"ProcessOn",
+		"InstaGantt",
+		"Hackpad",
+		"Jell",
+		"Waveapp",
+		"Skype",
+
+		"npm",
+		"Asana",
+		"Slack",
+		"UberConference",
+		"Sympli",
+		"Zeplin",
+		"Skype",
+
+		"Atom",
+		"Sublime",
+		"Redmine",
+		"Hubspot",
+		"Cloudinary",
+		"MailChimp",
+		"Mailgun"
+	],
+	"actions": [
+		{
+			"name": "Mail",
+			"url": "mailto:natthanhamilton@gmail.com"
+		},
+		{
+			"name": "LinkedIn",
+			"url": "https://www.linkedin.com/in/natthanhamilton/"
+		},
+		{
+			"name": "GitHub",
+			"url": "https://github.com/natthanhamilton/"
+		}
+	]
+}
