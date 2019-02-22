@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import cloudinary from 'cloudinary';
 import PropTypes from 'prop-types';
 import LazyLoad from 'react-lazy-load';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -25,174 +24,194 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 
 import locale from '../../../assets/locales/en-US/translations';
 import GenerateSkillsList from './GenerateSkillsList';
+import { cloudinary } from '../../utils';
 
 class Portfolio extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      index: null
-    };
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			index: null,
+		};
+	}
 
-  handleClose = () => {
-    this.setState({ index: null });
-  };
+	handleClose = () => {
+		this.setState({ index: null });
+	};
 
-  renderPortfolioList = () => {
-    const { classes, t } = this.props;
+	renderPortfolioList = () => {
+		const { classes, t } = this.props;
 
-    return locale.portfolio.list.map((portfolio, i) => {
-      const title = t(`portfolio.skillsTitle`);
-      const key = `portfolio-${title}-${i}`;
-      const cover = (
-        <LazyLoad className={classes.listImage} height={200}>
-          <div
-            style={{
-              background: `url(${cloudinary.url(`portfolio/${portfolio.image}.jpg`, cloudinaryOpts)}) 50% 50% no-repeat`
-            }}
-          />
-        </LazyLoad>
-      );
+		return t('portfolio.list').map((portfolio) => {
+			const cover = (
+				<LazyLoad className={classes.listImage} height={200}>
+					<div
+						style={{
+							background: `url(${cloudinary.url(
+								`portfolio/${portfolio.image}.jpg`,
+								cloudinaryOpts,
+							)}) 50% 50% no-repeat`,
+						}}
+					/>
+				</LazyLoad>
+			);
 
-      return (
-        <Grid key={key} item xs={12} sm={6}>
-          <Card>
-            {cover}
-            <CardContent>
-              <Typography variant="title">
-                {t(`portfolio.list.${i}.name`)}
-              </Typography>
-              <Typography variant="body1" noWrap paragraph>
-                {t(`portfolio.list.${i}.summary`)}
-              </Typography>
-              <GenerateSkillsList item={`portfolio.list.${i}.tools`} data={portfolio.tools} />
-            </CardContent>
-          </Card>
-        </Grid>
-      );
-    });
-  };
+			const title = portfolio.website ? (
+				<a href={portfolio.website}>
+					{portfolio.name} <OpenInNewIcon />
+				</a>
+			) : (
+				portfolio.name
+			);
 
-  renderDialog = () => {
-    const { classes, t } = this.props;
-    const { index } = this.state;
+			return (
+				<Grid key={portfolio.name} item xs={12} sm={6}>
+					<Card>
+						{cover}
+						<CardContent>
+							<Typography variant="title">{title}</Typography>
+							<Typography variant="body1" noWrap paragraph>
+								{portfolio.summary}
+							</Typography>
+							<GenerateSkillsList
+								item={portfolio.tools}
+								data={portfolio.tools}
+							/>
+						</CardContent>
+					</Card>
+				</Grid>
+			);
+		});
+	};
 
-    if (index == null) return null;
+	renderDialog = () => {
+		const { classes, t } = this.props;
+		const { index } = this.state;
 
-    const name = t(`portfolio.list.${index}.name`);
-    const summary = t(`portfolio.list.${index}.summary`);
+		if (index == null) return null;
 
-    return (
-      <Dialog
-        className={classes.dialog}
-        open={Boolean(index)}
-        onClose={this.handleClose}
-        aria-labelledby={name}
-        aria-describedby={summary}
-      >
-        <DialogContent>
-          <DialogContentText id={summary}>
-            <Paper className={classes.paper}>
-              <img
-                className={classes.image}
-                src={cloudinary.url(`portfolio/${t(`portfolio.list.${index}.image`)}.jpg`, { secure: true })}
-                alt={name}
-              />
-            </Paper>
-            <Typography className={classes.title} variant="title">
-              {name}
-            </Typography>
-            <Typography variant="body1">
-              {t(`portfolio.list.${index}.content`)}
-            </Typography>
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={this.handleClose} color="primary">
-            {t(`prompts.close`)}
-          </Button>
-        </DialogActions>
-      </Dialog>
-    );
-  };
+		const name = t(`portfolio.list.${index}.name`);
+		const summary = t(`portfolio.list.${index}.summary`);
 
-  render() {
-    const { classes, t } = this.props;
+		return (
+			<Dialog
+				className={classes.dialog}
+				open={Boolean(index)}
+				onClose={this.handleClose}
+				aria-labelledby={name}
+				aria-describedby={summary}>
+				<DialogContent>
+					<DialogContentText id={summary}>
+						<Paper className={classes.paper}>
+							<img
+								className={classes.image}
+								src={cloudinary.url(
+									`portfolio/${t(
+										`portfolio.list.${index}.image`,
+									)}.jpg`,
+									{
+										secure: true,
+									},
+								)}
+								alt={name}
+							/>
+						</Paper>
+						<Typography className={classes.title} variant="title">
+							{name}
+						</Typography>
+						<Typography variant="body1">
+							{t(`portfolio.list.${index}.content`)}
+						</Typography>
+					</DialogContentText>
+				</DialogContent>
+				<DialogActions>
+					<Button onClick={this.handleClose} color="primary">
+						{t(`prompts.close`)}
+					</Button>
+				</DialogActions>
+			</Dialog>
+		);
+	};
 
-    return (
-      <Grid container className={classes.container}>
-        <Grid item xs={12}>
-          <Typography className={classes.sectionTitle} variant="headline">
-            <span>
-              <GroupWork className={classes.iconLarge} />
-            </span>
-            {t(`portfolio.title`)}
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <Grid container spacing={24}>
-            {this.renderPortfolioList()}
-          </Grid>
-        </Grid>
-        {this.renderDialog()}
-      </Grid>
-    );
-  }
+	render() {
+		const { classes, t } = this.props;
+
+		return (
+			<Grid container className={classes.container}>
+				<Grid item xs={12}>
+					<Typography
+						className={classes.sectionTitle}
+						variant="headline">
+						<span>
+							<GroupWork className={classes.iconLarge} />
+						</span>
+						{t(`portfolio.title`)}
+					</Typography>
+				</Grid>
+				<Grid item xs={12}>
+					<Grid container spacing={24}>
+						{this.renderPortfolioList()}
+					</Grid>
+				</Grid>
+				{this.renderDialog()}
+			</Grid>
+		);
+	}
 }
 
 Portfolio.propTypes = {
-  classes: PropTypes.object,
-  t: PropTypes.func.isRequired
+	classes: PropTypes.object,
+	t: PropTypes.func.isRequired,
 };
 Portfolio.defaultProps = {
-  classes: {}
+	classes: {},
 };
 
 // Cloudinary
 const cloudinaryOpts = {
-  quality: 'auto:good',
-  crop: 'scale'
+	quality: 'auto:good',
+	crop: 'scale',
 };
 
 // Theme
 const styles = {
-  dialog: {
-    zIndex: 11111111
-  },
-  paper: {
-    margin: '0 0 20 0',
-    padding: 0
-  },
-  image: {
-    maxWidth: '100%'
-  },
-  title: {
-    paddingBottom: 10
-  },
-  cardActions: {
-    textAlign: 'right',
-    display: 'block'
-  },
-  listImage: {
-    position: 'relative',
-    '& div': {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      backgroundSize: 'cover !important'
-    }
-  },
-  skillsPanel: {
-    textAlign: 'center'
-  },
-  italic: {
-    fontStyle: 'italic'
-  }
+	dialog: {
+		zIndex: 11111111,
+	},
+	paper: {
+		margin: '0 0 20 0',
+		padding: 0,
+	},
+	image: {
+		maxWidth: '100%',
+	},
+	title: {
+		paddingBottom: 10,
+	},
+	cardActions: {
+		textAlign: 'right',
+		display: 'block',
+	},
+	listImage: {
+		position: 'relative',
+		'& div': {
+			position: 'absolute',
+			top: 0,
+			left: 0,
+			width: '100%',
+			height: '100%',
+			backgroundSize: 'cover !important',
+		},
+	},
+	skillsPanel: {
+		textAlign: 'center',
+	},
+	italic: {
+		fontStyle: 'italic',
+	},
 };
 
-export default withStyles(styles)(translate()(Portfolio));
+export default withStyles(styles)(withTranslation()(Portfolio));

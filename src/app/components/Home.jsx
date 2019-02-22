@@ -12,7 +12,6 @@ const Home = props => {
 
   return (
     <Layout>
-      {/* <Paper> */}
       <Grid container className={classes.root}>
         <Grid item xs={12} sm={5}>
           <Person />
@@ -31,7 +30,6 @@ const Home = props => {
 
         <SkillsBreakdown />
       </Grid>
-      {/* </Paper> */}
       <Footer />
     </Layout>
   );

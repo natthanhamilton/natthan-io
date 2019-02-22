@@ -1,9 +1,33 @@
 {
-  "presets": [["env", {"modules": false}], "react"],
+	"plugins": [
+		"@babel/transform-runtime",
 
-  "env": {
-    "test": {
-      "plugins": ["transform-es2015-modules-commonjs"]
-    }
-  }
+		"@babel/proposal-object-rest-spread",
+
+		[
+			"@babel/proposal-decorators",
+			{
+				"legacy": true
+			}
+		],
+		"@babel/proposal-class-properties",
+		"@babel/proposal-json-strings",
+
+		"@babel/syntax-dynamic-import",
+		"@babel/syntax-import-meta",
+
+		"@babel/transform-async-to-generator",
+		"@babel/proposal-async-generator-functions",
+
+		"@babel/syntax-jsx",
+		"@babel/transform-react-jsx",
+		"@babel/transform-react-display-name",
+		"@babel/transform-react-jsx-source",
+		"@babel/transform-react-jsx-self",
+
+		"@babel/transform-exponentiation-operator",
+		"@babel/transform-object-super",
+
+		"@babel/transform-arrow-functions"
+	]
 }
