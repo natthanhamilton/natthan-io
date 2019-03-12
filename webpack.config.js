@@ -4,7 +4,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
-const { GenerateSW } = require('workbox-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
 
 const BUILD_DIR = path.resolve(__dirname, 'dist');
@@ -21,21 +20,6 @@ module.exports = (env) => {
 		context: path.resolve(__dirname),
 		entry: {
 			main: APP_DIR + '/app.jsx',
-			vendor: [
-				'react',
-				'react-dom',
-				'prop-types',
-
-				'react-router',
-				'react-router-dom',
-
-				'react-redux',
-				'redux',
-				'react-router-redux',
-
-				'@material-ui/core',
-				'@material-ui/icons',
-			],
 		},
 		node: {
 			fs: 'empty',
@@ -104,7 +88,7 @@ module.exports = (env) => {
 				},
 				{
 					from: './.elasticbeanstalk',
-					to: './.elasticbeanstalk',
+					to: '../.elasticbeanstalk',
 				},
 			]),
 

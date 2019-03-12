@@ -1,44 +1,22 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { I18nextProvider } from 'react-i18next';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
 
 import './i18n';
-import * as components from './components';
-import AppLoading from './components/partials/AppLoading';
-console.log(process.env);
+import { Root } from './components';
+
 const App = () => {
 	return (
 		<Suspense fallback={null}>
 			<MuiThemeProvider theme={theme}>
-				<Router basename="/">
-					<Switch>
-						<Route path="/" exact component={components.Home} />
-					</Switch>
-				</Router>
+				<Root />
 			</MuiThemeProvider>
 		</Suspense>
 	);
 };
-
-// Server Worker
-// if ('serviceWorker' in navigator) {
-// 	window.addEventListener('load', () => {
-// 		navigator.serviceWorker
-// 			.register('/sw.js')
-// 			.then((registration) => {
-// 				registration.pushManager.subscribe({
-// 					userVisibleOnly: true,
-// 				});
-// 			})
-// 			.catch((registrationError) => {
-// 				// console.log('SW registration failed: ', registrationError);
-// 			});
-// 	});
-// }
 
 //Theme
 const theme = createMuiTheme({

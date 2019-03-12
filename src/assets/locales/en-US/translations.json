@@ -32,82 +32,38 @@
 	},
 	"experience": {
 		"title": "Work Experience",
-		"jobs": [
+		"list": [
 			{
 				"company": "Abroadeasy",
-				"title": "Partner, Growth Hacker",
+				"title": "Business Technology Consultant",
 				"location": "Camarillo, CA",
-				"started": "April 2014",
+				"started": "Apr 2014",
 				"ended": "Present",
-				"situation": "Abroadeasy is my own agency I’ve operated to focus on growth in the ever-changing ecommerce space.",
-				"task": "Project based, small agency work.",
-				"activity": [
-					"Developed a tool that tracks product health on ecommerce sites and reports any changes",
-					"Actively develop dozens of Shopify stores, focusing on innovating a brand’s user buying experience",
-					"Developed, including custom built WooCommerce theme, and operated their ecommerce initiatives"
-				],
-				"result": ""
+				"summary": "<p>Ecommerce Tools<ul><li>Marketplace tools such as an Amazon crawler to fill gaps in business awareness and analytics reporting</li></ul></p><p>Ecommerce Brand Sites<ul><li>Developed 20+ Shopify stores, focusing on innovating a brand’s user buying experience</li><li>Developed 10+ WordPress brand sites, including custom built, high performant WooCommerce themes</li><li>Mobile first store development and shopping experience optimization that fits the brand</li></ul></p><p>Manufacturer Wholesale Application<ul><li>Innovated a React based wholesale commerce application to replace phone and email order taking, allowing a retailer, sales rep, or staff to place orders for a retailer. The application included a real time product builder, innovative checkout with visual master carton changes, order history tracking with reorder ability, administrative capabilities to manage the business and operations, and dashboard analytics</li></ul></p><p>Data Pipeline<ul><li>Architected and developed a big data pipeline on AWS infrastructure, leveraging many services managed with a Cloud Formation configuration and isolating the business logic in lambdas for easy maintenance</li></ul></p><p>Administrative Application<ul><li>Rapidly developed an internal application to control the business prior to initial product launch which then grew into their b2b client management and beyond into their FDA clinical trial management center</li></ul></p><p>Mobile Application<ul><li>Developed a React Native/Expo mobile app with real time trader alerts, user functionality, and messaging</li></ul></p><p>Existing Ecosystem<ul><li>Architected and developed a new feature in a custom PHP Symfony2 product builder, tying into and carefully modifying the existing heavily abstracted application, resulting in unblocking the company’s biggest end to end manual bottleneck during peak holiday season. The feature eliminated manual product customization work, customer service interactions per customer, high return rates, and stress on manufacturing line</li></ul></p>"
 			},
 			{
-				"company": "Intelligent Investor",
-				"title": "Cofounder, CTO",
+				"company": "Crossroads Systems",
+				"title": "Inside Sales Representative",
+				"location": "Austin, Texas",
+				"started": "Sep 2014",
+				"ended": "Mar 2015",
+				"summary": "Successfully sold expensive data storage solutions, finding wins in university, media and entertainment, and other verticals while honing ability to sell with just my voice."
+			},
+			{
+				"company": "Techtronic Industries",
+				"title": "Field Sales Representative",
 				"location": "San Diego, CA",
-				"started": "September 2018",
-				"ended": "February 2019",
-				"situation": "Intelligent Investor was born out of a struggle to keep up with fast moving stock trading information. Having tried my own hand at trading, I always felt overwhelmed, behind on information, and hesitating on moves to make.",
-				"task": "Concept proving with a Discord group and then moving to a web application proof of concept, things looked good to focus on a crossroads of real time chatting and alerts",
-				"activity": [
-					"Innovated a web app proof of concept for social trading across localizations, focusing on real time alerting",
-					"Ported the concept into a React Native with Expo mobile application, releasing on Apple and Google stores",
-					"Wrapped the web app with Electron to build out desktop applications."
-				],
-				"result": "As things progressed towards an ecosystem solution, the startup began to prove unviable due to changes in the horizon. Project was ultimately scrapped, but not without incredibly valuable lessons gained."
+				"started": "Aug 2012",
+				"ended": "Sep 2014",
+				"summary": "Gained lifelong knowledge on business and sales working in channel sales with Home Depots and then promoted to outside sales with a 300-account book of business, generating double digit growth in both roles."
 			},
 			{
-				"company": "Dthera Sciences",
-				"title": "Software Engineer",
-				"location": "San Diego, CA",
-				"started": "March 2018",
-				"ended": "September 2018",
-				"situation": "Dthera Sciences was a life sciences startup focused on a technology solution to combat Alzheimer's disease.",
-				"task": "As they were ramping up for an initial launch, I was brought on to focus on an internal administrative application that will become the central nervous system to their business operations. As that task was swiftly accomplished, I was given charge of a new initiative to engineer a big data pipeline that would be responsible for injesting data from their product in the wild, transforming, and then feeding into the administrative application.",
-				"activity": [
-					"Architected and developed their administrative application with a high level of autonomy. \nChose to go with stock Material design, eliminating any need of custom UI dependencies. \nCollaborated on UX needs, proposing initial directions requiring minimal feedback to keep a high tempo. \nThe application also became their B2B portal, leveraging permission based access",
-					"Developed a big data pipeline on AWS infrastructure, leveraging Lambdas. \n Cloud Formation architecture housed all necessary pieces such as API Gateways, Kinesis buffering, S3 buckets, RDS databases injesting the buffered data. \n With 2 core lambdas on both sides, it became an operation of injesting and preparing the raw data, and then taking that raw data and transforming it. \n The core of my work centered around transforming the data, validated through Jest unit testing, which became hundreds of finite tests performed"
-				],
-				"result": "During my short tenure with Dthera, I was able to deliver two large impacts to the business under minimal guidance, high autonomy. Life events happening, my tenure with Dthera was cut short as working remote did not pan out."
-			},
-			{
-				"company": "Prints Charming",
-				"title": "Architect",
-				"location": "Remote",
-				"started": "March 2017",
-				"ended": "March 2018",
-				"situation": "Prints Charming is a small business around for many years running manual operations, and suddenly experienced growth resulting in bottlenecks and crippling effects on their small business",
-				"task": "Of the countless challenges available, I honed my focus on the sales and client facing part of their business where I noted orders were being handled manually through email or phone calls -- all the way from receiving the order through shipment and tracking of that shipment",
-				"activity": [
-					"Spent the first month breaking down their entire business into different blocks. Quickly discovered multiple factors I could make assumptions from that would significantly impact this project: \n(1) the owners I was working with had very limited technical knowledge, but desired to be highly involved, therefore a large amount of resources would be spent here; \n(2) there was no structured data to start with that will benefit the new application; \n (3) They have an existing legacy manufacturing application that I would have to interact with, and that data was in no beneficial condition",
-					"Given the desired nature of this application being client facing, chose a JS tech stack and established the development environment, leading with React.JS for the application (full list of tools can be found in the project)",
-					"Through the progression of this project, I was able to add value across the full spectrum of the business by studying all of their processes and proposing better solutions. Any manual process t",
-					"Innovated a ReactJS based wholesale commerce application to replace phone and email order taking, allowing a retailer, sales rep, or staff to place orders for a retailer, real time product builder, innovative checkout with real time master cartons, order history tracking, administrative capabilities to manage the business and operations, and dashboard analytics for awareness and drill into the business’ health",
-					"Focused heavily on salvaging data from existing internal application running MySQL, identifying what the business needs to know, what is currently available in the data, and then extracting into MongoDB and expanding data points to collect from my application"
-				],
-				"result": "With the maturity of a user's experience with online commerce applications, I knew that this would innovating a client facing application that handles the sales flow would unlock their revenue generating potential.\n Designed, developed, tested, deployed, maintained and improved a brand new wholesale commerce application for the sales side of their business revolutionalizing it from a manual operation of email and phone to a ReactJS, data driven solution unlocking their revenue generating potential.\n\n The impact of the new application on the business was in a lot of cases revolutionary for them. They were able to:\n -- Create orders in minutes versus hours \n -- Expose their entire product line to customers who were previously only aware of what products sales reps told them about\n -- Double digit percentage increase in products purchased from existing customers\n -- For the first time, customers were ordering for themselves, freeing up sales rep time to be more strategic and focus on growth strategies\n -- For the first time, sales rep groups were able to manage their book of business with their partnership to Prints Charming, creating new customer accounts and generating orders for those customers without the manual need for Prints Charming staff\n -- Prints Charming staff, sales reps, or the customer can order for that customer account, each can manage needed properties for the account, causing a higher probability for new orders, and much more\n -- An account's order history was now fully visible to them for the first time, with analytic breakdown never before available, along with reorder capability, making it incredibly simple for a user to gain insight into that account's health, generate conversation with that account on how they are doing, and increase sales volume\n\n The added business value of this targetted, well devised application will single-handedly transform their business and bring it into the digital age. Every day, it is generating more value than ever before for this small company"
-			},
-			{
-				"company": "Picture It On Canvas",
-				"title": "Software Engineer",
-				"location": "San Diego",
-				"started": "October 2016",
-				"ended": "March 2017",
-				"situation": "Picture It On Canvas (PIOC) was a founded and operated in San Diego company innovating their own proprietary code to deliver a custom user uploaded image on arts and crafts type of product. Up to the point of my coming on board, they have been outsourcing all technology. The original application was built years ago, the back end very lightly maintained, and the front end maintained by a European agency building out static HTML pages",
-				"task": "They desired to bring web development in house and my objective to be focus on all revenue generating opportunities. My arrival was right at the peak of their busiest season.",
-				"activity": [
-					"Immediately identified the poor state that the whole application was in and made the first prioity to be identifying the biggest areas for return on investment with as little effort invested possible by working closely with my talented and highly knowledge manager, the Director of Marketing, who had intimate knowledge of the application. This greatly decreased my ramp up time and allowed for an intelligent strategy",
-					"Worked quickly to move the client side to a more dynamic content driven application, eliminating static pages as much as possible, to allow for a single developer to manage the whole application in a sensible amount of time and effort",
-					"Worked closely with the Director of Marketing to upgrade the website's UI and UX elements, starting at the highest revenue generating points, such as the product builder. For example, identified areas that the user may get confused on which action to take, duplication of steps, unneccessary steps that the user must take"
-				],
-				"result": "In my short tenure at PIOC due to the parent company Zazzle absorbing the company and closing the San Diego office, I was able to make a profound impact to their business in a very short period of time. It turned out that their collage product line caused severe pain to the manufacturing process. Veteran staff told me stories of how every year prior was wraught with around the clock shifts, product backed up for weeks, thousands of backlogged images to process, and so forth. \n\nThe collage builder eliminated such an extreme amount of labor from the top down:\n -- designers had no work to do and were thus going into production to add extra support, allowing for backlogs to dwindle to nothing, which allowed staff to rest and perform at their best\n -- Morale was up\n -- No 24 shifts happened the whole season\n -- All deadlines were hit and product shipped\n -- Less mistakes happened during production, causing less returned product\n\n By fixing the biggest pain point in their product's production cycle, it managed to directly impact all parts of their business.\n The collage builder would go on to product tens of thousands of prints by itself without any designer involvement. Unfortunately, for such a great achievement and the design team having no work to do, it caused members of the design team to be laid off."
+				"company": "Tianjin University of Finance and Economics",
+				"title": "English Teacher",
+				"location": "Tianjin, China",
+				"started": "Dec 2011",
+				"ended": "Aug 2012",
+				"summary": "After graduating, I taught English in China where I began my journey in the language and culture. I taught both young children with a small organization I can't find on LinkedIn and college students at Tianjin Finance and Economics University."
 			}
 		]
 	},
@@ -265,6 +221,83 @@
 		"skillsTitle": "Skills/Tools",
 		"list": [
 			{
+				"name": "Intelligent Investor",
+				"summary": "Mobile Application",
+				"content": "Prints Charming is a built from the ground up custom solution for a wholesale company that has been in business for decades. The company has been running manually processes across the board, and through recent growth they have been experiencing, decided to seek a solution to their growing pains. After evaluating their business and their perceived endless problems, the project focused on attacking their problems at the beginning of their business cycle. They traditionally receive orders from customers via email or phone, which then begins a long email process. By developing a custom wholesale commerce application that integrated into, and rebuilt in a lot of cases, their existing business, Prints Charming experienced even greater growth now with an automated application that their customers can order for themselves, allowing for employee time to be spent more strategically. Existing retailers were ordering multiple times more product than they normally would due to a visually driven buying experience where they were exposed to products they did not know existed. The byproduct of choosing this area to attack was the direct need to structure their business and data appropriately so that it was even possible to have an automated system. Streamlining their business in such a way is allowing for tremendous growth at a fraction of the cost previously needed in manual labor",
+				"image": "pc",
+				"title": "Software Engineer",
+				"location": "San Diego, CA",
+				"started": "September 2018",
+				"ended": "February 2019",
+				"situation": "Intelligent Investor was born out of a struggle to keep up with fast moving stock trading information. Having tried my own hand at trading, I always felt overwhelmed, behind on information, and hesitating on moves to make.",
+				"task": "Concept proving with a Discord group and then moving to a web application proof of concept, things looked good to focus on a crossroads of real time chatting and alerts",
+				"activity": [
+					"Innovated a web app proof of concept for social trading across localizations, focusing on real time alerting",
+					"Ported the concept into a React Native with Expo mobile application, releasing on Apple and Google stores",
+					"Wrapped the web app with Electron to build out desktop applications."
+				],
+				"result": "As things progressed towards an ecosystem solution, the startup began to prove unviable due to changes in the horizon. Project was ultimately scrapped, but not without incredibly valuable lessons gained.",
+				"tools": [
+					"ReactJS",
+					"Redux",
+					"React Router",
+					"NodeJS",
+					"ES6",
+					"JSX",
+					"Webpack",
+					"MongoDB",
+					"MySQL",
+					"Bootstrap",
+					"React-Bootstrap",
+					"PHP",
+					"Laravel",
+					"Lumen",
+					"HTML5",
+					"JavaScript",
+					"JSON",
+					"CSS3",
+					"LESS"
+				]
+			},
+			{
+				"name": "Dthera Sciences",
+				"summary": "Administrative Application & Big Data Pipeline",
+				"content": "Prints Charming is a built from the ground up custom solution for a wholesale company that has been in business for decades. The company has been running manually processes across the board, and through recent growth they have been experiencing, decided to seek a solution to their growing pains. After evaluating their business and their perceived endless problems, the project focused on attacking their problems at the beginning of their business cycle. They traditionally receive orders from customers via email or phone, which then begins a long email process. By developing a custom wholesale commerce application that integrated into, and rebuilt in a lot of cases, their existing business, Prints Charming experienced even greater growth now with an automated application that their customers can order for themselves, allowing for employee time to be spent more strategically. Existing retailers were ordering multiple times more product than they normally would due to a visually driven buying experience where they were exposed to products they did not know existed. The byproduct of choosing this area to attack was the direct need to structure their business and data appropriately so that it was even possible to have an automated system. Streamlining their business in such a way is allowing for tremendous growth at a fraction of the cost previously needed in manual labor",
+				"image": "pc",
+				"title": "Software Engineer",
+				"location": "San Diego, CA",
+				"started": "March 2018",
+				"ended": "September 2018",
+				"situation": "Dthera Sciences was a life sciences startup focused on a technology solution to combat Alzheimer's disease.",
+				"task": "As they were ramping up for an initial launch, I was brought on to focus on an internal administrative application that will become the central nervous system to their business operations. As that task was swiftly accomplished, I was given charge of a new initiative to engineer a big data pipeline that would be responsible for injesting data from their product in the wild, transforming, and then feeding into the administrative application.",
+				"activity": [
+					"Architected and developed their administrative application with a high level of autonomy. \nChose to go with stock Material design, eliminating any need of custom UI dependencies. \nCollaborated on UX needs, proposing initial directions requiring minimal feedback to keep a high tempo. \nThe application also became their B2B portal, leveraging permission based access",
+					"Developed a big data pipeline on AWS infrastructure, leveraging Lambdas. \n Cloud Formation architecture housed all necessary pieces such as API Gateways, Kinesis buffering, S3 buckets, RDS databases injesting the buffered data. \n With 2 core lambdas on both sides, it became an operation of injesting and preparing the raw data, and then taking that raw data and transforming it. \n The core of my work centered around transforming the data, validated through Jest unit testing, which became hundreds of finite tests performed"
+				],
+				"result": "During my short tenure with Dthera, I was able to deliver two large impacts to the business under minimal guidance, high autonomy. Life events happening, my tenure with Dthera was cut short.",
+				"tools": [
+					"ReactJS",
+					"Redux",
+					"React Router",
+					"NodeJS",
+					"ES6",
+					"JSX",
+					"Webpack",
+					"MongoDB",
+					"MySQL",
+					"Bootstrap",
+					"React-Bootstrap",
+					"PHP",
+					"Laravel",
+					"Lumen",
+					"HTML5",
+					"JavaScript",
+					"JSON",
+					"CSS3",
+					"LESS"
+				]
+			},
+			{
 				"name": "Prints Charming",
 				"website": "http://oms.printscharming.biz/",
 				"summary": "ReactJS custom wholesale commerce application",
@@ -284,6 +317,44 @@
 					"Focused heavily on salvaging data from existing internal application running MySQL, identifying what the business needs to know, what is currently available in the data, and then extracting into MongoDB and expanding data points to collect from my application"
 				],
 				"result": "With the maturity of a user's experience with online commerce applications, I knew that this would innovating a client facing application that handles the sales flow would unlock their revenue generating potential.\n Designed, developed, tested, deployed, maintained and improved a brand new wholesale commerce application for the sales side of their business revolutionalizing it from a manual operation of email and phone to a ReactJS, data driven solution unlocking their revenue generating potential.\n\n The impact of the new application on the business was in a lot of cases revolutionary for them. They were able to:\n -- Create orders in minutes versus hours \n -- Expose their entire product line to customers who were previously only aware of what products sales reps told them about\n -- Double digit percentage increase in products purchased from existing customers\n -- For the first time, customers were ordering for themselves, freeing up sales rep time to be more strategic and focus on growth strategies\n -- For the first time, sales rep groups were able to manage their book of business with their partnership to Prints Charming, creating new customer accounts and generating orders for those customers without the manual need for Prints Charming staff\n -- Prints Charming staff, sales reps, or the customer can order for that customer account, each can manage needed properties for the account, causing a higher probability for new orders, and much more\n -- An account's order history was now fully visible to them for the first time, with analytic breakdown never before available, along with reorder capability, making it incredibly simple for a user to gain insight into that account's health, generate conversation with that account on how they are doing, and increase sales volume\n\n The added business value of this targetted, well devised application will single-handedly transform their business and bring it into the digital age. Every day, it is generating more value than ever before for this small company",
+				"tools": [
+					"ReactJS",
+					"Redux",
+					"React Router",
+					"NodeJS",
+					"ES6",
+					"JSX",
+					"Webpack",
+					"MongoDB",
+					"MySQL",
+					"Bootstrap",
+					"React-Bootstrap",
+					"PHP",
+					"Laravel",
+					"Lumen",
+					"HTML5",
+					"JavaScript",
+					"JSON",
+					"CSS3",
+					"LESS"
+				]
+			},
+			{
+				"name": "Picture It On Canvas",
+				"summary": "Existing ecosystem addition",
+				"content": "",
+				"image": "pc",
+				"location": "San Diego",
+				"started": "October 2016",
+				"ended": "March 2017",
+				"situation": "Picture It On Canvas (PIOC) was a founded and operated in San Diego company innovating their own proprietary code to deliver a custom user uploaded image on arts and crafts type of product. Up to the point of my coming on board, they have been outsourcing all technology. The original application was built years ago, the back end very lightly maintained, and the front end maintained by a European agency building out static HTML pages",
+				"task": "They desired to bring web development in house and my objective to be focus on all revenue generating opportunities. My arrival was right at the peak of their busiest season.",
+				"activity": [
+					"Immediately identified the poor state that the whole application was in and made the first prioity to be identifying the biggest areas for return on investment with as little effort invested possible by working closely with my talented and highly knowledge manager, the Director of Marketing, who had intimate knowledge of the application. This greatly decreased my ramp up time and allowed for an intelligent strategy",
+					"Worked quickly to move the client side to a more dynamic content driven application, eliminating static pages as much as possible, to allow for a single developer to manage the whole application in a sensible amount of time and effort",
+					"Worked closely with the Director of Marketing to upgrade the website's UI and UX elements, starting at the highest revenue generating points, such as the product builder. For example, identified areas that the user may get confused on which action to take, duplication of steps, unneccessary steps that the user must take"
+				],
+				"result": "In my short tenure at PIOC due to the parent company Zazzle absorbing the company and closing the San Diego office, I was able to make a profound impact to their business in a very short period of time. It turned out that their collage product line caused severe pain to the manufacturing process. Veteran staff told me stories of how every year prior was wraught with around the clock shifts, product backed up for weeks, thousands of backlogged images to process, and so forth. \n\nThe collage builder eliminated such an extreme amount of labor from the top down:\n -- designers had no work to do and were thus going into production to add extra support, allowing for backlogs to dwindle to nothing, which allowed staff to rest and perform at their best\n -- Morale was up\n -- No 24 shifts happened the whole season\n -- All deadlines were hit and product shipped\n -- Less mistakes happened during production, causing less returned product\n\n By fixing the biggest pain point in their product's production cycle, it managed to directly impact all parts of their business.\n The collage builder would go on to product tens of thousands of prints by itself without any designer involvement. Unfortunately, for such a great achievement and the design team having no work to do, it caused members of the design team to be laid off.",
 				"tools": [
 					"ReactJS",
 					"Redux",

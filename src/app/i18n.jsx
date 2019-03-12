@@ -14,7 +14,7 @@ i18n.use(Backend)
 		ns: ['translations'],
 		defaultNS: 'translations',
 
-		debug: true,
+		debug: false,
 
 		interpolation: {
 			escapeValue: false, // not needed for react!!
