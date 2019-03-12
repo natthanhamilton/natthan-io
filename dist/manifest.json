@@ -1,0 +1,29 @@
+{
+  "short_name": "NatthanIO",
+  "name": "Digital Home of Natthan Hamilton",
+  "icons": [{
+    "src": "assets/touch/icon-512x512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  },{
+    "src": "assets/touch/icon-128x128.png",
+    "type": "image/png",
+    "sizes": "128x128"
+  }, {
+    "src": "assets/touch/apple-touch-icon.png",
+    "type": "image/png",
+    "sizes": "152x152"
+  }, {
+    "src": "assets/touch/ms-touch-icon-144x144-precomposed.png",
+    "type": "image/png",
+    "sizes": "144x144"
+  }, {
+    "src": "assets/touch/chrome-touch-icon-192x192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/",
+  "background_color": "#2196F3",
+  "theme_color": "#2196F3",
+  "display": "standalone"
+}
