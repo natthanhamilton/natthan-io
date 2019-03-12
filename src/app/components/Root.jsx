@@ -6,10 +6,8 @@ import { Helmet } from 'react-helmet';
 import { makeStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
-import Tooltip from '@material-ui/core/Tooltip';
 import Chip from '@material-ui/core/Chip';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -31,13 +29,11 @@ const cloudinaryOpts = {
 	secure: true,
 };
 const cloudinaryAvatar = {
-	height: 113,
-	quality: 60,
-	width: 100,
+	height: 400,
+	quality: 100,
 	crop: 'scale',
 	secure: true,
 };
-
 const useStyles = makeStyles({
 	root: {
 		flexGrow: 1,
@@ -67,16 +63,12 @@ const useStyles = makeStyles({
 		},
 	},
 	avatar: {
-		width: '100px !important',
-		height: '100px !important',
+		width: 'auto',
 		margin: 'auto',
 	},
 	actionIcon: {
 		maxHeight: 36,
 		padding: '0 5px',
-	},
-	actions: {
-		textAlign: 'center',
 	},
 	imgPlaceholder: {
 		display: 'inline-block',
@@ -92,21 +84,9 @@ const useStyles = makeStyles({
 		paddingTop: 2.5,
 		paddingBottom: 2.5,
 	},
-	sectionHeader: {
-		fontWeight: 'bold',
-	},
-	ul: {
-		margin: 0,
-	},
 	gitLink: {
 		textDecoration: 'none',
 		padding: '0 5px',
-	},
-	badges: {
-		textAlign: 'center',
-	},
-	badge: {
-		padding: 5,
 	},
 	footer: {
 		flexGrow: 1,
@@ -115,23 +95,11 @@ const useStyles = makeStyles({
 		paddingRight: 0,
 		textAlign: 'center',
 	},
-	skillExp: {
-		float: 'right',
-	},
-	progressBar: {
-		marginBottom: 5,
-	},
 	chip: {
 		margin: 4,
 	},
 	bold: {
 		fontWeight: 'bold',
-	},
-	skillImg: {
-		display: 'inline-block',
-		width: '48px !important',
-		height: '48px !important',
-		padding: '7 !important',
 	},
 	listImage: {
 		height: 200,
@@ -139,6 +107,12 @@ const useStyles = makeStyles({
 	},
 	textRight: {
 		textAlign: 'right',
+	},
+	textCenter: {
+		textAlign: 'center',
+	},
+	comingSoon: {
+		padding: 40,
 	},
 });
 
@@ -248,6 +222,26 @@ const Person = () => {
 	const { t } = useTranslation();
 	const classes = useStyles();
 
+	return (
+		<Grid container className={classes.container} spacing={24}>
+			<Grid item xs={12} className={classes.textCenter}>
+				<img
+					alt="Natthan Hamilton"
+					src={cloudinary.url(
+						`portraits/nate2.jpg`,
+						cloudinaryAvatar,
+					)}
+					className={classes.avatar}
+				/>
+			</Grid>
+		</Grid>
+	);
+};
+
+const About = () => {
+	const { t } = useTranslation();
+	const classes = useStyles();
+
 	const actionsList = t(`actions`).map((action) => (
 		<a key={action.name} target="_new" href={action.url}>
 			<Img
@@ -263,31 +257,15 @@ const Person = () => {
 	));
 
 	return (
-		<Grid container className={classes.container} spacing={24}>
+		<Grid>
+			<Typography variant="h5" paragraph>
+				{t(`person.name`)}
+			</Typography>
+			<Typography paragraph>{t('person.description')}</Typography>
+			<Typography paragraph>{t('about.aboutContent')}</Typography>
 			<Grid item xs={12}>
-				<Avatar
-					alt="Natthan Hamilton"
-					src={cloudinary.url(`portraits/nate.jpg`, cloudinaryAvatar)}
-					className={classes.avatar}
-				/>
-				<Typography variant="h5" align="center" paragraph>
-					{t(`person.name`)}
-				</Typography>
-			</Grid>
-			<Grid className={classes.actions} item xs={12}>
 				{actionsList}
 			</Grid>
-		</Grid>
-	);
-};
-
-const About = () => {
-	const { t } = useTranslation();
-
-	return (
-		<Grid>
-			<Typography paragraph>{t('person.description')}</Typography>
-			<Typography>{t('about.aboutContent')}</Typography>
 		</Grid>
 	);
 };
@@ -510,7 +488,10 @@ const Portfolio = () => {
 			</Grid>
 			<Grid item xs={12}>
 				<Grid container spacing={24}>
-					<RenderPortfolioList />
+					{/* <RenderPortfolioList /> */}
+					<Typography variant="h6" className={classes.comingSoon}>
+						Coming Soon...
+					</Typography>
 				</Grid>
 			</Grid>
 		</Grid>
