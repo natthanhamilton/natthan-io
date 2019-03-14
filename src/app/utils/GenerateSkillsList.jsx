@@ -22,22 +22,21 @@ const useStyles = makeStyles({
 	},
 });
 
-const GenerateSkillsList = ({ data, item }) => {
+const GenerateSkillsList = ({ data }) => {
 	const { t } = useTranslation();
 	const classes = useStyles();
 
-	return data.map((skill, i) => {
-		const title = t(`${item}.${i}`);
+	return data.map((skill) => {
 		const path = skill.replace(/\s+/g, '-').toLowerCase();
 		return (
 			<Tooltip
-				key={`skill-list-${title}-${i}`}
-				title={title}
+				key={`skill-list-${skill}`}
+				title={skill}
 				placement="bottom"
 				className={classes.skillImg}>
 				<img
 					src={cloudinary.url(`tools/${path}.png`, cloudinaryOpts)}
-					alt={title}
+					alt={skill}
 				/>
 			</Tooltip>
 		);

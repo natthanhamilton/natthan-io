@@ -6,4 +6,3 @@ Digital Home of Natthan Hamilton
 # To-Do
 
 -   Build blogging feature
--   Finish portfolio piece

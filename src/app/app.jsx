@@ -36,6 +36,9 @@ const theme = createMuiTheme({
 			},
 		},
 	},
+	spacing: {
+		unit: 8,
+	},
 	MuiDivider: {
 		margin: '10 0',
 	},

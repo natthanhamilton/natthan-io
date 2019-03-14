@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Img from 'react-image-smooth-loading';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
+import Gallery from 'react-photo-gallery';
+import Lightbox from 'react-images';
 
+import { withStyles } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -11,28 +14,38 @@ import Button from '@material-ui/core/Button';
 import Chip from '@material-ui/core/Chip';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import Dialog from '@material-ui/core/Dialog';
+import MuiDialogContent from '@material-ui/core/DialogContent';
+import MuiDialogActions from '@material-ui/core/DialogActions';
 
 import LocationOn from '@material-ui/icons/LocationOnOutlined';
 import DateRange from '@material-ui/icons/DateRangeOutlined';
 import School from '@material-ui/icons/SchoolOutlined';
 import Work from '@material-ui/icons/WorkOutline';
 import Star from '@material-ui/icons/StarBorder';
-import OpenInNewIcon from '@material-ui/icons/OpenInNewOutlined';
 import GroupWork from '@material-ui/icons/GroupWorkOutlined';
 
 import locale from '../../assets/locales/en-US/translations';
 import { cloudinary, GenerateSkillsList } from '../utils';
 
-const cloudinaryOpts = {
-	quality: 'auto:good',
-	crop: 'scale',
-	secure: true,
-};
-const cloudinaryAvatar = {
-	height: 400,
+const cloudinaryBaseOpts = {
 	quality: 100,
 	crop: 'scale',
 	secure: true,
+};
+const cloudinaryLarge = {
+	...cloudinaryBaseOpts,
+	height: 400,
+};
+const cloudinaryicons = {
+	...cloudinaryBaseOpts,
+	height: 36,
+	width: 36,
+};
+const cloudinaryModalThumbnails = {
+	...cloudinaryBaseOpts,
+	height: 50,
+	width: 50,
 };
 const useStyles = makeStyles({
 	root: {
@@ -84,6 +97,9 @@ const useStyles = makeStyles({
 		paddingTop: 2.5,
 		paddingBottom: 2.5,
 	},
+	padding2x: {
+		padding: 16,
+	},
 	gitLink: {
 		textDecoration: 'none',
 		padding: '0 5px',
@@ -101,9 +117,23 @@ const useStyles = makeStyles({
 	bold: {
 		fontWeight: 'bold',
 	},
-	listImage: {
-		height: 200,
+	portfolioCover: {
 		backgroundSize: 'cover !important',
+		boxShadow: '0px 2px 5px 0px rgba(204,204,204,0.5)',
+	},
+	// modalCover: {
+	// 	backgroundSize: 'cover !important',
+	// 	boxShadow: '0px 2px 5px 0px rgba(204,204,204,0.5)',
+	// },
+	portfolioCoverHeight: {
+		backgroundSize: 'cover !important',
+		boxShadow: '0px 2px 5px 0px rgba(204,204,204,0.5)',
+		height: 250,
+	},
+	modalCoverHeight: {
+		backgroundSize: 'cover !important',
+		boxShadow: '0px 2px 5px 0px rgba(204,204,204,0.5)',
+		height: 500,
 	},
 	textRight: {
 		textAlign: 'right',
@@ -114,7 +144,49 @@ const useStyles = makeStyles({
 	comingSoon: {
 		padding: 40,
 	},
+	card: {
+		'&:hover': {
+			position: 'relative',
+			top: -5,
+			cursor: 'pointer',
+			transition: 'all 1s ease',
+		},
+	},
+	galleryImg: {
+		display: 'inline-block',
+		float: 'left',
+		height: 'auto',
+		maxWidth: 300,
+	},
+	portfolioThumbnail: {
+		backgroundSize: 'cover !important',
+		boxShadow: '0px 2px 5px 0px rgba(204,204,204,0.5)',
+		margin: 8,
+		height: 200,
+		width: 200,
+		'&:hover': {
+			position: 'relative',
+			top: -5,
+			cursor: 'pointer',
+			transition: 'all 1s ease',
+		},
+	},
 });
+
+const DialogContent = withStyles((theme) => ({
+	root: {
+		margin: 0,
+		padding: '0 !important',
+	},
+}))(MuiDialogContent);
+
+const DialogActions = withStyles((theme) => ({
+	root: {
+		borderTop: `1px solid #ccc`,
+		margin: 0,
+		padding: theme.spacing.unit,
+	},
+}))(MuiDialogActions);
 
 const Experience = () => {
 	const { t } = useTranslation();
@@ -227,10 +299,7 @@ const Person = () => {
 			<Grid item xs={12} className={classes.textCenter}>
 				<img
 					alt="Natthan Hamilton"
-					src={cloudinary.url(
-						`portraits/nate2.jpg`,
-						cloudinaryAvatar,
-					)}
+					src={cloudinary.url(`portraits/nate2.jpg`, cloudinaryLarge)}
 					className={classes.avatar}
 				/>
 			</Grid>
@@ -248,7 +317,7 @@ const About = () => {
 				className={classes.imgPlaceholder}
 				src={cloudinary.url(
 					`icons/${action.name.toLowerCase()}.png`,
-					cloudinaryOpts,
+					cloudinaryicons,
 				)}
 				alt={action.name}
 				title={action.name}
@@ -262,7 +331,7 @@ const About = () => {
 				{t(`person.name`)}
 			</Typography>
 			<Typography paragraph>{t('person.description')}</Typography>
-			<Typography paragraph>{t('about.aboutContent')}</Typography>
+			<Typography paragraph>{t('person.content')}</Typography>
 			<Grid item xs={12}>
 				{actionsList}
 			</Grid>
@@ -346,28 +415,19 @@ const SkillsBreakdown = () => {
 					<Typography variant="h5">
 						{t(`skills.experiencedTitle`)}
 					</Typography>
-					<GenerateSkillsList
-						item="skillsExperienced"
-						data={locale.skillsExperienced}
-					/>
+					<GenerateSkillsList data={locale.skillsExperienced} />
 				</Grid>
 				<Grid className={classes.section} item xs={12}>
 					<Typography variant="h5">
 						{t(`skills.familiarTitle`)}
 					</Typography>
-					<GenerateSkillsList
-						item="skillsFamiliar"
-						data={locale.skillsFamiliar}
-					/>
+					<GenerateSkillsList data={locale.skillsFamiliar} />
 				</Grid>
 				<Grid className={classes.section} item xs={12}>
 					<Typography variant="h5">
 						{t(`skills.toolsTitle`)}
 					</Typography>
-					<GenerateSkillsList
-						item="skillsTools"
-						data={locale.skillsTools}
-					/>
+					<GenerateSkillsList data={locale.skillsTools} />
 				</Grid>
 			</Grid>
 		</Grid>
@@ -427,46 +487,175 @@ const Layout = ({ children }) => {
 	);
 };
 
-const RenderPortfolioList = () => {
+const PortfolioGallery = ({ portfolio }) => {
+	const classes = useStyles();
+	const [open, setOpen] = useState(false);
+	const [currentImage, setCurrentImage] = useState(0);
+
+	const openLightbox = (index) => {
+		setOpen(true);
+		setCurrentImage(index);
+	};
+	const closeLightbox = () => {
+		setOpen(false);
+		setCurrentImage(0);
+	};
+	const photos = [];
+	portfolio.gallery.map((img) =>
+		photos.push({
+			src: cloudinary.url(
+				`portfolio/${portfolio.imgPrefix}${img}.jpg`,
+				cloudinaryBaseOpts,
+			),
+			height: 50,
+			width: 50,
+		}),
+	);
+	const BackgroundImg = (props) => {
+		console.log('component props', props);
+		return (
+			<div
+				onClick={() => openLightbox(props.index)}
+				className={classes.portfolioThumbnail}
+				style={{
+					background: `url(${props.photo.src}) 50% 50% no-repeat`,
+				}}
+			/>
+		);
+	};
+
+	return (
+		<div>
+			<Gallery
+				ImageComponent={BackgroundImg}
+				photos={photos}
+				onClick={openLightbox}
+			/>
+			<Lightbox
+				images={photos}
+				onClose={closeLightbox}
+				onClickPrev={() => setCurrentImage(currentImage - 1)}
+				onClickNext={() => setCurrentImage(currentImage + 1)}
+				currentImage={currentImage}
+				isOpen={open}
+			/>
+		</div>
+	);
+};
+
+const PortfolioList = () => {
 	const { t } = useTranslation();
 	const classes = useStyles();
+	const [open, setOpen] = useState(false);
 
 	return t('portfolio.list').map((portfolio) => {
+		if (!portfolio.active) return;
 		const cover = (
 			<div
-				className={classes.listImage}
+				className={classes.portfolioCoverHeight}
 				style={{
 					background: `url(${cloudinary.url(
-						`portfolio/${portfolio.image}.jpg`,
-						cloudinaryOpts,
+						`portfolio/${portfolio.imgPrefix}${
+							portfolio.cover
+						}.jpg`,
+						cloudinaryBaseOpts,
+					)}) 50% 50% no-repeat`,
+				}}
+			/>
+		);
+		const modalCover = (
+			<div
+				className={classes.modalCoverHeight}
+				style={{
+					background: `url(${cloudinary.url(
+						`portfolio/${portfolio.imgPrefix}${
+							portfolio.cover
+						}.jpg`,
+						cloudinaryBaseOpts,
 					)}) 50% 50% no-repeat`,
 				}}
 			/>
 		);
 
-		const title = portfolio.website ? (
-			<a href={portfolio.website}>
-				{portfolio.name} <OpenInNewIcon />
-			</a>
-		) : (
-			portfolio.name
-		);
+		const activities = portfolio.activities
+			? portfolio.activities.map((activity) => (
+					<li key={activity}>{activity}</li>
+			  ))
+			: null;
 
 		return (
 			<Grid key={portfolio.name} item xs={12} sm={6}>
-				<Card>
+				<Card
+					className={classes.card}
+					onClick={() => setOpen(portfolio.name)}>
 					{cover}
 					<CardContent>
-						<Typography variant="h5">{title}</Typography>
-						<Typography noWrap paragraph>
+						<Typography variant="h6">
 							{portfolio.summary}
 						</Typography>
-						{/* <GenerateSkillsList
-							item={portfolio.tools}
-							data={portfolio.tools}
-						/> */}
+						<Typography>{portfolio.name}</Typography>
 					</CardContent>
 				</Card>
+				{open == portfolio.name && (
+					<Dialog
+						onClose={() => setOpen(false)}
+						open={true}
+						scroll="paper"
+						maxWidth="md">
+						<DialogContent>
+							{modalCover}
+							<Grid container className={classes.padding2x}>
+								<Grid item xs={12}>
+									<Typography variant="h6">
+										{portfolio.summary}
+									</Typography>
+									<Typography paragraph>
+										{portfolio.name}
+									</Typography>
+									<Typography variant="h6">
+										Situation
+									</Typography>
+									<Typography paragraph>
+										{portfolio.situation}
+									</Typography>
+									<Typography variant="h6">Task</Typography>
+									<Typography paragraph>
+										{portfolio.task}
+									</Typography>
+									<Typography variant="h6">
+										Activities
+									</Typography>
+									<Typography paragraph>
+										<ul>{activities}</ul>
+									</Typography>
+									<Typography variant="h6">
+										Results
+									</Typography>
+									<Typography paragraph>
+										{portfolio.result}
+									</Typography>
+									<Typography variant="h6">
+										Skills Used
+									</Typography>
+									<GenerateSkillsList
+										data={portfolio.tools}
+									/>
+									<Typography variant="h6">
+										Gallery
+									</Typography>
+									<PortfolioGallery portfolio={portfolio} />
+								</Grid>
+							</Grid>
+						</DialogContent>
+						<DialogActions>
+							<Button
+								onClick={() => setOpen(false)}
+								color="primary">
+								Close
+							</Button>
+						</DialogActions>
+					</Dialog>
+				)}
 			</Grid>
 		);
 	});
@@ -477,22 +666,18 @@ const Portfolio = () => {
 	const classes = useStyles();
 
 	return (
-		<Grid container className={classes.container}>
-			<Grid item xs={12}>
-				<Typography className={classes.sectionTitle} variant="headline">
-					<span>
-						<GroupWork className={classes.iconLarge} />
-					</span>
-					{t(`portfolio.title`)}
-				</Typography>
-			</Grid>
-			<Grid item xs={12}>
-				<Grid container spacing={24}>
-					{/* <RenderPortfolioList /> */}
-					<Typography variant="h6" className={classes.comingSoon}>
-						Coming Soon...
-					</Typography>
-				</Grid>
+		<Grid>
+			<Typography
+				className={classes.sectionTitle}
+				variant="headline"
+				gutterBottom>
+				<span>
+					<GroupWork className={classes.iconLarge} />
+				</span>
+				{t(`portfolio.title`)}
+			</Typography>
+			<Grid container spacing={24}>
+				<PortfolioList />
 			</Grid>
 		</Grid>
 	);
