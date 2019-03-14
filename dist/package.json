@@ -1,0 +1,14 @@
+{
+  "name": "natthan-io",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "dependencies": {
+    "compression": "^1.7.2",
+    "express": "^4.16.2",
+    "express-static-gzip": "^0.3.2"
+  }
+}
