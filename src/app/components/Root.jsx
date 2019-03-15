@@ -17,6 +17,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogContent from '@material-ui/core/DialogContent';
 import MuiDialogActions from '@material-ui/core/DialogActions';
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 import LocationOn from '@material-ui/icons/LocationOnOutlined';
 import DateRange from '@material-ui/icons/DateRangeOutlined';
@@ -39,7 +40,7 @@ const cloudinaryLarge = {
 };
 const cloudinaryicons = {
 	...cloudinaryBaseOpts,
-	height: 36,
+	// height: 36,
 	width: 36,
 };
 const cloudinaryModalThumbnails = {
@@ -584,7 +585,7 @@ const PortfolioList = () => {
 			: null;
 
 		return (
-			<Grid key={portfolio.name} item xs={12} sm={6}>
+			<Grid key={portfolio.name} item xs={12} sm={6} md={4}>
 				<Card
 					className={classes.card}
 					onClick={() => setOpen(portfolio.name)}>
@@ -683,6 +684,36 @@ const Portfolio = () => {
 	);
 };
 
+const Languages = () => {
+	const { t } = useTranslation();
+	const classes = useStyles();
+
+	const list = t(`languages.list`).map((language) => (
+		<Grid item xs={12}>
+			<Typography>
+				{language.name}
+				&nbsp;&nbsp;
+				<small>{language.value}</small>
+			</Typography>
+			<LinearProgress variant="determinate" value={language.percentage} />
+		</Grid>
+	));
+
+	return (
+		<Grid container className={classes.container} spacing={24}>
+			<Grid item xs={12}>
+				<Typography className={classes.sectionTitle} variant="headline">
+					<span>
+						<Star className={classes.iconLarge} />
+					</span>
+					{t(`languages.title`)}
+				</Typography>
+			</Grid>
+			{list}
+		</Grid>
+	);
+};
+
 const Root = () => {
 	const classes = useStyles();
 
@@ -699,20 +730,24 @@ const Root = () => {
 						</Grid>
 					</Grid>
 				</Grid>
-				<Grid item xs={12} sm={12}>
+				<Grid item xs={12}>
 					<Skills />
 				</Grid>
-				<Grid item xs={12} sm={12}>
+				<Grid item xs={12}>
 					<Experience />
 				</Grid>
-				<Grid item xs={12} sm={12}>
+				<Grid item xs={12}>
 					<Education />
 				</Grid>
-				<Grid item xs={12} sm={12}>
+				<Grid item xs={12}>
 					<Portfolio />
 				</Grid>
-
-				<SkillsBreakdown />
+				<Grid item xs={12}>
+					<SkillsBreakdown />
+				</Grid>
+				<Grid item xs={12}>
+					<Languages />
+				</Grid>
 			</Grid>
 			<Footer />
 		</Layout>

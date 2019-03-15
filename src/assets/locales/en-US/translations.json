@@ -322,31 +322,6 @@
 				]
 			},
 			{
-				"active": false,
-				"name": "Abroadeasy, Inc",
-				"website": null,
-				"summary": "Agency brand development",
-				"imgPrefix": "aecreative/",
-				"cover": "ae",
-				"gallery": ["aecreative-logo"],
-				"tools": [
-					"MongoDB",
-					"MySQL",
-					"Material Design",
-					"Bootstrap",
-					"PHP",
-					"Laravel",
-					"HTML5",
-					"JavaScript",
-					"jQuery",
-					"JSON",
-					"AJAX",
-					"CSS3",
-					"LESS",
-					"Sass"
-				]
-			},
-			{
 				"active": true,
 				"name": "Abroadeasy",
 				"website": null,
@@ -368,14 +343,21 @@
 				"started": "March 2015",
 				"ended": "February 2016",
 				"situation": "Abroadeasy was a very ambitious international technology startup based in Shanghai, China with the goal of modernizing a traditional billion dollar international education industry inside China. Having first hand experience of the problems, one of Abroadeasy's co-founders conceptualized a better way it can be done aggregating the international community and then focusing on b2b services to the agencies inside China, effectively augmenting them to avoid a direct battle at first.",
-				"task": "I was responsible for architecting and leading the technology development on all fronts: AWS, backend, and frontend. ",
-				"activities": ["List of activities coming soon."],
+				"task": "I was responsible for architecting and leading the technology development on all fronts: AWS, backend, and frontend.",
+				"activities": [
+					"Wore a product manager hat upkeeping a very active and evolving product roadmap that team members could follow with their respective responsibilities.",
+					"Wore a lead programmer hat leading from the front, and focused on the UIUX that was desired in the vision of the platform.",
+					"Worked closely with the UIUX designer on each page sketch mockup to ensure all product requirements were met and developers were always kept busy.",
+					"Used tools such as Xtensio to build user profiles for all stakeholders to become emotionally invested in who they are building the platform for.",
+					"Created user feedback surveys and brought people into the office to get firsthand feedback to identify problems with the platform and resolve them in a timely manner."
+				],
 				"result": "Unfortunately as things appeared to progress well both in technical development and business development, dramatic market changes made the industry become extremely hot and attractive to an influx of hundreds of new startups. This caused a market collapse where no one could make a profit to survive, and so we chose to move on from the project.",
 				"tools": [
 					"ReactJS",
 					"Redux",
 					"React Router",
 					"NodeJS",
+					"ExpressJS",
 					"ES6",
 					"JSX",
 					"Webpack",
@@ -390,7 +372,75 @@
 					"JavaScript",
 					"JSON",
 					"CSS3",
-					"LESS"
+					"Sass",
+					"GitHub",
+					"Amazon Web Services",
+					"NginX"
+				]
+			},
+			{
+				"active": true,
+				"name": "Type-A Deodorant",
+				"summary": "Shopping experience",
+				"imgPrefix": "typea/",
+				"cover": "3",
+				"gallery": ["4", "2", "5", "1"],
+				"title": "Developer",
+				"location": "Remote",
+				"started": "November 2018",
+				"ended": "March 2019",
+				"situation": "Type-A is a new company focusing on natural deodorants. Their existing shopify solution had serious flaws where in the code the desktop and mobile versions were entirely segregated from each other, making it difficult to implement any upgrades.",
+				"task": "Create a seamless, responsive buying experience from desktop to mobile where it currently did not exist.",
+				"activities": [
+					"Focused initial efforts on unblocking the responsive nature within the code, restructuring and consolidating the HTML, JS, and CSS to be able to proceed forward.",
+					"From there, it was a trivial matter to implement a mobile-first direction, taking inspiration from their mobile style and applying it to desktop.",
+					"Restructured their desktop version to be responsive down through tablet. It was originally built as `position: absolute` div layers."
+				],
+				"result": "Unlocking the single page product selection allowed for a very simple process to add new products, and has gone on to produce massive month-over-month revenue increases for the small company that continues to add new products to grow their business.",
+				"tools": ["Shopify", "Bootstrap", "HTML5", "JavaScript", "CSS3"]
+			},
+			{
+				"active": true,
+				"name": "Nuvothera",
+				"summary": "Multi-brand experience",
+				"imgPrefix": "nuvothera/",
+				"cover": "4",
+				"gallery": ["3", "2", "1"],
+				"title": "Developer",
+				"location": "Remote",
+				"started": "November 2018",
+				"ended": "March 2019",
+				"situation": "Nuvothera is a successful small company selling their first brand product that wanted to create their second one, but keep them tied closely together.",
+				"task": "Develop a new brand e-commerce site.",
+				"activities": [
+					"Leveraging Shopify's template structure, developed new pages needed for the brand.",
+					"A top level CSS element listening to which brand prefix was in the url path allowed for switching brand specific styling."
+				],
+				"result": "The result was a seamless experience with a brand image link at the top of the page that made it look like they were simply sister brands and everything thereafter was standalone as if its own website, allowing the company to not have to go through the hassle of multiple Shopify accounts and more easily scale their business.",
+				"tools": ["Shopify", "Bootstrap", "HTML5", "JavaScript", "CSS3"]
+			},
+			{
+				"active": false,
+				"name": "Abroadeasy, Inc",
+				"summary": "Agency brand development",
+				"imgPrefix": "aecreative/",
+				"cover": "ae",
+				"gallery": ["aecreative-logo"],
+				"tools": [
+					"MongoDB",
+					"MySQL",
+					"Material Design",
+					"Bootstrap",
+					"PHP",
+					"Laravel",
+					"HTML5",
+					"JavaScript",
+					"jQuery",
+					"JSON",
+					"AJAX",
+					"CSS3",
+					"LESS",
+					"Sass"
 				]
 			}
 		]
@@ -401,10 +451,10 @@
 		"React Router",
 		"Electron",
 		"React Native",
+		"Expo",
 
 		"NodeJS",
 		"ExpressJS",
-		"ES6",
 		"JSX",
 		"Babel",
 		"PassportJS",
@@ -424,83 +474,56 @@
 		"Bootstrap",
 		"React-Bootstrap",
 
+		"Amazon Web Services",
 		"GitHub",
 
 		"PHP",
 		"phpStorm",
 		"Laravel",
 		"Lumen",
-		"CodeIgniter",
 
 		"HTML5",
+		"CSS3",
 		"JavaScript",
 		"jQuery",
-		"JSON",
-		"AJAX",
-		"CSS3",
-		"LESS",
 		"Sass",
 
 		"Shopify",
 		"WordPress",
 		"WooCommerce",
-		"Flatsome",
 		"Stripe"
 	],
 	"skillsFamiliar": [
 		"Python",
-
-		"Docker",
-		"Laradock",
-
-		"Google Cloud",
-		"Google Apps",
-		"Google Analytics",
-		"Amazon Web Services",
-
 		"Symfony2",
 
-		"Yelp",
+		"Google Cloud",
+		"Google Analytics",
 
 		"NginX",
-		"Apache"
+		"Apache",
+		"Docker"
 	],
 	"skillsLearning": [],
 	"skillsTools": [
+		"InVision",
+		"Xtensio",
+		"ProcessOn",
+		"InstaGantt",
+
+		"Asana",
+		"Slack",
+		"Sympli",
+		"Zeplin",
+
+		"Cloudinary",
+		"MailChimp",
 		"Cloudflare",
 		"SentryIO",
 		"TravisCI",
 		"CodeCov",
 		"David-DM",
-		"AppVeyor",
-
-		"PingDom",
-		"SalesForce",
-		"WeChat",
-		"InVision",
-		"Xtensio",
-		"ProcessOn",
-		"InstaGantt",
-		"Hackpad",
-		"Jell",
-		"Waveapp",
-		"Skype",
-
-		"npm",
-		"Asana",
-		"Slack",
-		"UberConference",
-		"Sympli",
-		"Zeplin",
-		"Skype",
-
-		"Atom",
-		"Sublime",
-		"Redmine",
-		"Hubspot",
-		"Cloudinary",
-		"MailChimp",
-		"Mailgun"
+		"AppVeyor"
 	],
 	"actions": [
 		{
@@ -515,5 +538,20 @@
 			"name": "GitHub",
 			"url": "https://github.com/natthanhamilton/"
 		}
-	]
+	],
+	"languages": {
+		"title": "Languages",
+		"list": [
+			{
+				"name": "English",
+				"value": "Native or bilingual proficiency",
+				"percentage": 100
+			},
+			{
+				"name": "Chinese",
+				"value": "Limited working proficiency",
+				"percentage": 40
+			}
+		]
+	}
 }
