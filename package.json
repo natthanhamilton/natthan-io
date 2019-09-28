@@ -27,7 +27,7 @@
 		"i18next": "^15.0.4",
 		"i18next-browser-languagedetector": "^3.0.1",
 		"i18next-xhr-backend": "^2.0.1",
-		"react": "^16.8.3",
+		"react": "^16.10.1",
 		"react-dom": "^16.8.3",
 		"react-helmet": "^5.2.0",
 		"react-i18next": "^10.2.0",
