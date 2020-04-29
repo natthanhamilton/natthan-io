@@ -57,7 +57,7 @@
 		"@babel/plugin-transform-react-jsx": "^7.9.4",
 		"@babel/plugin-transform-react-jsx-self": "^7.9.0",
 		"@babel/plugin-transform-react-jsx-source": "^7.9.0",
-		"@babel/plugin-transform-runtime": "^7.2.0",
+		"@babel/plugin-transform-runtime": "^7.9.6",
 		"babel-eslint": "^10.0.1",
 		"babel-jest": "^24.1.0",
 		"babel-loader": "^8.0.5",
